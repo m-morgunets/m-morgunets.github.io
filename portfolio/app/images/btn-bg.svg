@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="90" height="31" viewBox="0 0 90 31">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #391557;
+        filter: url(#filter);
+      }
+    </style>
+    <filter id="filter" x="0" y="0" width="90" height="31" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#0f33ff"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <rect class="cls-1" width="90" height="31"/>
+</svg>
