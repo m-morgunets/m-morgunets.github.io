@@ -17,4 +17,13 @@ $(function () {
     })
   }
 
+  $('.reviews__slider').slick({
+    dots: true,
+    dotsClass: 'slick-dots',
+    arrows: false,
+    infinite: true,
+    autoplay: true,
+    fade: true,
+  })
+
 });
