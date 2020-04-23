@@ -13,8 +13,8 @@ body {
   font-weight: 400;
   font-size: 14px;
   color: #fff;
-  min-width: 320px;
-  overflow-x: hidden;
+  // min-width: 320px;
+  // overflow-x: hidden;
 }
 
 a {
@@ -41,7 +41,15 @@ button {
 .menu-list {
   li {
     display: inline-block;
+    & + li {
+      margin-left: 22px;
+    }
+  }
+  a {
+    line-height: 20px;
     position: relative;
+    color: #fff;
+    transition: all 0.5s;
     &:before {
       left: 0;
       top: 60px;
@@ -56,15 +64,9 @@ button {
     &:hover:before {
       transform: scaleX(1);
     }
-    & + li {
-      margin-left: 22px;
-    }
-  }
-  a {
-    line-height: 20px;
   }
   .active {
-    &:before {
+    a:before {
       transform: scaleX(1);
     }
   }
@@ -87,7 +89,7 @@ button {
 }
 
 .section__title {
-  width: 580px;
+  max-width: 580px;
   text-align: center;
   margin: 0 auto;
   .section__subtitle {
