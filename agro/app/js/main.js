@@ -1,5 +1,7 @@
 $(function () {
 
+  new WOW().init();
+
   let images = document.querySelectorAll(".header-content__item-img");
   let items = document.querySelectorAll(".header-content__item");
   let galleryImg = document.querySelectorAll(".gallery-images__item-img");
@@ -32,14 +34,13 @@ $(function () {
   if (windowWidth > 850) {
     for (let img of galleryImg) {
       img.style.width = (windowWidth / 4) + "px";
-      console.log(img.style.width);
       img.style.height = ((windowWidth / 4) * 0.924) + "px";
     }
   } else {
     for (let img of galleryImg) {
       img.style.width = (windowWidth / 2) + "px";
-      console.log(img.style.width);
       img.style.height = ((windowWidth / 2) * 0.924) + "px";
     }
   }
+
 });
