@@ -1,0 +1,12 @@
+@font-face {
+  font-family: "Gilroy";
+  src: local("Gilroy Regular"), local("Gilroy-Regular"),
+    url(../fonts/Gilroy-Regular.woff2) format("woff2"),
+    url(../fonts/Gilroy-Regular.woff) format("woff"),
+    url(../fonts/Gilroy-Regular.ttf) format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "PFDinTextCompPro";
+  src: url(../fonts/PFDinTextCompPro-Medium_0.ttf);
+}

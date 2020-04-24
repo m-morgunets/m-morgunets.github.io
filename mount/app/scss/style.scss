@@ -1,0 +1,67 @@
+@import "vars";
+@import "libs";
+@import "fonts";
+@import "global";
+
+.home__header {
+  padding: 0 60px;
+  background-image: url(../images/home-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  line-height: 37px;
+  height: 170px;
+  align-items: center;
+  font-family: "PFDinTextCompPro";
+  position: relative;
+}
+.home__header-menu {
+  display: flex;
+}
+.home__header-menu-icon {
+  li {
+    height: 10px;
+    width: 47px;
+    background-color: #fff;
+    border-radius: 5px;
+  }
+  li + li {
+    margin-top: 5px;
+  }
+}
+.home-header__menu-text {
+  margin-left: 18px;
+  font-size: 44px;
+  text-transform: uppercase;
+}
+.home__header-logo {
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.home__header-phone {
+  font-size: 43px;
+  max-width: 280px;
+  span {
+    font-size: 22px;
+    font-family: "Gilroy";
+    padding-left: 20px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 9px;
+      height: 9px;
+      background-color: #2de314;
+      border-radius: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+    }
+  }
+}
+
+@import "media";
