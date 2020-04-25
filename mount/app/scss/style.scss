@@ -3,12 +3,14 @@
 @import "fonts";
 @import "global";
 
-.home__header {
-  padding: 0 60px;
+.home {
   background-image: url(../images/home-bg.jpg);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top;
   background-size: cover;
+}
+.home__header {
+  padding: 0 60px;
   display: flex;
   justify-content: space-between;
   line-height: 37px;
@@ -62,6 +64,77 @@
       left: 0;
     }
   }
+}
+
+.home__content {
+  font-family: "PFDinTextCompPro";
+  text-transform: uppercase;
+  padding: 180px 0 960px 80px;
+}
+.home__content-title {
+  font-size: 116px;
+  line-height: 50px;
+  max-width: 775px;
+  margin-bottom: 50px;
+  span {
+    font-size: 37px;
+    line-height: 37px;
+  }
+}
+.home__content-btn {
+  color: #444648;
+  background-image: url(../images/btn-bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  font-size: 35px;
+  line-height: 37px;
+  padding: 15px 0 0 40px;
+  width: 305px;
+  height: 83px;
+  position: relative;
+  &::before {
+    content: "";
+    background-image: url(../images/btn-arrows.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: absolute;
+    width: 121px;
+    height: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 90px;
+  }
+}
+
+.service {
+  background-image: url(../images/service-bg.png);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: contain;
+}
+.service__item {
+  display: flex;
+  align-items: center;
+  & + .service__item {
+    margin-top: 10px;
+  }
+}
+.service__item-content {
+  max-width: 525px;
+  margin-left: 60px;
+}
+.service__item-title {
+  font-family: "PFDinTextCompPro";
+  color: #444648;
+  font-size: 51px;
+  line-height: 94px;
+}
+.service__item-text {
+  color: #717578;
+  font-size: 21px;
+  line-height: 24px;
 }
 
 @import "media";
