@@ -11,7 +11,7 @@
 
 <body>
 
-  <section class="home" data-parallax="scroll" data-image-src="images/home-bg.jpg">
+  <section class="home">
     <div class="home__header">
       <div class="home__header-menu">
         <ul class="home__header-menu-icon">
@@ -27,19 +27,24 @@
     </div>
     <div class="home__content">
       <div class="container">
-        <div class="home__content-title">Покоряй Вершины <span>в действительно надежной экипировке</span></div>
+        <div class="home__content-title">
+          <div class="home__content-subtitle">Покоряй Вершины</div>
+          <div class="home__content-subtext">в действительно надежной экипировке</div>
+        </div>
         <div class="home__content-btn">
-          Узнать подробнее
-          <img src="images/btn-arrows.svg" class=" animated fadeInDown infinite slow" alt="">
+          <div class="home-content__btn-text">Узнать подробнее</div>
+          <div class="home-content__btn-img"><img src="images/btn-arrows.svg" class=" animated fadeInDown infinite slow"
+              alt=""></div>
         </div>
       </div>
     </div>
-    <div class="mont-bg"><img src="images/service-bg--2.png" alt=""></div>
+    <div class="mont-bg"><img src="images/mountain-bg.png" alt=""></div>
   </section>
+
   <section class="service">
     <div class="container">
       <div class="service__box">
-        <div class="service__item">
+        <div class="service__item" data-depth="0.4">
           <div class="service__item-img"><img src="images/service-item--1.png" alt=""></div>
           <div class="service__item-content">
             <div class="service__item-title">Топовое оборудование</div>
@@ -48,7 +53,8 @@
             </div>
           </div>
         </div>
-        <div class="service__item">
+        <div class="service__item" data-depth="0.6">
+          <div class="service__item-img img-adaptive"><img src="images/service-item--2.png" alt=""></div>
           <div class="service__item-content">
             <div class="service__item-title">Топовое оборудование</div>
             <div class="service__item-text">Профессиональные веревки, которые не дадут упасть и разбиться нахрен. Если
@@ -57,7 +63,7 @@
           </div>
           <div class="service__item-img"><img src="images/service-item--2.png" alt=""></div>
         </div>
-        <div class="service__item">
+        <div class="service__item" data-depth="0.4">
           <div class="service__item-img"><img src="images/service-item--3.png" alt=""></div>
           <div class="service__item-content">
             <div class="service__item-title">Топовое оборудование</div>
