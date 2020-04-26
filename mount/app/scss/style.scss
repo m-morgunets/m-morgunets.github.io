@@ -4,8 +4,6 @@
 @import "global";
 
 .home {
-  // min-height: 400px;
-  // max-width: 1534px;
   min-height: 400px;
   position: relative;
   background: transparent;
@@ -140,13 +138,21 @@
 }
 .service__item-img {
   z-index: 4;
-}
-.img-adaptive {
-  display: none;
+  transition: all 0.7s;
+  &:hover {
+    transform: translateY(-20px);
+  }
 }
 .service__item-content {
   max-width: 525px;
   margin-left: 60px;
+  transition: all 0.7s;
+  &:hover {
+    transform: translateY(-20px);
+  }
+}
+.img-adaptive {
+  display: none;
 }
 .service__item-title {
   font-family: "PFDinTextCompPro";

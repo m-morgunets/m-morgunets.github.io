@@ -1,5 +1,14 @@
 $(function () {
 
+
+  let windowWidth = document.documentElement.clientWidth;
+  if (windowWidth > 584) {
+    $('.home').parallax({ imageSrc: 'images/home-bg.jpg' });
+  }
+  if (windowWidth <= 584) {
+    $('.home').parallax({ imageSrc: 'images/home-miniBg.jpg' });
+  }
+
   $('.home__content-btn').on('click', function () {
     $('.service').get(0).scrollIntoView({
       block: "start",
@@ -16,17 +25,4 @@ $(function () {
       easing: 'swing'
     });
   }
-
-  let windowWidth = document.documentElement.clientWidth;
-  if (windowWidth > 584) {
-    $('.home').parallax({ imageSrc: '../images/home-bg.jpg' });
-  }
-  if (windowWidth < 584) {
-    $('.home').parallax({ imageSrc: '../images/home-miniBg.jpg' });
-  }
-
-  var service = document.querySelector('.service__box');
-  var parallaxInstance = new Parallax(service, {
-    lativeInput: true
-  });
 });
