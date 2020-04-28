@@ -6,6 +6,17 @@
     url(../fonts/Gilroy-Regular.ttf) format("truetype");
   font-weight: 400;
 }
+
+@font-face {
+  font-family: "Gilroy";
+  src: local("Gilroy Bold Italic"), local("Gilroy-Bold-Italic"),
+    url(../fonts/Gilroy-BoldItalic.woff2) format("woff2"),
+    url(../fonts/Gilroy-BoldItalic.woff) format("woff"),
+    url(../fonts/Gilroy-BoldItalic.ttf) format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+
 @font-face {
   font-family: "PFDinTextCompPro";
   src: url(../fonts/PFDinTextCompPro-Medium_0.ttf);

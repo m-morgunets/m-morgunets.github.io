@@ -36,3 +36,23 @@ button {
   max-width: 1170px;
   margin: 0 auto;
 }
+
+.default-btn {
+  font-family: "PFDinTextCompPro";
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #444648;
+  background-image: url(../images/btn-bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 305px;
+  height: 83px;
+  position: relative;
+}
+
+.default-btn__text {
+  font-size: 35px;
+  line-height: 37px;
+  padding: 15px 0 0 40px;
+}

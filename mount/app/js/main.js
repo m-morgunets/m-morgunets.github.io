@@ -1,5 +1,11 @@
 $(function () {
 
+  // $(window).scroll(function () {
+  //   if ($(this).scrollTop() > el.offset().top - 200) {
+  //     el.addClass('animation');
+  //   }
+  // });
+
 
   let windowWidth = document.documentElement.clientWidth;
   if (windowWidth > 584) {
@@ -24,5 +30,17 @@ $(function () {
       duration: 'slow',
       easing: 'swing'
     });
+  }
+
+  let items = document.querySelectorAll('.shop__item')
+  let btn = document.querySelectorAll('.shop__item-btn');
+
+  for (let i = 0; i <= 4; i++) {
+    items[i].addEventListener('mousemove', () => {
+      btn[i].innerHTML = "INFO";
+    })
+    items[i].addEventListener('mouseout', () => {
+      btn[i].innerHTML = "ПОДРОБНЕЕ";
+    })
   }
 });
