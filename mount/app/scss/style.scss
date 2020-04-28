@@ -7,13 +7,13 @@
   min-height: 400px;
   position: relative;
   background: transparent;
-}
-.mont-bg {
-  position: absolute;
-  bottom: -10px;
-  left: -17px;
-  img {
-    width: 100vw;
+  .mont-bg {
+    position: absolute;
+    bottom: -10px;
+    left: -17px;
+    img {
+      width: 100vw;
+    }
   }
 }
 .home__header {
@@ -93,22 +93,6 @@
   line-height: 37px;
   margin-left: 5px;
 }
-.home__content-btn {
-  cursor: pointer;
-  color: #444648;
-  background-image: url(../images/btn-bg.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  width: 305px;
-  height: 83px;
-  position: relative;
-}
-.home-content__btn-text {
-  font-size: 35px;
-  line-height: 37px;
-  padding: 15px 0 0 40px;
-}
 .home-content__btn-img {
   position: absolute;
   width: 121px;
@@ -127,6 +111,7 @@
   background-position: center bottom;
   background-size: contain;
   background-color: #fff;
+  padding: 50px 0 100px;
 }
 .service__item {
   display: flex !important;
@@ -164,6 +149,192 @@
   color: #717578;
   font-size: 21px;
   line-height: 24px;
+}
+
+.shop {
+  text-transform: uppercase;
+  font-family: "PFDinTextCompPro";
+  position: relative;
+  .mont-bg {
+    position: absolute;
+    bottom: -380px;
+    img {
+      width: 100vw;
+    }
+  }
+}
+.shop__top {
+  color: #ebebeb;
+  font-size: 130px;
+  line-height: 130px;
+  text-align: right;
+  transform: rotate(18deg);
+  .line--1 {
+    padding-right: 80px;
+  }
+  .line--2 {
+    padding-right: 40px;
+  }
+}
+.shop__title {
+  position: relative;
+  font-size: 140px;
+  line-height: 0;
+}
+.shop__title-text {
+  color: #444648;
+  position: absolute;
+  left: -8px;
+  bottom: -50px;
+}
+.shop__title-bg {
+  color: #ebebeb;
+  transform: rotate(18deg);
+  width: 500px;
+}
+
+.shop__inner {
+  margin-top: 210px;
+}
+.shop__inner-line {
+  display: flex;
+  justify-content: space-between;
+  &:nth-child(1) {
+    padding-bottom: 50px;
+  }
+}
+.shop__item {
+  position: relative;
+  &:hover {
+    .shop__item-box {
+      transform: translateY(-50px);
+    }
+    .shop__item-btn {
+      background-color: #78ff6a;
+    }
+    .shop__item-hover {
+      transform: translate(-50%, 10px);
+    }
+  }
+}
+.shop__item-box,
+.shop__item-btn,
+.shop__item-hover {
+  transition: all 0.5s;
+}
+.shop__item-box {
+  border-radius: 15px;
+  background-color: #efefef;
+  box-shadow: 0px 6px 27px 0px rgba(0, 0, 0, 0.3);
+  width: 544px;
+  height: 540px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left center;
+  color: #444648;
+  position: relative;
+  z-index: 5;
+}
+.shop__item-content {
+  width: 230px;
+  position: absolute;
+  top: 25px;
+  right: 20px;
+}
+.shop__item-title {
+  font-size: 45px;
+  line-height: 49px;
+  padding-left: 10px;
+}
+.shop__item-text {
+  font-family: "Gilroy";
+  font-size: 20px;
+  line-height: 23px;
+  text-transform: none;
+  padding: 40px 0 25px 10px;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: #c0c0c0;
+    width: 100%;
+    height: 3px;
+    top: 20px;
+    left: 0;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: #c0c0c0;
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+  }
+}
+.shop__item-btn {
+  border-radius: 12px;
+  background-color: #fff;
+  width: 211px;
+  height: 71px;
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+  font-size: 43px;
+  padding-top: 11px;
+  text-align: center;
+}
+.shop__item-hover {
+  font-weight: 700;
+  font-style: italic;
+  font-family: "Gilroy";
+  border-radius: 14px;
+  background-color: #434547;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  bottom: 0;
+  width: 496px;
+  height: 100px;
+  font-size: 33px;
+  text-align: center;
+  padding-top: 50px;
+  z-index: 4;
+}
+// @keyframes shopRock {
+//   from {
+//   }
+//   to {
+//   }
+// }
+
+.bonus {
+  min-height: 400px;
+  background: transparent;
+  height: 1850px;
+}
+.bonus-box {
+  position: relative;
+}
+.bonus__content {
+  position: absolute;
+  max-width: 700px;
+  right: 15px;
+  top: 720px;
+}
+.bonus__content-title {
+  font-size: 88px;
+  line-height: 95px;
+  text-transform: uppercase;
+  font-family: "PFDinTextCompPro";
+  padding-left: 7px;
+}
+.bonus__content-text {
+  font-size: 23px;
+  line-height: 31px;
+  color: #e2e2e2;
+  margin: 35px 0 70px;
+  padding-left: 10px;
 }
 
 @import "media";
