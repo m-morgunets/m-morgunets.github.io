@@ -156,12 +156,20 @@
   font-family: "PFDinTextCompPro";
   position: relative;
   .mont-bg {
+    z-index: 4;
     position: absolute;
-    bottom: -380px;
+    bottom: -450px;
     img {
       width: 100vw;
     }
   }
+}
+.shop-rock {
+  top: -600px;
+  left: -1000px;
+  position: absolute;
+  z-index: 6;
+  transition: all 1s;
 }
 .shop__top {
   color: #ebebeb;
@@ -209,9 +217,6 @@
     .shop__item-box {
       transform: translateY(-50px);
     }
-    .shop__item-btn {
-      background-color: #78ff6a;
-    }
     .shop__item-hover {
       transform: translate(-50%, 10px);
     }
@@ -233,7 +238,7 @@
   background-position: left center;
   color: #444648;
   position: relative;
-  z-index: 5;
+  z-index: 6;
 }
 .shop__item-content {
   width: 230px;
@@ -273,6 +278,7 @@
   }
 }
 .shop__item-btn {
+  cursor: pointer;
   border-radius: 12px;
   background-color: #fff;
   width: 211px;
@@ -283,6 +289,9 @@
   font-size: 43px;
   padding-top: 11px;
   text-align: center;
+  &:hover {
+    background-color: #78ff6a;
+  }
 }
 .shop__item-hover {
   font-weight: 700;
@@ -299,19 +308,24 @@
   font-size: 33px;
   text-align: center;
   padding-top: 50px;
-  z-index: 4;
+  z-index: 5;
 }
-// @keyframes shopRock {
-//   from {
-//   }
-//   to {
-//   }
-// }
 
 .bonus {
   min-height: 400px;
   background: transparent;
   height: 1850px;
+  position: relative;
+}
+.bonus-rock {
+  position: absolute;
+  right: -100px;
+  top: -400px;
+  z-index: 3;
+  transition: all 1s;
+  img {
+    width: 500px;
+  }
 }
 .bonus-box {
   position: relative;
@@ -335,6 +349,19 @@
   color: #e2e2e2;
   margin: 35px 0 70px;
   padding-left: 10px;
+}
+
+.last {
+  position: relative;
+  z-index: 4;
+  padding-bottom: 2000px;
+}
+.last-rock {
+  position: absolute;
+  top: -150px;
+  img {
+    width: 100vw;
+  }
 }
 
 @import "media";
