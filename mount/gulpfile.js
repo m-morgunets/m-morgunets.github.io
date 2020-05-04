@@ -28,6 +28,7 @@ gulp.task('css', function () {
     'node_modules/normalize.css/normalize.css',
     'node_modules/slick-carousel/slick/slick.css',
     'node_modules/animate.css/animate.css',
+    'node_modules/jqCart_1.1.2/css/jqcart.css',
   ])
     .pipe(concat('_libs.scss'))
     .pipe(gulp.dest('app/scss'))
@@ -48,7 +49,8 @@ gulp.task('js', function () {
   return gulp.src([
     'node_modules/slick-carousel/slick/slick.js',
     'node_modules/parallax.js-1.5.0/parallax.min.js',
-    'node_modules/parallax-js/dist/parallax.min.js'
+    'node_modules/parallax-js/dist/parallax.min.js',
+    'node_modules/jqCart_1.1.2/js/jqcart.min.js',
   ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())
