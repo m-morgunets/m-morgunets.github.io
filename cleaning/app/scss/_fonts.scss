@@ -1,0 +1,26 @@
+@font-face {
+  font-family: "Gilroy";
+  src: local("Gilroy Bold"), local("Gilroy-Bold"),
+    url(../fonts/Gilroy-Bold.woff2) format("woff2"),
+    url(../fonts/Gilroy-Bold.woff) format("woff"),
+    url(../fonts/Gilroy-Bold.ttf) format("truetype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: local("Gilroy Black"), local("Gilroy-Black"),
+    url(../fonts/Gilroy-Black.woff2) format("woff2"),
+    url(../fonts/Gilroy-Black.woff) format("woff"),
+    url(../fonts/Gilroy-Black.ttf) format("truetype");
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: "GillSansNova";
+  src: local("GillSansNova Reguler"), local("GillSansNova-Reguler"),
+    url("../fonts/GillSansNova-Regular.ttf") format("truetype"),
+    url("../fonts/GillSansNova-Regular.woff") format("woff"),
+    url("../fonts/GillSansNova-Regular.woff2") format("woff2");
+  font-weight: 400;
+}
