@@ -106,7 +106,7 @@
 .home__cubes-item--1,
 .home__cubes-item--2 {
   animation-name: cubesAnim;
-  animation-duration: 5s;
+  animation-duration: 8s;
   animation-iteration-count: infinite;
   position: absolute;
   z-index: 2;
@@ -121,7 +121,7 @@
 .home__cubes-item--2 {
   bottom: 140px;
   right: 357px;
-  animation-duration: 6s;
+  animation-duration: 10s;
 }
 
 @keyframes cubesAnim {
@@ -129,7 +129,7 @@
     transform: translateY(0);
   }
   50% {
-    transform: translateY(40px);
+    transform: translateY(20px);
   }
   to {
     transform: translateY(0);
