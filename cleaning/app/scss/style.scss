@@ -36,7 +36,7 @@
 }
 
 .home {
-  background: url(../images/homeDots-bg.jpg) no-repeat;
+  background: url(../images/dots-bg.png) no-repeat;
   background-position: left center;
   background-size: auto;
 }
@@ -159,6 +159,13 @@
   background-position: center;
   background-size: cover;
   padding: 80px 0 130px;
+  position: relative;
+}
+.services-dots {
+  position: absolute;
+  right: 0;
+  bottom: -215px;
+  z-index: 1;
 }
 .services__box {
   position: relative;
@@ -184,7 +191,7 @@
   height: 220px;
   &:nth-child(3) {
     .services__item-content {
-      margin-left: -250px;
+      margin-left: -400px;
     }
   }
 }
@@ -206,10 +213,33 @@
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  &.active ~ .services__item-content {
-    display: block;
+  &::before {
+    transition: all 0.5s;
+    border-radius: 25px;
+    content: "";
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    z-index: 1;
+    top: 11px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0px 0px 0px 0px rgba(0, 255, 252, 0.11);
+  }
+  &:hover {
+    &::before {
+      box-shadow: 0px 1px 16px 0px rgba(0, 255, 252, 0.11);
+    }
   }
 }
+// .services__item-img.active {
+//   &::before {
+//     box-shadow: 0px 1px 16px 0px rgba(0, 255, 252, 0.11);
+//   }
+// & ~ .services__item-content {
+//   display: block;
+// }
+// }
 .services__item-content {
   z-index: 2;
   display: none;
@@ -256,6 +286,7 @@
   }
 }
 .services-item__content-btn {
+  cursor: pointer;
   position: absolute;
   bottom: 0;
   font-family: "GillSansNova";
@@ -277,13 +308,17 @@
 .services__box-bottom {
   max-width: 720px;
   margin: 120px auto 0;
+  .services__item:nth-child(1),
+  .services__item:nth-child(2) {
+    .services__item-content {
+      margin-top: -350px;
+    }
+  }
 }
 
 .test {
-  background-image: url(../images/test-bg.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background: transparent;
+  min-height: 400px;
   position: relative;
 }
 .test__popup {
@@ -362,10 +397,10 @@
 .test__number {
   display: flex;
   align-items: center;
+  padding: 0 0 130px 30px;
 }
 .test__number-send {
   border-radius: 45px;
-  margin-left: 30px;
   position: relative;
   width: 480px;
   height: 213px;
@@ -392,6 +427,7 @@
 }
 .test-number__send-input {
   input {
+    outline: none;
     color: #b4b4b4;
     text-align: center;
     width: 240px;
