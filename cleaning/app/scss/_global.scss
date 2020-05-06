@@ -36,3 +36,11 @@ button {
   max-width: 1170px;
   margin: 0 auto;
 }
+
+.cubes-item {
+  animation-name: cubesAnim;
+  animation-duration: 6.5s;
+  animation-iteration-count: infinite;
+  position: absolute;
+  z-index: 4;
+}
