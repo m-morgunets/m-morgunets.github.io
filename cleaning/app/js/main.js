@@ -34,27 +34,27 @@ $(function () {
     });
   }
 
-  let item = document.querySelectorAll('.services__item');
-  let itemImg = document.querySelectorAll('.services__item-img');
-  let content = document.querySelectorAll('.services__item-content');
+  // let item = document.querySelectorAll('.services__item');
+  // let itemImg = document.querySelectorAll('.services__item-img');
+  // let content = document.querySelectorAll('.services__item-content');
 
-  for (let i = 0; i <= item.length; i++) {
-    itemImg[i].addEventListener('mouseover', function () {
-      content[i].style.display = 'block';
-    });
-    item[i].addEventListener('mouseout', () => {
-      let timerId = setTimeout(function () {
-        content[i].style.display = 'none';
-      }, 1000);
-      itemImg[i].addEventListener('mouseover', function () {
-        content[i].style.display = 'block';
-        clearTimeout(timerId);
-      });
-      content[i].addEventListener('mouseover', function () {
-        this.style.display = 'block';
-        clearTimeout(timerId);
-      });
-    });
-  };
+  // for (let i = 0; i <= item.length; i++) {
+  //   itemImg[i].addEventListener('mouseover', function () {
+  //     content[i].style.display = 'block';
+  //   });
+  //   item[i].addEventListener('mouseout', () => {
+  //     let timerId = setTimeout(function () {
+  //       content[i].style.display = 'none';
+  //     }, 1000);
+  //     itemImg[i].addEventListener('mouseover', function () {
+  //       content[i].style.display = 'block';
+  //       clearTimeout(timerId);
+  //     });
+  //     content[i].addEventListener('mouseover', function () {
+  //       this.style.display = 'block';
+  //       clearTimeout(timerId);
+  //     });
+  //   });
+  // };
 
 });
