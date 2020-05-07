@@ -252,7 +252,7 @@
   z-index: 2;
   visibility: hidden;
   opacity: 0;
-  transition: 0.3s;
+  transition: 0.5s;
   position: relative;
   height: 600px;
   width: 388px;
@@ -322,6 +322,11 @@
   .services__item:nth-child(2) {
     .services__item-content {
       margin-top: -350px;
+    }
+  }
+  .services__item:nth-child(2) {
+    .services__item-content {
+      margin-left: -350px;
     }
   }
 }
@@ -481,4 +486,88 @@
   }
 }
 
+.slider {
+  padding: 100px 0 290px;
+  background-image: url(../images/services-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.slider__title {
+  font-family: "GillSansNova";
+  font-weight: 400;
+  font-size: 53px;
+  text-align: center;
+}
+.slider__box {
+  position: relative;
+  height: 650px;
+  margin: 60px 0 25px;
+}
+.slider__item {
+  position: absolute;
+  transition: all 0.5s;
+  opacity: 0;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  visibility: hidden;
+}
+.slider__runner {
+  position: relative;
+  align-items: center;
+  max-width: 982px;
+  height: 90px;
+  margin: 0 auto;
+  background-image: url(../images/slider-runner.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  &-box {
+    border: none !important;
+    background: none;
+    position: absolute;
+    width: 735px;
+    height: inherit;
+  }
+  .ui-slider-handle {
+    margin: 20px 0 0;
+    transition: all 0.5s;
+    background: none;
+    border: none;
+    background-image: url(../images/runner-item.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    outline: none;
+    padding: 28px 123px;
+    z-index: 0;
+  }
+}
+.slider__runner-titles {
+  color: rgb(78, 78, 78);
+  font-family: "Gilroy";
+  font-weight: 400;
+  font-size: 26px;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 982px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding-bottom: 5px;
+  z-index: 1;
+  .slider__runner-title {
+    position: relative;
+    padding-top: 12px;
+    height: 55px;
+    align-items: center;
+    transition: all 0.5s;
+    visibility: visible;
+    cursor: pointer;
+    width: 245px;
+    text-align: center;
+  }
+}
 @import "media";
