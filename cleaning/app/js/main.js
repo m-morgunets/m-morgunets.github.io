@@ -53,7 +53,6 @@ $(function () {
       });
       $('.ui-slider-handle ul li:nth-child(' + n + ')').css('opacity', 0);
 
-      $('.ui-slider-handle ul li:nth-child(' + steps[ui.value] + ')').css('opacity', 1);
       $('.slider__item:nth-child(' + steps[ui.value] + ')').css({
         'opacity': 1,
         'visibility': 'visible'
@@ -62,6 +61,7 @@ $(function () {
         'color': '#e6e6e6',
         'opacity': 0
       });
+      $('.ui-slider-handle ul li:nth-child(' + steps[ui.value] + ')').css('opacity', 1);
       n = steps[ui.value];
     }
   });
