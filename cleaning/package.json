@@ -12,6 +12,7 @@
     "animate.css": "^3.7.2",
     "browser-sync": "^2.26.5",
     "del": "^5.0.0",
+    "fancybox": "^3.0.1",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.1.0",
     "gulp-concat": "^2.6.1",
@@ -19,7 +20,8 @@
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.2",
     "normalize.css": "^8.0.1",
-    "parallax-js": "^3.1.0"
+    "parallax-js": "^3.1.0",
+    "popup-simple": "^1.0.7"
   },
   "dependencies": {
     "slick-carousel": "^1.8.1"
