@@ -26,7 +26,6 @@ gulp.task('scss', function () {
 gulp.task('css', function () {
   return gulp.src([
     'node_modules/normalize.css/normalize.css',
-    'node_modules/slick-carousel/slick/slick.css',
     'node_modules/animate.css/animate.css',
   ])
     .pipe(concat('_libs.scss'))
@@ -46,9 +45,9 @@ gulp.task('script', function () {
 
 gulp.task('js', function () {
   return gulp.src([
-    'node_modules/parallax.js-1.5.0/parallax.min.js',
-    'node_modules/jquery-popup-overlay/jquery.popupoverlay.js',
-    'node_modules/jquery.maskedinput/jquery.maskedinput.min.js',
+    'parallax.js-1.5.0/parallax.min.js',
+    'jquery.maskedinput/jquery.maskedinput.min.js',
+    'node_modules/parallax-js/dist/parallax.min.js',
   ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())

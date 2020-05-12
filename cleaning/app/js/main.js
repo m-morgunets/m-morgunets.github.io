@@ -1,15 +1,27 @@
 $(function () {
 
   // Slider на втором экране
-  let itemIndex = 0;
+  let servicesItemIndex = 0;
   $('.list__item').on('mouseover', function () {
-    if ($(this).index() != itemIndex) {
-      $('.list__item:nth-child(' + (itemIndex + 1) + ')').toggleClass('active');
+    if ($(this).index() != servicesItemIndex) {
+      $('.list__item:nth-child(' + (servicesItemIndex + 1) + ')').toggleClass('active');
       $(this).toggleClass('active');
-      $('.box__item:nth-child(' + (itemIndex + 1) + ')').toggleClass('active');
+      $('.box__item:nth-child(' + (servicesItemIndex + 1) + ')').toggleClass('active');
       $('.box__item:nth-child(' + ($(this).index() + 1) + ')').toggleClass('active');
     }
-    itemIndex = $(this).index();
+    servicesItemIndex = $(this).index();
+  })
+
+  // Slider на четвертом экране
+  let sliderItemIndex = 0;
+  $('.slider__runner-title').on('click', function () {
+    if ($(this).index() != sliderItemIndex) {
+      $('.slider__runner-title:nth-child(' + (sliderItemIndex + 1) + ')').toggleClass('active');
+      $(this).toggleClass('active');
+      $('.slider__item:nth-child(' + (sliderItemIndex + 1) + ')').toggleClass('active');
+      $('.slider__item:nth-child(' + ($(this).index() + 1) + ')').toggleClass('active');
+    }
+    sliderItemIndex = $(this).index();
   })
 
   //Параллакс эффект кубиков
@@ -46,85 +58,77 @@ $(function () {
     });
   }
 
-  // Настройка UI-слайдера со всеми переходами и анимациями
-  let n = 1;
-  let i = 0
-  var steps = [1, 2, 3, 4];
+  // Преобразование номера телефона
+  $('.test-number__send-input input').mask("+7(999) 999 99-99");
+  $('.popup-tel').mask("+7(999) 999 99-99");
 
-  $('.slider__runner-box').slider({
-    value: 0,
-    min: 0,
-    max: steps.length - 1,
-    step: 1,
-    slide: function addSlider(event, ui) {
-      $('.slider__item:nth-child(' + n + ')').css({
-        'opacity': 0,
-        'visibility': 'hidden'
-      });
-      $('.slider__runner-title:nth-child(' + n + ')').css({
-        'color': '#4e4e4e',
-        'opacity': 1
-      });
-      $('.ui-slider-handle ul li:nth-child(' + n + ')').css('opacity', 0);
-      $('.slider__item:nth-child(' + n + ')').toggleClass('active');
+  //PopUP
+  $('.header__phone-btn').click(function () {
+    $('.phone-popup').fadeIn();
+    return false;
+  });
 
-      $('.slider__item:nth-child(' + steps[ui.value] + ')').css({
-        'opacity': 1,
-        'visibility': 'visible'
-      });
-      $('.slider__runner-title:nth-child(' + steps[ui.value] + ')').css({
-        'color': '#e6e6e6',
-        'opacity': 0
-      });
-      $('.ui-slider-handle ul li:nth-child(' + steps[ui.value] + ')').css('opacity', 1);
-      setTimeout(() => {
-        $('.slider__item:nth-child(' + steps[ui.value] + ')').toggleClass('active');
-      }, 300)
-      n = steps[ui.value];
+  $('.popup-close').click(function () {
+    $(this).parents('.phone-popup').fadeOut();
+    return false;
+  });
+
+  $(document).keydown(function (e) {
+    if (e.keyCode === 27) {
+      e.stopPropagation();
+      $('.phone-popup').fadeOut();
     }
   });
 
+  $('.phone-popup').click(function (e) {
+    if ($(e.target).closest('.popup').length == 0) {
+      $(this).fadeOut();
+    }
+  });
 
-  $('.slider__runner-title').on('click', function () {
-    let index = $(this).index();
-    console.log(index);
-
-    // $('.slider__runner-box').slider('steps', index);
-  })
-  // $('.slider__runner-box').slider('value', )
+  // AJAX отправка обратной связи
+  $('#sendMail').on('click', function () {
+    var name = $('#name').val().trim();
+    var phone = $('#phone').val().trim();
 
 
-  // Добавление UL списка с заголовками в кнопку
-  let addUl = $('<ul><li>Кухня</li><li>Комната</li><li>Прихожая</li><li>Туалет</li></ul>')
-  $('.ui-slider-handle').html(addUl);
+    if (name == "" & phone == "") {
+      return false
+    } else if (name == "") {
+      return false
+    } else if (phone == "") {
+      return false
+    }
+    $('#errorMess').text("")
 
-  // Default значения при первой загрузке страницы
-  $('.slider__item:nth-child(1)').css({
-    'opacity': 1,
-    'visibility': 'visible'
-  })
-  $('.slider__runner-title:nth-child(1)').css('color', '#e6e6e6');
-  $('.ui-slider-handle ul li:nth-child(1)').css('opacity', 1);
-  $('.slider__item:nth-child(1)').toggleClass('active');
-
-  // Анимация при клике на ползунок
-  function mousDown() {
-    $('.ui-slider-handle ul').css({
-      'cursor': 'grabbing',
-      'cursor': '-webkit-grabbing',
-      'opacity': 0
+    $.ajax({
+      url: 'php/mail.php',
+      type: 'POST',
+      cache: false,
+      data: { 'name': name, 'phone': phone },
+      dataType: 'html',
+      beforeSend: function () {
+        $('#sendMail').prop('disabled', true);
+      },
+      success: function (data) {
+        if (data) {
+          $('#phoneForm').trigger('reset');
+        }
+        $('#sendMail').prop('disabled', false);
+      },
     })
-  }
-  function mouseUp() {
-    $('.ui-slider-handle ul').css({
-      'cursor': 'grab',
-      'cursor': '-webkit-grab',
-      'opacity': 1
-    });
-  };
-  $('.ui-slider-handle ul').on('mousedown', mousDown);
-  $('.ui-slider-handle ul').on('mouseup', mouseUp);
+  })
 
-  // Преобразование номера телефона
-  $('.test-number__send-input input').mask("+7(999) 999 99-99");
+  // Анимация в секции "exemples"
+  $('.examples__item').on('mouseover', function () {
+    $(this).addClass('active')
+  })
+
+  // Paralax.js в секции "exemples"
+  var scene = document.querySelectorAll('.examples_paralax-item')
+  for (let elem of scene) {
+    var parallaxInstance = new Parallax(elem, {
+      relativeInput: true
+    });
+  }
 });

@@ -6,6 +6,7 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -43,4 +44,21 @@ button {
   animation-iteration-count: infinite;
   position: absolute;
   z-index: 4;
+}
+
+.section-title {
+  font-family: "GillSansNova";
+  font-weight: 400;
+  font-size: 53px;
+  text-align: center;
+  color: #4e4e4e;
+}
+
+.section-subtitle {
+  font-family: "GillSansNova";
+  font-weight: 400;
+  text-align: center;
+  color: #bbb;
+  font-size: 21px;
+  line-height: 19px;
 }
