@@ -24,6 +24,18 @@ $(function () {
     sliderItemIndex = $(this).index();
   })
 
+  // Slider в тесте
+  let testItemIndex = 0;
+  $('.popup-view__btn').on('click', function () {
+    if ($(this).index() != testItemIndex) {
+      $('.popup-view__btn:nth-child(' + (testItemIndex + 1) + ')').toggleClass('active');
+      $(this).toggleClass('active');
+      $('.popup-item:nth-child(' + (testItemIndex + 1) + ')').toggleClass('active');
+      $('.popup-item:nth-child(' + ($(this).index() + 1) + ')').toggleClass('active');
+    }
+    testItemIndex = $(this).index();
+  })
+
   //Параллакс эффект кубиков
   $(window).scroll(function (event) {
     let scroll = $(this).scrollTop();
@@ -58,9 +70,10 @@ $(function () {
     });
   }
 
-  // Преобразование номера телефона
+  // Преобразование полей с номера телефонов
   $('.test-number__send-input input').mask("+7(999) 999 99-99");
   $('.popup-tel').mask("+7(999) 999 99-99");
+  $('#test-phone').mask("+7(999) 999 99-99");
 
   //PopUP в первой секции
   $('.header__phone-btn').click(function () {
@@ -166,4 +179,71 @@ $(function () {
       relativeInput: true
     });
   }
+
+  // Выпадающий список в тесте
+  const selectSingleOne = document.querySelector('.__select--1');
+  const selectSingle_titleOne = selectSingleOne.querySelector('.__select__title');
+  const selectSingle_labelsOne = selectSingleOne.querySelectorAll('.__select__label');
+
+  const selectSingleTwo = document.querySelector('.__select--2');
+  const selectSingle_titleTwo = selectSingleTwo.querySelector('.__select__title');
+  const selectSingle_labelsTwo = selectSingleTwo.querySelectorAll('.__select__label');
+
+  const selectSingleThree = document.querySelector('.__select--3');
+  const selectSingle_titleThree = selectSingleThree.querySelector('.__select__title');
+  const selectSingle_labelsThree = selectSingleThree.querySelectorAll('.__select__label');
+
+  const selectSingleFour = document.querySelector('.__select--4');
+  const selectSingle_titleFour = selectSingleFour.querySelector('.__select__title');
+  const selectSingle_labelsFour = selectSingleFour.querySelectorAll('.__select__label');
+
+  const selectSingleFive = document.querySelector('.__select--5');
+  const selectSingle_titleFive = selectSingleFive.querySelector('.__select__title');
+  const selectSingle_labelsFive = selectSingleFive.querySelectorAll('.__select__label');
+
+  const selectSingleSix = document.querySelector('.__select--6');
+  const selectSingle_titleSix = selectSingleSix.querySelector('.__select__title');
+  const selectSingle_labelsSix = selectSingleSix.querySelectorAll('.__select__label');
+
+  select(selectSingleOne, selectSingle_titleOne, selectSingle_labelsOne);
+  select(selectSingleTwo, selectSingle_titleTwo, selectSingle_labelsTwo);
+  select(selectSingleThree, selectSingle_titleThree, selectSingle_labelsThree);
+  select(selectSingleFour, selectSingle_titleFour, selectSingle_labelsFour);
+  select(selectSingleFive, selectSingle_titleFive, selectSingle_labelsFive);
+  select(selectSingleSix, selectSingle_titleSix, selectSingle_labelsSix);
+
+  function select(single, title, label) {
+    // Toggle menu
+    title.addEventListener('click', () => {
+      if ('active' === single.getAttribute('data-state')) {
+        single.setAttribute('data-state', '');
+      } else {
+        single.setAttribute('data-state', 'active');
+      }
+    });
+
+    // Close when click to option
+    for (let i = 0; i < label.length; i++) {
+      label[i].addEventListener('click', (evt) => {
+        title.textContent = evt.target.textContent;
+        single.setAttribute('data-state', '');
+      });
+    }
+  }
+
+  let Value = "";
+  $('.popup-bell__form-input input').keyup(function () {
+    Value = $(this).val();
+    if (Value.length > 0) {
+      $(this).addClass('active');
+    }
+  });
+  $('.popup-bell__form-input input').focus(function () {
+    $(this).addClass('active');
+  })
+  $('.popup-bell__form-input input').blur(function () {
+    if (Value.length <= 0) {
+      $(this).removeClass('active');
+    }
+  })
 });
