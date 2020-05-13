@@ -150,8 +150,8 @@
           <div class="test-popup__btn-bg"><img src="images/test-hoverBtn.jpg" alt=""></div>
         </div>
         <div class="test__content">
-          <div class="test__title">Расчитай стоимость своей уборки прямо сейчас!</div>
-          <div class="test__subtitle">Пройди тест и узнай, сколько стоит твоя уборка</div>
+          <div class="test__title">Рассчитайте стоимость своей уборки прямо сейчас!</div>
+          <div class="test__subtitle">Пройдите тест и узнайте, сколько стоит ваша уборка</div>
         </div>
       </div>
       <div class="test__number">
@@ -163,7 +163,7 @@
           <div class="test-number__send-btn">Перезвоните мне!</div>
         </div>
         <div class="test__content">
-          <div class="test__title">...или оставь свой номер</div>
+          <div class="test__title">...или оставьте свой номер</div>
           <div class="test__subtitle">и мы перезвоним в тчение 5 минут!</div>
         </div>
       </div>
@@ -331,16 +331,16 @@
     <div class="container">
       <div class="examples-box">
         <div class="examples_paralax-item paralax--1">
-          <img data-depth="0.4" src="images/lemon.png" alt="">
-          <img data-depth="0.2" src="images/lemon-shadow.png" alt="">
+          <img data-depth="0.2" src="images/lemon.png" alt="">
+          <img data-depth="0.1" src="images/lemon-shadow.png" alt="">
         </div>
         <div class="examples_paralax-item paralax--2">
-          <img data-depth="0.45" src="images/lemon.png" alt="">
-          <img data-depth="0.25" src="images/lemon-shadow.png" alt="">
+          <img data-depth="0.2" src="images/lemon.png" alt="">
+          <img data-depth="0.1" src="images/lemon-shadow.png" alt="">
         </div>
         <div class="examples_paralax-item paralax--3">
-          <img data-depth="0.5" src="images/lemon.png" alt="">
-          <img data-depth="0.3" src="images/lemon-shadow.png" alt="">
+          <img data-depth="0.2" src="images/lemon.png" alt="">
+          <img data-depth="0.1" src="images/lemon-shadow.png" alt="">
         </div>
         <div class="section-title">Хотите также?</div>
         <div class="section-subtitle">Наводите мышку на картинки</div>
@@ -382,10 +382,7 @@
               <div class="examples__item-mg-after"><img src="images/examples-itemtAfter--1.jpg" alt=""></div>
             </div>
           </div>
-          <div class="examples__text">Это примерный текст, в котором можно раскрыть
-            какие-либо преимущества вашей компании, рассказать про секрет успешной уборке, о средствах, которыми
-            вы пользуетесь. О том, сколько времени вы уже
-            работаете и сколько у вас было клиентов</div>
+          <div class="examples__remove"><img src="images/remove-arrows.png" alt=""></div>
           <div class="examples__text">Это примерный текст, в котором можно раскрыть
             какие-либо преимущества вашей компании, рассказать про секрет успешной уборке, о средствах, которыми
             вы пользуетесь. О том, сколько времени вы уже
@@ -399,7 +396,7 @@
     <div class="container">
       <div class="section-title">Посмотрите видео и убедитесь во всем сами ;)</div>
       <div class="video__content">
-        <iframe width="730" height="480" src="https://www.youtube.com/embed/EGyCJci7kT8" frameborder=""
+        <iframe width="730" height="480" src="https://www.youtube.com/embed/0wCC3aLXdOw" frameborder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <div class="video__content-right">
           <div class="video__content-test">
@@ -423,6 +420,54 @@
       <input class="popup-tel" id="phone" type="text" placeholder="Ваш телефон">
       <button class="popup-btn" id="sendMail" type="button">Отправить</button>
     </form>
+  </div>
+
+  <div class="test-popup">
+    <div class="popup" id="phoneForm">
+      <a class="popup-close" href="#"></a>
+      <div class="popup-left">
+        <div class="popup-title">Рассчет стоимости</div>
+        <div class="popup-view">
+          <div class="popup-view__title">Какой вид услуги необходим?</div>
+          <div class="popup-view__inner">
+            <div class="popup-view__btn">Уборка</div>
+            <div class="popup-view__btn">Химчистка мебели</div>
+            <div class="popup-view__btn">Мытье окон</div>
+          </div>
+        </div>
+        <div class="popup-questions">
+          <div class="popup-question--1">
+            <div class="popup-question__title">Где необходимо провести уборку?</div>
+            <div class="popup-question__list">
+              <select>
+                <option disabled selected="selected">Пункт 1</option>
+                <option value="300">Пункт 2</option>
+                <option value="200">Пункт 3</option>
+                <option value="150">Пункт 4</option>
+              </select>
+            </div>
+          </div>
+          <div class="popup-question--2">
+            <div class="popup-question__title">Второй вопрос с выпадающим списком?</div>
+            <div class="popup-question__list">
+              <select>
+                <option disabled selected="selected">Пункт 1</option>
+                <option value="500">Пункт 2</option>
+                <option value="250">Пункт 3</option>
+                <option value="230">Пункт 4</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="popup-extra">
+          <div class="popup-extra__title">Что должно быть включено в уборку?</div>
+          <div class="popup-extra__check"><input type="checkbox">Химчистка мебели</div>
+          <div class="popup-extra__check"><input type="checkbox">Мытье окон</div>
+          <div class="popup-extra__check"><input type="checkbox">Мытье окон</div>
+          <div class="popup-extra__check"><input type="checkbox">Ещё что-то</div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
