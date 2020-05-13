@@ -62,7 +62,7 @@ $(function () {
   $('.test-number__send-input input').mask("+7(999) 999 99-99");
   $('.popup-tel').mask("+7(999) 999 99-99");
 
-  //PopUP
+  //PopUP в первой секции
   $('.header__phone-btn').click(function () {
     $('.phone-popup').fadeIn();
     return false;
@@ -81,6 +81,30 @@ $(function () {
   });
 
   $('.phone-popup').click(function (e) {
+    if ($(e.target).closest('.popup').length == 0) {
+      $(this).fadeOut();
+    }
+  });
+
+  // PopUp-тест
+  $('.test__popup-btn').click(function () {
+    $('.test-popup').fadeIn();
+    return false;
+  });
+
+  $('.popup-close').click(function () {
+    $(this).parents('.test-popup').fadeOut();
+    return false;
+  });
+
+  $(document).keydown(function (e) {
+    if (e.keyCode === 27) {
+      e.stopPropagation();
+      $('.test-popup').fadeOut();
+    }
+  });
+
+  $('.test-popup').click(function (e) {
     if ($(e.target).closest('.popup').length == 0) {
       $(this).fadeOut();
     }
@@ -120,8 +144,19 @@ $(function () {
   })
 
   // Анимация в секции "exemples"
+  let activeCheck = 0;
+  let rotateRemove = 0;
   $('.examples__item').on('mouseover', function () {
+    activeCheck++
     $(this).addClass('active')
+  })
+  $('.examples__remove').on('click', function () {
+    if (activeCheck != 0) {
+      rotateRemove += 180;
+      $(this).css('transform', 'rotate(' + rotateRemove + 'deg)')
+    }
+    activeCheck = 0
+    $('.examples__item').removeClass('active');
   })
 
   // Paralax.js в секции "exemples"
