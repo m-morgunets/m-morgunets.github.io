@@ -246,4 +246,13 @@ $(function () {
       $(this).removeClass('active');
     }
   })
+
+  // Белый цвет на клик в секции Neon
+  $('.neon__item').on('click', function () {
+    $(this).addClass('white');
+  });
+
+  $('.neon__item').mouseleave(function () {
+    $(this).removeClass('white');
+  })
 });
