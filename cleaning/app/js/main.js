@@ -1,5 +1,16 @@
 $(function () {
 
+  // Slider на секции с отзывами
+  $('.reviews__slider').slick({
+    // centerMode: true,
+    infinite: true,
+    dots: false,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    prevArrow: '<img class="slider-arrows slider-arrows__left" src="images/arrows-left.png" alt=""></img>',
+    nextArrow: '<img class="slider-arrows slider-arrows__right" src="images/arrows-right.png" alt=""></img>',
+  });
+
   // Slider на втором экране
   let servicesItemIndex = 0;
   $('.list__item').on('mouseover', function () {
@@ -34,6 +45,19 @@ $(function () {
       $('.popup-item:nth-child(' + ($(this).index() + 1) + ')').toggleClass('active');
     }
     testItemIndex = $(this).index();
+  })
+
+  // Slider в секции FAQ
+  let FAQItemIndex = 0;
+  $('.faq__item').on('click', function () {
+    if ($(this).index() != FAQItemIndex) {
+      $('.faq__item:nth-child(' + (FAQItemIndex + 1) + ')').removeClass('active');
+      $(this).addClass('active');
+    }
+    if ($(this).index() == FAQItemIndex) {
+      $(this).toggleClass('active');
+    }
+    FAQItemIndex = $(this).index();
   })
 
   //Параллакс эффект кубиков
@@ -74,6 +98,7 @@ $(function () {
   $('.test-number__send-input input').mask("+7(999) 999 99-99");
   $('.popup-tel').mask("+7(999) 999 99-99");
   $('#test-phone').mask("+7(999) 999 99-99");
+  $('.bell-content__phone input').mask("+7(999) 999 99-99");
 
   //PopUP в первой секции
   $('.header__phone-btn').click(function () {
@@ -101,6 +126,11 @@ $(function () {
 
   // PopUp-тест
   $('.test__popup-btn').click(function () {
+    $('.test-popup').fadeIn();
+    return false;
+  });
+
+  $('.home__btn').click(function () {
     $('.test-popup').fadeIn();
     return false;
   });
@@ -231,21 +261,26 @@ $(function () {
     }
   }
 
-  let Value = "";
-  $('.popup-bell__form-input input').keyup(function () {
-    Value = $(this).val();
-    if (Value.length > 0) {
+  formFocus($('.popup-bell__form-input input'));
+  formFocus($('.bell-content__input input'));
+  function formFocus(elem) {
+    let Value = "";
+    elem.keyup(function () {
+      Value = $(this).val();
+      if (Value.length > 0) {
+        $(this).addClass('active');
+      }
+    });
+    elem.focus(function () {
       $(this).addClass('active');
-    }
-  });
-  $('.popup-bell__form-input input').focus(function () {
-    $(this).addClass('active');
-  })
-  $('.popup-bell__form-input input').blur(function () {
-    if (Value.length <= 0) {
-      $(this).removeClass('active');
-    }
-  })
+    });
+    elem.blur(function () {
+      if (Value.length <= 0) {
+        $(this).removeClass('active');
+      }
+    });
+  }
+
 
   // Белый цвет на клик в секции Neon
   $('.neon__item').on('click', function () {

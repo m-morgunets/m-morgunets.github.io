@@ -21,9 +21,7 @@
     "gulp-uglify": "^3.0.2",
     "normalize.css": "^8.0.1",
     "parallax-js": "^3.1.0",
-    "popup-simple": "^1.0.7"
-  },
-  "dependencies": {
+    "popup-simple": "^1.0.7",
     "slick-carousel": "^1.8.1"
   }
 }
