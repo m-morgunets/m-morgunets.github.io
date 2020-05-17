@@ -48,6 +48,7 @@ gulp.task('js', function () {
   return gulp.src([
     'parallax.js-1.5.0/parallax.min.js',
     'jquery.maskedinput/jquery.maskedinput.min.js',
+    'browser/browser.js',
     'node_modules/parallax-js/dist/parallax.min.js',
     'node_modules/slick-carousel/slick/slick.js',
   ])
