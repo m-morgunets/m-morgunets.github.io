@@ -305,6 +305,75 @@
       height: 572px;
     }
   }
+  .neon__item-text {
+    padding-top: 15px;
+    font-size: 18px;
+    line-height: 23px;
+  }
+  .neon__item-title {
+    font-size: 46px;
+    line-height: 47px;
+  }
+  .neon__item-img {
+    img {
+      width: 80%;
+    }
+  }
+  .editorial {
+    height: 220px;
+  }
+  .reviews-box {
+    .phone {
+      width: 300px;
+      left: 5px;
+    }
+  }
+  .reviews__slider {
+    padding-top: 63px;
+    .slider-arrows__left {
+      display: none;
+    }
+  }
+  .reviews__item {
+    img {
+      width: 263px;
+    }
+  }
+  .faq__item-content {
+    font-size: 16px;
+  }
+  .faq__item {
+    max-width: 500px;
+  }
+  .bell-inner {
+    max-width: 900px;
+    height: 600px;
+    padding-top: 30px;
+  }
+  .bell__title {
+    font-size: 44px;
+  }
+  .bell__subtitle {
+    font-size: 21px;
+    margin-bottom: 30px;
+  }
+  .bell__content {
+    padding-top: 30px;
+    &::before {
+      width: 800px;
+    }
+  }
+  .bell-content__title {
+    font-size: 24px;
+  }
+  .bell__btn button {
+    font-size: 25px;
+    width: 400px;
+    height: 70px;
+  }
+  .bell__signature {
+    font-size: 17px;
+  }
 }
 
 @media (max-width: 1300px) {
