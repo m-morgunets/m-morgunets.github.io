@@ -1,8 +1,6 @@
 $(function () {
-
   // Slider на секции с отзывами
   $('.reviews__slider').slick({
-    // centerMode: true,
     infinite: true,
     dots: false,
     slidesToShow: 4,
@@ -69,10 +67,10 @@ $(function () {
   })
 
   //Параллакс эффект кубиков
-
+  let cubesScroll = $(window).scrollTop();
   scrollCubes()
   function scrollCubes() {
-    let scroll = $(this).scrollTop();
+    scroll = $(this).scrollTop();
     let t_1 = scroll * 0.8;
     let t_2 = scroll * 0.5;
     let t_3 = scroll * 0.3;
@@ -137,13 +135,26 @@ $(function () {
   });
 
   // PopUp-тест
+  let testScroll = $(window).scrollTop();
+
   $('.test__popup-btn').click(function () {
     $('.test-popup').fadeIn();
+    testScroll = $(window).scrollTop();
+    $('.test-popup').css('top', testScroll + 50 + 'px')
     return false;
   });
 
   $('.home__btn').click(function () {
     $('.test-popup').fadeIn();
+    testScroll = $(window).scrollTop();
+    $('.test-popup').css('top', testScroll + 50 + 'px')
+    return false;
+  });
+
+  $('.video-content__test-btn').click(function () {
+    $('.test-popup').fadeIn();
+    testScroll = $(window).scrollTop();
+    $('.test-popup').css('top', testScroll + 50 + 'px')
     return false;
   });
 

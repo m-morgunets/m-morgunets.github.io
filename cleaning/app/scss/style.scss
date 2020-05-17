@@ -1095,12 +1095,12 @@
 .neon__item-title {
   font-size: 53px;
   line-height: 57px;
-  max-width: 430px;
+  max-width: 360px;
   margin: 35px 0 30px;
 }
 .neon__item-text {
   position: relative;
-  max-width: 420px;
+  max-width: 360px;
   padding-top: 50px;
   font-weight: 400;
   font-size: 22px;
@@ -1518,6 +1518,7 @@
   color: #fff;
   display: flex;
   justify-content: space-between;
+  margin: 0 30px;
 }
 .footer__inner {
   width: 360px;
@@ -1700,8 +1701,11 @@
 
 .test-popup {
   display: none;
-  position: relative;
+  position: absolute;
   z-index: 10;
+  top: 50px;
+  left: 50%;
+  height: 870px;
   &::before {
     content: "";
     background: #000;
@@ -1715,12 +1719,12 @@
   }
   .popup {
     display: flex;
-    position: fixed;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 1105px;
-    height: 870px;
+    height: inherit;
     background: #fff;
     border-radius: 40px;
     z-index: 11;
