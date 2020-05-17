@@ -9,6 +9,14 @@ $(function () {
     slidesToScroll: 1,
     prevArrow: '<img class="slider-arrows slider-arrows__left" src="images/arrows-left.png" alt=""></img>',
     nextArrow: '<img class="slider-arrows slider-arrows__right" src="images/arrows-right.png" alt=""></img>',
+    responsive: [
+      {
+        breakpoint: 1300,
+        settings: {
+          slidesToShow: 3
+        }
+      }
+    ]
   });
 
   // Slider на втором экране
@@ -61,19 +69,23 @@ $(function () {
   })
 
   //Параллакс эффект кубиков
-  $(window).scroll(function (event) {
+
+  scrollCubes()
+  function scrollCubes() {
     let scroll = $(this).scrollTop();
     let t_1 = scroll * 0.8;
     let t_2 = scroll * 0.5;
     let t_3 = scroll * 0.3;
     let t_4 = scroll * 0.6;
     let t_5 = scroll * 0.3;
-
     $('.cubes-item--1').css('top', (-1 * t_1) - 60 + 'px');
-    $('.cubes-item--2').css('bottom', t_2 + 140 + 'px');
+    $('.cubes-item--2').css('bottom', t_2 - 80 + 'px');
     $('.cubes-item--3').css('top', (-1 * t_3) + 80 + 'px');
     $('.cubes-item--4').css('top', (-1 * t_3) + 150 + 'px');
     $('.cubes-item--5').css('top', (-1 * t_5) + 500 + 'px');
+  }
+  $(window).scroll(function (event) {
+    scrollCubes()
   });
 
   // Scroll на вторую страницу (кнопка на первом экране)
