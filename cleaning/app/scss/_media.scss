@@ -331,7 +331,7 @@
   .reviews__slider {
     padding-top: 63px;
     .slider-arrows__left {
-      display: none;
+      display: none !important;
     }
   }
   .reviews__item {

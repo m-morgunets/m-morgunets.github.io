@@ -1,4 +1,13 @@
 $(function () {
+
+  if (BrowserDetect.browser == "Explorer" || BrowserDetect.browser == "Safari" || BrowserDetect.OS == "iPhone/iPod") {
+    $('.test').parallax({ imageSrc: 'images/test-bg.jpg' });
+    $('.bell').parallax({ imageSrc: 'images/bell-bg.jpg' });
+  } else {
+    $('.test').parallax({ imageSrc: 'images/test-bg.webp' });
+    $('.bell').parallax({ imageSrc: 'images/bell-bg.webp' });
+  }
+
   // Slider на секции с отзывами
   $('.reviews__slider').slick({
     infinite: true,
