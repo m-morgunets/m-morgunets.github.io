@@ -3,23 +3,9 @@ $(function () {
   if (BrowserDetect.browser == "Explorer" || BrowserDetect.browser == "Safari" || BrowserDetect.OS == "iPhone/iPod") {
     $('.test').parallax({ imageSrc: 'images/test-bg.jpg' });
     $('.bell').parallax({ imageSrc: 'images/bell-bg.jpg' });
-    $('.services').css('background', 'url(../images/services-bg.jpg)');
-    $('.test__number-send').css('background', 'url(../images/test-btn.jpg)');
-    $('.slider').css('background', 'url(../images/slider-bg.jpg)');
-    $('.examples').css('background', 'url(../images/gray-bg.jpg)');
-    $('.video').css('background', 'url(../images/gray-bg.jpg)');
-    $('.reviews').css('background', 'url(../images/gray-bg.jpg)');
-    $('.faq').css('background', 'url(../images/gray-bg.jpg)');
   } else {
     $('.test').parallax({ imageSrc: 'images/test-bg.webp' });
     $('.bell').parallax({ imageSrc: 'images/bell-bg.webp' });
-    $('.services').css('background', 'url(../images/services-bg.webp)');
-    $('.test__number-send').css('background', 'url(../images/test-btn.webp)');
-    $('.slider').css('background', 'url(../images/slider-bg.webp)');
-    $('.examples').css('background', 'url(../images/gray-bg.webp)');
-    $('.video').css('background', 'url(../images/gray-bg.webp)');
-    $('.reviews').css('background', 'url(../images/gray-bg.webp)');
-    $('.faq').css('background', 'url(../images/gray-bg.webp)');
   }
 
   // Slider на секции с отзывами
