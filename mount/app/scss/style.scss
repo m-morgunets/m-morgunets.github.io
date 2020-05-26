@@ -6,7 +6,9 @@
 .home {
   min-height: 400px;
   position: relative;
-  background: transparent;
+  background-image: url(../images/home-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
   .mont-bg {
     position: absolute;
     bottom: -10px;

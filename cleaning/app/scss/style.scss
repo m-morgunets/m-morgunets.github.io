@@ -521,11 +521,6 @@
   padding-bottom: 5px;
   z-index: 0;
   .slider__runner-title {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
     cursor: pointer;
     margin-top: 5px;
@@ -1074,8 +1069,6 @@
     left: 0;
     width: inherit;
     height: 690px;
-    -webkit-box-shadow: inset 0px 0px 10px 0px rgba(255, 52, 52, 1);
-    -moz-box-shadow: inset 0px 0px 10px 0px rgba(255, 52, 52, 1);
     box-shadow: inset 0px 0px 10px 0px rgba(255, 52, 52, 1);
   }
   &:hover {
@@ -1147,8 +1140,6 @@
   margin: 30px 0;
   border-color: #ff3434;
   color: #ff3434;
-  -webkit-box-shadow: 0px 0px 10px 0px rgba(255, 52, 52, 1);
-  -moz-box-shadow: 0px 0px 10px 0px rgba(255, 52, 52, 1);
   box-shadow: 0px 0px 10px 0px rgba(255, 52, 52, 1);
   .neon__item-text::before {
     background-color: #ff3434;
@@ -1160,12 +1151,8 @@
 .neon__item.violet {
   border-color: #fd34ff;
   color: #fd34ff;
-  -webkit-box-shadow: 0px 0px 10px 0px rgba(253, 52, 255, 1);
-  -moz-box-shadow: 0px 0px 10px 0px rgba(253, 52, 255, 1);
   box-shadow: 0px 0px 10px 0px rgba(253, 52, 255, 1);
   &:before {
-    -webkit-box-shadow: inset 0px 0px 10px 0px rgba(253, 52, 255, 1);
-    -moz-box-shadow: inset 0px 0px 10px 0px rgba(253, 52, 255, 1);
     box-shadow: inset 0px 0px 10px 0px rgba(253, 52, 255, 1);
   }
   .neon__item-text::before {
@@ -1178,12 +1165,8 @@
 .neon__item.green {
   border-color: #5aff34;
   color: #5aff34;
-  -webkit-box-shadow: 0px 0px 10px 0px rgba(90, 255, 52, 1);
-  -moz-box-shadow: 0px 0px 10px 0px rgba(90, 255, 52, 1);
   box-shadow: 0px 0px 10px 0px rgba(90, 255, 52, 1);
   &:before {
-    -webkit-box-shadow: inset 0px 0px 10px 0px rgba(90, 255, 52, 1);
-    -moz-box-shadow: inset 0px 0px 10px 0px rgba(90, 255, 52, 1);
     box-shadow: inset 0px 0px 10px 0px rgba(90, 255, 52, 1);
   }
   .neon__item-text::before {
@@ -1197,12 +1180,8 @@
   margin: 30px 0;
   border-color: #34fffd;
   color: #34fffd;
-  -webkit-box-shadow: 0px 0px 10px 0px rgba(52, 255, 253, 1);
-  -moz-box-shadow: 0px 0px 10px 0px rgba(52, 255, 253, 1);
   box-shadow: 0px 0px 10px 0px rgba(52, 255, 253, 1);
   &:before {
-    -webkit-box-shadow: inset 0px 0px 10px 0px rgba(52, 255, 253, 1);
-    -moz-box-shadow: inset 0px 0px 10px 0px rgba(52, 255, 253, 1);
     box-shadow: inset 0px 0px 10px 0px rgba(52, 255, 253, 1);
   }
   .neon__item-text::before {
@@ -1397,13 +1376,6 @@
   min-height: 400px;
   position: relative;
   padding: 190px 0;
-  .bell-bg {
-    left: 0;
-    top: 0;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-  }
 }
 .bell-inner {
   position: relative;
@@ -1418,6 +1390,8 @@
   text-align: center;
 }
 .bell__title {
+  max-width: 750px;
+  margin: 0 auto;
   font-size: 50px;
   color: #4d4e4f;
   line-height: 47px;
@@ -1467,22 +1441,18 @@
 }
 .bell__btn {
   margin-top: 50px;
-  button {
-    cursor: pointer;
-    color: #462b0a;
-    font-family: "Gilroy";
-    font-weight: 900;
-    font-size: 27px;
-    width: 440px;
-    height: 85px;
-    border: none;
-    border-radius: 40px;
-    background-color: #ffd555;
-    border-bottom: 5px solid #bd8a4d;
-    -webkit-box-shadow: 0px 7px 14px 0px rgba(189, 138, 77, 0.69);
-    -moz-box-shadow: 0px 7px 14px 0px rgba(189, 138, 77, 0.69);
-    box-shadow: 0px 7px 14px 0px rgba(189, 138, 77, 0.69);
-  }
+  cursor: pointer;
+  color: #462b0a;
+  font-family: "Gilroy";
+  font-weight: 900;
+  font-size: 27px;
+  width: 440px;
+  height: 85px;
+  border: none;
+  border-radius: 40px;
+  background-color: #ffd555;
+  border-bottom: 5px solid #bd8a4d;
+  box-shadow: 0px 7px 14px 0px rgba(189, 138, 77, 0.69);
 }
 .bell__signature {
   position: absolute;
@@ -1609,42 +1579,39 @@
     opacity: 0.7;
     z-index: 10;
   }
-  .popup {
+  .bell-inner {
     position: fixed;
-    top: 20%;
+    top: 50%;
     left: 50%;
-    padding: 20px;
-    width: 400px;
-    height: 360px;
-    margin-left: -200px;
+    transform: translate(-50%, -50%);
+    width: 1110px;
     background: #fff;
-    border-radius: 4px;
+    border-radius: 40px;
     z-index: 11;
     opacity: 1;
+    .bell__title {
+      margin-bottom: 20px;
+    }
   }
   .popup-close {
+    z-index: 4;
     transition: all 0.5s;
     position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 50px;
-    height: 50px;
-    border-radius: 7px;
-    // border: 2px solid #000;
-    background-color: #000;
-    &:hover {
-      opacity: 1;
-    }
+    top: 25px;
+    right: 25px;
+    width: 21px;
+    height: 21px;
     &:before,
     &:after {
+      border-radius: 5px;
       transition: all 0.5s;
       position: absolute;
-      left: 22px;
-      top: 5px;
+      left: 10px;
+      top: 0;
       content: " ";
-      height: 40px;
-      width: 6px;
-      background-color: #fff;
+      height: 21px;
+      width: 3px;
+      background-color: #dadada;
     }
     &:before {
       transform: rotate(45deg);
@@ -1653,10 +1620,9 @@
       transform: rotate(-45deg);
     }
     &:hover {
-      background-color: transparent;
       &:before,
       &:after {
-        background-color: #000;
+        background-color: #b1b1b1;
       }
       &:before {
         transform: rotate(-135deg);
@@ -1664,56 +1630,6 @@
       &:after {
         transform: rotate(135deg);
       }
-    }
-  }
-  .popup-name,
-  .popup-tel {
-    outline: none;
-    position: absolute;
-    top: 100px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: none;
-    border-radius: 20px;
-    width: 300px;
-    height: 60px;
-    text-align: center;
-    border: 2px solid #000;
-    color: #000;
-    font-family: "GillSansNova";
-    font-weight: 400;
-    font-size: 20px;
-    &::placeholder {
-      color: #000;
-      font-family: "GillSansNova";
-      font-weight: 400;
-    }
-  }
-  .popup-name {
-    margin-top: 80px;
-  }
-  .popup-tel {
-    margin: 10px 0 10px;
-  }
-  .popup-btn {
-    outline: none;
-    transition: all 0.5s;
-    cursor: pointer;
-    border-radius: 20px;
-    padding: 10px 50px;
-    color: #fff;
-    font-size: 25px;
-    font-family: "GillSansNova";
-    font-weight: 400;
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #000;
-    border: 2px solid #000;
-    &:hover {
-      background: transparent;
-      color: #000;
     }
   }
 }
@@ -1779,6 +1695,12 @@
       &:before,
       &:after {
         background-color: #b1b1b1;
+      }
+      &:before {
+        transform: rotate(-135deg);
+      }
+      &:after {
+        transform: rotate(135deg);
       }
     }
   }
@@ -1981,7 +1903,7 @@
 }
 .popup-bell__btn {
   border: none;
-  border-bottom-right-radius: 43px;
+  border-bottom-right-radius: 40px;
   position: absolute;
   bottom: 0;
   right: 0;

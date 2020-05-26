@@ -808,7 +808,7 @@
     </div>
   </section>
 
-  <section class="bell">
+  <!-- <section class="bell">
     <div class="container">
       <div class="bell-inner">
         <div class="bell__title">Не нашли ответа на свой вопрос?</div>
@@ -823,11 +823,11 @@
             <div class="bell-content__input"><input type="text"></div>
           </div>
         </div>
-        <div class="bell__btn"><button>Заказать звонок!</button></div>
+        <button class="bell__btn">Заказать звонок!</button>
         <div class="bell__signature">Мы перезвоним вам в течение 5 минут и ответим на все ваши вопросы!</div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <footer class="footer">
     <div class="container">
@@ -880,12 +880,24 @@
 
 
   <div class="phone-popup">
-    <form class="popup" id="phoneForm">
+    <!-- <form class="popup" id="phoneForm"> -->
+    <form class="bell-inner" id="phoneForm">
       <a class="popup-close" href="#"></a>
-      <input class="popup-name" id="name" type="text" placeholder="Ваше имя">
-      <input class="popup-tel" id="phone" type="text" placeholder="Ваш телефон">
-      <button class="popup-btn" id="sendMail" type="button">Отправить</button>
+      <div class="bell__title">Оставьте ваш номер и мы перезвоним в течение 5 минут!</div>
+      <div class="bell__content">
+        <div class="bell__content-name">
+          <div class="bell-content__title">Как к вам обращаться?</div>
+          <div class="bell-content__input"><input id="name" type="text"></div>
+        </div>
+        <div class="bell-content__phone">
+          <div class="bell-content__title">Ваш номер:</div>
+          <div class="bell-content__input"><input id="phone" type="text"></div>
+        </div>
+      </div>
+      <button class="bell__btn">Заказать звонок!</button>
+      <div class="bell__signature">Мы перезвоним вам в течение 5 минут и ответим на все ваши вопросы!</div>
     </form>
+    <!-- </form> -->
   </div>
 
   <div class="test-popup">
