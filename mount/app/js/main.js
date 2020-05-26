@@ -1,5 +1,13 @@
 $(function () {
 
+  let windowWidth = document.documentElement.clientWidth;
+  $('.home').css('background', 'transparent')
+  if (windowWidth > 584) {
+    $('.home').parallax({ imageSrc: 'images/home-bg.jpg' });
+  }
+  if (windowWidth <= 584) {
+    $('.home').parallax({ imageSrc: 'images/home-miniBg.jpg' });
+  }
 
   let shopRock = document.querySelector('.shop-rock');
   let bonusRock = document.querySelector('.bonus-rock')
@@ -46,15 +54,6 @@ $(function () {
     if ($(this).scrollTop() < $('.bonus').offset().top - 1500 && flagBonusTop == false) {
       flagBonusTop = true;
     }
-  }
-
-
-  let windowWidth = document.documentElement.clientWidth;
-  if (windowWidth > 584) {
-    $('.home').parallax({ imageSrc: 'images/home-bg.jpg' });
-  }
-  if (windowWidth <= 584) {
-    $('.home').parallax({ imageSrc: 'images/home-miniBg.jpg' });
   }
 
   $('.home__content-btn').on('click', function () {

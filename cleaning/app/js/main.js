@@ -138,54 +138,85 @@ $(function () {
   });
 
   $('.phone-popup').click(function (e) {
-    if ($(e.target).closest('.popup').length == 0) {
+    if ($(e.target).closest('.bell-inner').length == 0) {
       $(this).fadeOut();
     }
   });
 
-  // PopUp-тест
-  let testScroll = $(window).scrollTop();
+  // // PopUp-тест
+  // let testScroll = $(window).scrollTop();
 
-  $('.test__popup-btn').click(function () {
-    $('.test-popup').fadeIn();
-    testScroll = $(window).scrollTop();
-    $('.test-popup').css('top', testScroll + 50 + 'px')
-    return false;
-  });
+  // $('.test__popup-btn').click(function () {
+  //   $('.test-popup').fadeIn();
+  //   testScroll = $(window).scrollTop();
+  //   $('.test-popup').css('top', testScroll + 50 + 'px')
+  //   return false;
+  // });
 
-  $('.home__btn').click(function () {
-    $('.test-popup').fadeIn();
-    testScroll = $(window).scrollTop();
-    $('.test-popup').css('top', testScroll + 50 + 'px')
-    return false;
-  });
+  // $('.home__btn').click(function () {
+  //   $('.test-popup').fadeIn();
+  //   testScroll = $(window).scrollTop();
+  //   $('.test-popup').css('top', testScroll + 50 + 'px')
+  //   return false;
+  // });
 
-  $('.video-content__test-btn').click(function () {
-    $('.test-popup').fadeIn();
-    testScroll = $(window).scrollTop();
-    $('.test-popup').css('top', testScroll + 50 + 'px')
-    return false;
-  });
+  // $('.video-content__test-btn').click(function () {
+  //   $('.test-popup').fadeIn();
+  //   testScroll = $(window).scrollTop();
+  //   $('.test-popup').css('top', testScroll + 50 + 'px')
+  //   return false;
+  // });
 
-  $('.popup-close').click(function () {
-    $(this).parents('.test-popup').fadeOut();
-    return false;
-  });
+  // $('.popup-close').click(function () {
+  //   $(this).parents('.test-popup').fadeOut();
+  //   return false;
+  // });
 
-  $(document).keydown(function (e) {
-    if (e.keyCode === 27) {
-      e.stopPropagation();
-      $('.test-popup').fadeOut();
+  // $(document).keydown(function (e) {
+  //   if (e.keyCode === 27) {
+  //     e.stopPropagation();
+  //     $('.test-popup').fadeOut();
+  //   }
+  // });
+
+  // $('.test-popup').click(function (e) {
+  //   if ($(e.target).closest('.popup').length == 0) {
+  //     $(this).fadeOut();
+  //   }
+  // });
+
+  // AJAX отправка обратной связи из PopUP
+  $('.phone-popup .bell__btn').on('click', function () {
+    var name = $('.' + this + '#name').val().trim();
+    var phone = $('#phone').val().trim();
+
+    if (name == "" & phone == "") {
+      return false
+    } else if (name == "") {
+      return false
+    } else if (phone == "") {
+      return false
     }
-  });
 
-  $('.test-popup').click(function (e) {
-    if ($(e.target).closest('.popup').length == 0) {
-      $(this).fadeOut();
-    }
-  });
+    $.ajax({
+      url: 'php/mail.php',
+      type: 'POST',
+      cache: false,
+      data: { 'name': name, 'phone': phone },
+      dataType: 'html',
+      beforeSend: function () {
+        // $('#sendMail').prop('disabled', true);
+      },
+      success: function (data) {
+        if (data) {
+          $('#phoneForm').trigger('reset');
+        }
+        // $('#sendMail').prop('disabled', false);
+      },
+    })
+  })
 
-  // AJAX отправка обратной связи
+  // AJAX отправка обратной связи из секции
   $('#sendMail').on('click', function () {
     var name = $('#name').val().trim();
     var phone = $('#phone').val().trim();
