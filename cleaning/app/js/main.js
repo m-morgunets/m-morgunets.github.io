@@ -85,7 +85,7 @@ $(function () {
     let t_3 = scroll * 0.3;
     let t_4 = scroll * 0.6;
     let t_5 = scroll * 0.3;
-    $('.cubes-item--1').css('top', (-1 * t_1) - 60 + 'px');
+    $('.cubes-item--1').css('top', (-1 * t_1) + 30 + 'px');
     $('.cubes-item--2').css('bottom', t_2 - 80 + 'px');
     $('.cubes-item--3').css('top', (-1 * t_3) + 80 + 'px');
     $('.cubes-item--4').css('top', (-1 * t_3) + 150 + 'px');
@@ -143,47 +143,47 @@ $(function () {
     }
   });
 
-  // // PopUp-тест
-  // let testScroll = $(window).scrollTop();
+  // PopUp-тест
+  let testScroll = $(window).scrollTop();
 
-  // $('.test__popup-btn').click(function () {
-  //   $('.test-popup').fadeIn();
-  //   testScroll = $(window).scrollTop();
-  //   $('.test-popup').css('top', testScroll + 50 + 'px')
-  //   return false;
-  // });
+  $('.test__popup-btn').click(function () {
+    $('.test-popup').fadeIn();
+    testScroll = $(window).scrollTop();
+    $('.test-popup').css('top', testScroll + 50 + 'px')
+    return false;
+  });
 
-  // $('.home__btn').click(function () {
-  //   $('.test-popup').fadeIn();
-  //   testScroll = $(window).scrollTop();
-  //   $('.test-popup').css('top', testScroll + 50 + 'px')
-  //   return false;
-  // });
+  $('.home__btn').click(function () {
+    $('.test-popup').fadeIn();
+    testScroll = $(window).scrollTop();
+    $('.test-popup').css('top', testScroll + 50 + 'px')
+    return false;
+  });
 
-  // $('.video-content__test-btn').click(function () {
-  //   $('.test-popup').fadeIn();
-  //   testScroll = $(window).scrollTop();
-  //   $('.test-popup').css('top', testScroll + 50 + 'px')
-  //   return false;
-  // });
+  $('.video-content__test-btn').click(function () {
+    $('.test-popup').fadeIn();
+    testScroll = $(window).scrollTop();
+    $('.test-popup').css('top', testScroll + 50 + 'px')
+    return false;
+  });
 
-  // $('.popup-close').click(function () {
-  //   $(this).parents('.test-popup').fadeOut();
-  //   return false;
-  // });
+  $('.popup-close').click(function () {
+    $(this).parents('.test-popup').fadeOut();
+    return false;
+  });
 
-  // $(document).keydown(function (e) {
-  //   if (e.keyCode === 27) {
-  //     e.stopPropagation();
-  //     $('.test-popup').fadeOut();
-  //   }
-  // });
+  $(document).keydown(function (e) {
+    if (e.keyCode === 27) {
+      e.stopPropagation();
+      $('.test-popup').fadeOut();
+    }
+  });
 
-  // $('.test-popup').click(function (e) {
-  //   if ($(e.target).closest('.popup').length == 0) {
-  //     $(this).fadeOut();
-  //   }
-  // });
+  $('.test-popup').click(function (e) {
+    if ($(e.target).closest('.popup').length == 0) {
+      $(this).fadeOut();
+    }
+  });
 
   // AJAX отправка обратной связи из PopUP
   $('.phone-popup .bell__btn').on('click', function () {
@@ -259,7 +259,7 @@ $(function () {
   $('.examples__remove').on('click', function () {
     if (activeCheck != 0) {
       rotateRemove += 180;
-      $(this).css('transform', 'rotate(' + rotateRemove + 'deg)')
+      $(this).css('transform', 'translateY(-50%) rotate(' + rotateRemove + 'deg)')
     }
     activeCheck = 0
     $('.examples__item').removeClass('active');
