@@ -46,6 +46,18 @@ button {
   z-index: 4;
 }
 
+@keyframes cubesAnim {
+  from {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
 .section-title {
   font-family: "GillSansNova";
   font-weight: 400;
