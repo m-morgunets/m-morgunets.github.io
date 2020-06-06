@@ -86,7 +86,7 @@ $(function () {
     let t_4 = scroll * 0.6;
     let t_5 = scroll * 0.3;
     $('.cubes-item--1').css('top', (-1 * t_1) + 30 + 'px');
-    $('.cubes-item--2').css('bottom', t_2 - 80 + 'px');
+    $('.cubes-item--2').css('bottom', t_2 - 20 + 'px');
     $('.cubes-item--3').css('top', (-1 * t_3) + 80 + 'px');
     $('.cubes-item--4').css('top', (-1 * t_3) + 150 + 'px');
     $('.cubes-item--5').css('top', (-1 * t_5) + 500 + 'px');
@@ -139,48 +139,6 @@ $(function () {
 
   $('.phone-popup').click(function (e) {
     if ($(e.target).closest('.bell-inner').length == 0) {
-      $(this).fadeOut();
-    }
-  });
-
-  // PopUp-тест
-  let testScroll = $(window).scrollTop();
-
-  $('.test__popup-btn').click(function () {
-    $('.test-popup').fadeIn();
-    testScroll = $(window).scrollTop();
-    $('.test-popup').css('top', testScroll + 50 + 'px')
-    return false;
-  });
-
-  $('.home__btn').click(function () {
-    $('.test-popup').fadeIn();
-    testScroll = $(window).scrollTop();
-    $('.test-popup').css('top', testScroll + 50 + 'px')
-    return false;
-  });
-
-  $('.video-content__test-btn').click(function () {
-    $('.test-popup').fadeIn();
-    testScroll = $(window).scrollTop();
-    $('.test-popup').css('top', testScroll + 50 + 'px')
-    return false;
-  });
-
-  $('.popup-close').click(function () {
-    $(this).parents('.test-popup').fadeOut();
-    return false;
-  });
-
-  $(document).keydown(function (e) {
-    if (e.keyCode === 27) {
-      e.stopPropagation();
-      $('.test-popup').fadeOut();
-    }
-  });
-
-  $('.test-popup').click(function (e) {
-    if ($(e.target).closest('.popup').length == 0) {
       $(this).fadeOut();
     }
   });
@@ -273,78 +231,6 @@ $(function () {
     });
   }
 
-  // Выпадающий список в тесте
-  const selectSingleOne = document.querySelector('.__select--1');
-  const selectSingle_titleOne = selectSingleOne.querySelector('.__select__title');
-  const selectSingle_labelsOne = selectSingleOne.querySelectorAll('.__select__label');
-
-  const selectSingleTwo = document.querySelector('.__select--2');
-  const selectSingle_titleTwo = selectSingleTwo.querySelector('.__select__title');
-  const selectSingle_labelsTwo = selectSingleTwo.querySelectorAll('.__select__label');
-
-  const selectSingleThree = document.querySelector('.__select--3');
-  const selectSingle_titleThree = selectSingleThree.querySelector('.__select__title');
-  const selectSingle_labelsThree = selectSingleThree.querySelectorAll('.__select__label');
-
-  const selectSingleFour = document.querySelector('.__select--4');
-  const selectSingle_titleFour = selectSingleFour.querySelector('.__select__title');
-  const selectSingle_labelsFour = selectSingleFour.querySelectorAll('.__select__label');
-
-  const selectSingleFive = document.querySelector('.__select--5');
-  const selectSingle_titleFive = selectSingleFive.querySelector('.__select__title');
-  const selectSingle_labelsFive = selectSingleFive.querySelectorAll('.__select__label');
-
-  const selectSingleSix = document.querySelector('.__select--6');
-  const selectSingle_titleSix = selectSingleSix.querySelector('.__select__title');
-  const selectSingle_labelsSix = selectSingleSix.querySelectorAll('.__select__label');
-
-  select(selectSingleOne, selectSingle_titleOne, selectSingle_labelsOne);
-  select(selectSingleTwo, selectSingle_titleTwo, selectSingle_labelsTwo);
-  select(selectSingleThree, selectSingle_titleThree, selectSingle_labelsThree);
-  select(selectSingleFour, selectSingle_titleFour, selectSingle_labelsFour);
-  select(selectSingleFive, selectSingle_titleFive, selectSingle_labelsFive);
-  select(selectSingleSix, selectSingle_titleSix, selectSingle_labelsSix);
-
-  function select(single, title, label) {
-    // Toggle menu
-    title.addEventListener('click', () => {
-      if ('active' === single.getAttribute('data-state')) {
-        single.setAttribute('data-state', '');
-      } else {
-        single.setAttribute('data-state', 'active');
-      }
-    });
-
-    // Close when click to option
-    for (let i = 0; i < label.length; i++) {
-      label[i].addEventListener('click', (evt) => {
-        title.textContent = evt.target.textContent;
-        single.setAttribute('data-state', '');
-      });
-    }
-  }
-
-  formFocus($('.popup-bell__form-input input'));
-  formFocus($('.bell-content__input input'));
-  function formFocus(elem) {
-    let Value = "";
-    elem.keyup(function () {
-      Value = $(this).val();
-      if (Value.length > 0) {
-        $(this).addClass('active');
-      }
-    });
-    elem.focus(function () {
-      $(this).addClass('active');
-    });
-    elem.blur(function () {
-      if (Value.length <= 0) {
-        $(this).removeClass('active');
-      }
-    });
-  }
-
-
   // Белый цвет на клик в секции Neon
   $('.neon__item').on('click', function () {
     $(this).addClass('white');
@@ -353,4 +239,42 @@ $(function () {
   $('.neon__item').mouseleave(function () {
     $(this).removeClass('white');
   })
+
+  let keyQuestionNow = 1;
+  let keyQuestionArr = [];
+  $('.test__answer-btn').on('click', function () {
+    $(`.test-question--${keyQuestionNow}`).removeClass('active');
+    keyQuestionArr.push(keyQuestionNow);
+
+    keyQuestionNow = this.dataset.answer;
+
+
+    if (keyQuestionNow > 1) {
+      $('.test-box').addClass('wide');
+    }
+
+    $(`.test-question--${keyQuestionNow}`).addClass('active');
+  });
+
+  $('.test__btn-back').on('click', function () {
+    $(`.test-question--${keyQuestionNow}`).removeClass('active');
+    keyQuestionNow = keyQuestionArr[keyQuestionArr.length - 1]
+
+    $(`.test-question--${keyQuestionNow}`).addClass('active');
+    keyQuestionArr = keyQuestionArr.slice(0, -1);
+
+
+    if (keyQuestionNow == 1) {
+      $('.test-box').removeClass('wide');
+    }
+  });
+
+  $('.test__btn-repeat').on('click', function () {
+    $(`.test-question--${keyQuestionNow}`).removeClass('active');
+    keyQuestionArr = keyQuestionArr.slice(0);
+    keyQuestionNow = keyQuestionArr[0];
+    $(`.test-question--${keyQuestionNow}`).addClass('active');
+    $('.test-box').removeClass('wide');
+
+  });
 });
