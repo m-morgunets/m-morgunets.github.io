@@ -26,6 +26,17 @@ $(function () {
     ]
   });
 
+  $('.slider__tools-box').slick({
+    infinite: true,
+    dots: false,
+    arrows: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    fade: true
+  })
+
   // Slider на втором экране
   let servicesItemIndex = 0;
   $('.list__item').on('mouseover', function () {
@@ -217,7 +228,7 @@ $(function () {
   $('.examples__remove').on('click', function () {
     if (activeCheck != 0) {
       rotateRemove += 180;
-      $(this).css('transform', 'translateY(-50%) rotate(' + rotateRemove + 'deg)')
+      $(this).css('transform', 'rotate(' + rotateRemove + 'deg)')
     }
     activeCheck = 0
     $('.examples__item').removeClass('active');
