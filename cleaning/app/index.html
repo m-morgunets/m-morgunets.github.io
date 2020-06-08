@@ -12,57 +12,65 @@
 
 <body>
 
-  <section class="first-screen">
-    <header class="header">
-      <div class="header-box">
-        <div class="header__logo">
-          <img src="images/logo.png" alt="">
-          <div class="cubes-item--1 cubes-item"><img src="images/home-cube.png" alt=""></div>
-        </div>
-        <div class="header__phone">
-          <div class="header__phone-num"><a href="tel:+7(911)232-09-87">+7 (911) 232-09-87</a></div>
-          <button class="header__phone-btn">Заказать звонок</button>
-        </div>
+  <header class="header">
+    <div class="header-box">
+      <ul class="header__menu">
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+      <div class="header__logo">
+        <img src="images/logo.png" alt="">
+        <div class="cubes-item--1 cubes-item"><img src="images/home-cube.png" alt=""></div>
       </div>
-    </header>
+      <div class="header__phone">
+        <div class="header__phone-num"><a href="tel:+7(911)232-09-87">+7 (911) 232-09-87</a></div>
+        <button class="header__phone-btn">Заказать звонок</button>
+      </div>
+    </div>
+  </header>
 
-    <section class="home">
-      <div class="container">
-        <div class="home-box">
-          <div class="home__overtitle">Клининг в Санкт-Петербурге</div>
-          <div class="home__title">Создадим чистосту <br> в любом помещении</div>
-          <div class="home__titer">Более 500 уборок <span>|</span> Более 50 живых отзывов <span>|</span> Работаем уже
-            более 2-х лет</div>
-          <div class="home__btn">
-            <div class="home__btn-text">Пройти тест и узнать свою цену!</div>
-            <div class="home__btn-bg">
-              <img src="images/home-btn.png" alt="">
-            </div>
-            <div class="home__btn-bg">
-              <img src="images/home-hoverBtn.png">
-            </div>
+  <section class="home">
+    <div class="container">
+      <div class="home-box">
+        <div class="home__overtitle">Клининг в Санкт-Петербурге</div>
+        <div class="home__title">Наведем чистосту <br> в любом помещении</div>
+        <div class="home__titer">Более 500 уборок <span>|</span> Более 50 живых отзывов <span>|</span> Работаем уже
+          более 2-х лет</div>
+        <div class="home__btn">
+          <div class="home__btn-text">Пройти тест и узнать свою цену!</div>
+          <div class="home__btn-bg">
+            <img src="images/home-btn.png" alt="">
           </div>
-          <div class="home__bg">
-            <div class="cubes-item--2 cubes-item"><img src="images/home-cube.png" alt=""></div>
-            <picture>
-              <source srcset="images/home-bg.webp" type="image/webp">
-              <img src="images/home-bg.jpg" alt="">
-            </picture>
+          <div class="home__btn-bg">
+            <img src="images/home-hoverBtn.png">
           </div>
         </div>
-      </div>
-    </section>
-
-    <div class="scroll">
-      <div class="scroll__content">
-        <div class="scroll__content-text">Подробнее</div>
-        <div class="scroll__content-img"><img src="images/skroll-arrows.png" class="animated fadeInDown infinite slow">
+        <div class="home__bg">
+          <div class="cubes-item--2 cubes-item"><img src="images/home-cube.png" alt=""></div>
+          <picture>
+            <source srcset="images/home-bg.webp" type="image/webp">
+            <img src="images/home-bg.jpg" alt="">
+          </picture>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="services">
+  <div class="scroll">
+    <div class="scroll__content">
+      <div class="scroll__content-text">Подробнее</div>
+      <div class="scroll__content-img"><img src="images/skroll-arrows.png" class="animated fadeInDown infinite slow">
+      </div>
+    </div>
+  </div>
+
+  <div class="scrollPhone">
+    <div class="scrollPhone-title">Узнать цену вашей уборки прямо сейчас!</div>
+    <button class="scrollPhone-btn">Узнать!</button>
+  </div>
+
+  <!-- <section class="services">
     <div class="cubes-item--3 cubes-item"><img src="images/home-cube.png" alt=""></div>
     <img class="services-dots" src="images/dots-bg.png" alt="">
     <div class="container">
@@ -231,7 +239,7 @@
       </div>
 
       <div class="test__question test-question--2">
-        <div class="test__question-title">Какая услуга вам интересует?</div>
+        <div class="test__question-title">Какая услуга ваc интересует?</div>
         <div class="test__inner">
           <ul class="test__sign">
             <li>Варианты ответа</li>
@@ -511,7 +519,7 @@
       </div>
 
       <div class="test__question test-question--10">
-        <div class="test__question-title">Какая услуга вам интересует?</div>
+        <div class="test__question-title">Какая услуга ваc интересует?</div>
         <div class="test__inner">
           <ul class="test__sign">
             <li>Варианты ответа</li>
@@ -1043,7 +1051,7 @@
     </div>
   </section>
 
-  <!-- <section class="video">
+  <section class="video">
     <div class="container">
       <div class="section-title">Посмотрите видео и убедитесь во всем сами ;)</div>
       <div class="video__content">
@@ -1065,7 +1073,7 @@
         </div>
       </div>
     </div>
-  </section> -->
+  </section>
 
   <section class="customers">
     <div class="section-title">Среди наших клиентов</div>
@@ -1405,7 +1413,7 @@
       <div class="footer__signature-text signature--1">Site designed by Yalano</div>
       <div class="footer__signature-text signature--2">Sverstano by Миша Моргунец</div>
     </div>
-  </footer>
+  </footer> -->
 
 
 
