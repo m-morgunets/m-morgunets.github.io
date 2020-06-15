@@ -341,14 +341,16 @@
   float: right;
   margin-right: 30px;
   background: transparent;
-  font-weight: 400;
   font-family: "GillSansNova";
-  font-size: 18px;
   height: 45px;
   width: 330px;
-  color: #b1b1b1;
   border: 2px solid #b1b1b1;
   border-radius: 40px;
+  font-weight: 400;
+  a {
+    color: #b1b1b1;
+    font-size: 18px;
+  }
 }
 
 .test {
