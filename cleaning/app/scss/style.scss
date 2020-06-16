@@ -680,7 +680,7 @@
   position: relative;
 }
 .slick-prev {
-  display: none;
+  display: none !important;
 }
 .slick-next {
   position: absolute;

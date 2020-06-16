@@ -233,7 +233,7 @@ $(function () {
   })
 
   // Scroll на вторую страницу (кнопка на первом экране)
-  function scroll(btn, item) {
+  function itemScroll(btn, item) {
     $(btn).on('click', function () {
       $(item).get(0).scrollIntoView({
         block: "start",
@@ -251,16 +251,16 @@ $(function () {
       });
     }
   }
-  scroll('.scroll', '.services');
-  scroll('.home__btn', '.test');
-  scroll('.scrollPhone-btn', '.test');
-  scroll('.footer__top-test', '.test');
-  scroll('.footer__top-list li:nth-child(1)', '.services');
-  scroll('.footer__top-list li:nth-child(2)', '.slider');
-  scroll('.footer__top-list li:nth-child(3)', '.examples');
-  scroll('.footer__top-list li:nth-child(4)', '.neon');
-  scroll('.footer__top-list li:nth-child(5)', '.reviews');
-  scroll('.footer__top-list li:nth-child(6)', '.faq');
+  itemScroll('.scroll', '.services');
+  itemScroll('.home__btn', '.test');
+  itemScroll('.scrollPhone-btn', '.test');
+  itemScroll('.footer__top-test', '.test');
+  itemScroll('.footer__top-list li:nth-child(1)', '.services');
+  itemScroll('.footer__top-list li:nth-child(2)', '.slider');
+  itemScroll('.footer__top-list li:nth-child(3)', '.examples');
+  itemScroll('.footer__top-list li:nth-child(4)', '.neon');
+  itemScroll('.footer__top-list li:nth-child(5)', '.reviews');
+  itemScroll('.footer__top-list li:nth-child(6)', '.faq');
 
 
   // Преобразование полей с номера телефонов
