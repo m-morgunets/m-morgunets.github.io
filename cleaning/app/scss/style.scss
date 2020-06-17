@@ -325,22 +325,6 @@
   padding-left: 12px;
   line-height: 18px;
 }
-.services__btn {
-  cursor: pointer;
-  float: right;
-  margin-right: 30px;
-  background: transparent;
-  font-family: "GillSansNova";
-  height: 45px;
-  width: 330px;
-  border: 2px solid #b1b1b1;
-  border-radius: 40px;
-  font-weight: 400;
-  a {
-    color: #b1b1b1;
-    font-size: 18px;
-  }
-}
 
 .test {
   position: relative;
@@ -583,7 +567,10 @@
     border-right: 2px solid #ededed;
   }
 }
-
+.test-question--8 .test__finish-top,
+.test-question--9 .test__finish-top{
+  cursor: pointer;
+}
 .test-question--1 {
   .test__answer {
     display: flex;
@@ -921,9 +908,53 @@
     }
   }
 }
+
+.item--3 {
+  .dots--1 {
+    top: 40px;
+    left: 260px;
+  }
+  .dots--4 {
+    top: 255px;
+    right: 165px;
+  }
+  .dots--5 {
+    .slider__item-text {
+      left: 14px;
+    }
+  }
+}
+.item--4 {
+  .dots--1 {
+    top: 65px;
+    left: 180px;
+  }
+  .dots--4 {
+    top: 165px;
+    left: 300px;
+  }
+}
 .item--3,
 .item--4 {
-  display: none;
+  .dots--2 {
+    top: 210px;
+    right: 17px;
+  }
+  .dots--3 {
+    left: 145px;
+    top: 245px;
+  }
+  .dots--5 {
+    left: 253px;
+    bottom: 100px;
+  }
+  .dots--6 {
+    bottom: 38px;
+    right: 77px;
+    .slider__item-text {
+      left: 30px;
+    }
+  }
 }
 
 .examples {
@@ -1807,6 +1838,9 @@
   display: flex;
   justify-content: space-between;
   margin: 0 30px;
+  a {
+    color: #fff;
+  }
 }
 .footer__inner {
   width: 360px;
@@ -1853,14 +1887,21 @@
   }
 }
 .footer__top-social,
-.footer__top-mail {
+.footer__top-mail,
+.footer__top-address {
   padding-left: 15px;
+}
+.footer__top-address {
+  padding-top: 35px;
 }
 .footer__top-social {
   padding-top: 35px;
+  svg {
+    cursor: pointer;
+  }
 }
 .footer__top-mail {
-  padding-top: 60px;
+  padding-top: 35px;
 }
 
 .phone-popup,
@@ -1966,10 +2007,9 @@
     color: #898989;
   }
 }
-
-.prices {
+.prices .bell-inner {
+  overflow: auto;
 }
-
 .prices-title {
   font-size: 35px;
   color: #4e4e4e;
@@ -1987,8 +2027,28 @@
   font-weight: 500;
   font-size: 17px;
   max-width: 400px;
+  margin: 0 auto;
   width: 100%;
   text-align: left;
+}
+
+.mountaineering {
+  .prices-content {
+    overflow: auto;
+    height: 500px;
+    width: 90%;
+  }
+  .bell-inner {
+    max-width: 700px;
+    width: 100%;
+    overflow: visible;
+  }
+  .prices-text {
+    max-width: 570px;
+  }
+  li {
+    padding-left: 15px;
+  }
 }
 
 @import "media";
