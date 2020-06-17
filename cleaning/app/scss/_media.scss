@@ -1447,6 +1447,15 @@
   .faq {
     background: none;
   }
+  .neon-wave__top,
+  .neon-wave__bottom {
+    img {
+      display: none;
+    }
+    .neon-wave__top-phone {
+      display: block;
+    }
+  }
 }
 
 @media (max-width: 780px) {
@@ -1948,6 +1957,10 @@
       text-align: center;
       font-size: 14px;
     }
+  }
+
+  .neon {
+    padding: 180px 0;
   }
 }
 
