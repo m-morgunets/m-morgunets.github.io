@@ -255,13 +255,14 @@ $(function () {
   itemScroll('.home__btn', '.test');
   itemScroll('.scrollPhone-btn', '.test');
   itemScroll('.footer__top-test', '.test');
+  itemScroll('.neon__item--2', '.test');
   itemScroll('.footer__top-list li:nth-child(1)', '.services');
   itemScroll('.footer__top-list li:nth-child(2)', '.slider');
   itemScroll('.footer__top-list li:nth-child(3)', '.examples');
   itemScroll('.footer__top-list li:nth-child(4)', '.neon');
   itemScroll('.footer__top-list li:nth-child(5)', '.reviews');
   itemScroll('.footer__top-list li:nth-child(6)', '.faq');
-
+  itemScroll('.neon__item--2', '.test');
 
   // Преобразование полей с номера телефонов
   $('.test-number__send-input input').mask("+7(999) 999 99-99");
@@ -299,41 +300,74 @@ $(function () {
   PopUp(true, '.header__phone-btn', '.phone-popup');
   PopUp(true, '.footer__top-phone', '.phone-popup');
   PopUp(false, '', '.mountaineering');
+  PopUp(false, '', '.dryCleaning');
   PopUp(false, '', '.request');
 
-
-  // AJAX отправка обратной связи из секции
-  // $('#sendMail').on('click', function () {
-  //   var name = $('#name').val().trim();
-  //   var phone = $('#phone').val().trim();
+  $('.phone-popup .bell__btn').on('click', function () {
+    let name = $('.phone-popup #name').val().trim();
+    let phone = $('.phone-popup #phone').val().trim();
 
 
-  //   if (name == "" & phone == "") {
-  //     return false
-  //   } else if (name == "") {
-  //     return false
-  //   } else if (phone == "") {
-  //     return false
-  //   }
-  //   $('#errorMess').text("")
+    if (name == "" & phone == "") {
+      return false
+    } else if (name == "") {
+      return false
+    } else if (phone == "") {
+      return false
+    }
+    $('#errorMess').text("")
 
-  //   $.ajax({
-  //     url: 'php/mail.php',
-  //     type: 'POST',
-  //     cache: false,
-  //     data: { 'name': name, 'phone': phone },
-  //     dataType: 'html',
-  //     beforeSend: function () {
-  //       $('#sendMail').prop('disabled', true);
-  //     },
-  //     success: function (data) {
-  //       if (data) {
-  //         $('#phoneForm').trigger('reset');
-  //       }
-  //       $('#sendMail').prop('disabled', false);
-  //     },
-  //   })
-  // })
+    $.ajax({
+      url: 'php/mail.php',
+      type: 'POST',
+      cache: false,
+      data: { 'name': name, 'phone': phone },
+      dataType: 'html',
+      beforeSend: function () {
+        $('.phone-popup .bell__btn').prop('disabled', true);
+      },
+      success: function (data) {
+        if (data) {
+          $('.request').fadeIn();
+          $('.bell-inner').trigger('reset');
+        }
+        $('.phone-popup .bell__btn').prop('disabled', false);
+      },
+    })
+  })
+
+  $('.bell .bell__btn').on('click', function () {
+    let name = $('.bell #name').val().trim();
+    let phone = $('.bell #phone').val().trim();
+
+
+    if (name == "" & phone == "") {
+      return false
+    } else if (name == "") {
+      return false
+    } else if (phone == "") {
+      return false
+    }
+    $('#errorMess').text("")
+
+    $.ajax({
+      url: 'php/mail.php',
+      type: 'POST',
+      cache: false,
+      data: { 'name': name, 'phone': phone },
+      dataType: 'html',
+      beforeSend: function () {
+        $('.bell .bell__btn').prop('disabled', true);
+      },
+      success: function (data) {
+        if (data) {
+          $('.request').fadeIn();
+          $('.bell-inner').trigger('reset');
+        }
+        $('.bell .bell__btn').prop('disabled', false);
+      },
+    })
+  })
 
   // Анимация в секции "exemples"
   let activeCheck = 0;
@@ -377,19 +411,16 @@ $(function () {
 
 
     if (name == "" & phone == "") {
-      $('#errorMess').text("Введите имя и телефон")
       return false
     } else if (name == "") {
-      $('#errorMess').text("Введите имя")
       return false
     } else if (phone == "") {
-      $('#errorMess').text("Введите телефон")
       return false
     }
     $('#errorMess').text("")
 
     $.ajax({
-      url: 'php/mail.php',
+      url: 'php/mailTest.php',
       type: 'POST',
       cache: false,
       data: { 'name': name, 'phone': phone, 'answer': answer },
@@ -432,6 +463,12 @@ $(function () {
       $('.test__btn-repeat').addClass('active')
       $('.test__btn-back').removeClass('active')
     }
+    if (+finishKey == 8) {
+      $('.dryCleaning').fadeIn();
+    }
+    if (finishKey == 9) {
+      $('.mountaineering').fadeIn();
+    }
   });
 
   $('.test__btn-back').on('click', function () {
@@ -464,6 +501,17 @@ $(function () {
   if (document.documentElement.clientWidth < 700) {
     $('.test__finish-text').html('<p>Окончательная стоимость зависит от особенностей помещения, поверхности, времени, сложности и объема работ</p>');
     $('.test__finish .bell__title').html('Предлагаем созввониться и более детально все обсудить');
+  }
+  $('.test-question--8 .test__finish-top').on('click', function () {
+    $('.dryCleaning').fadeIn();
+  })
+  $('.test-question--9 .test__finish-top').on('click', function () {
+    $('.mountaineering').fadeIn();
+  })
+
+  if (document.documentElement.clientWidth < 830) {
+    $('.neon-wave__top').html('<img src="images/neon-wavePhone.png">');
+    $('.neon-wave__bottom').html('<img src="images/neon-wavePhone.png">');
   }
 });
 
