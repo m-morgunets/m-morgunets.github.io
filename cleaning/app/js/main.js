@@ -443,6 +443,21 @@ $(function () {
   let keyQuestionArr = [];
   let answerArr = [];
   let finishKey;
+  let prices = '';
+  let pricesList = {
+    11: '~6500R',
+    12: '~140R/м²',
+    13: '~135R/м²',
+    14: '~130R/м²',
+    21: '~6500R',
+    22: '~165R/м²',
+    23: '~160R/м²',
+    24: '~155R/м²',
+    31: '~200R/м²',
+    32: '~200R/м²',
+    33: '~200R/м²',
+    34: '~200R/м²',
+  }
 
   $('.test__answer-btn').on('click', function () {
     $(`.test-question--${keyQuestionNow}`).removeClass('active');
@@ -466,8 +481,13 @@ $(function () {
     if (+finishKey == 8) {
       $('.dryCleaning').fadeIn();
     }
-    if (finishKey == 9) {
+    if (+finishKey == 9) {
       $('.mountaineering').fadeIn();
+    }
+    prices = this.dataset.price != undefined ? String(prices) + String(this.dataset.price) : '';
+    if (+finishKey == 15) {
+      let priceNow = pricesList[prices]
+      $('.test-question--15 .test__finish-title').text('Ваша цена ' + priceNow);
     }
   });
 
@@ -478,6 +498,7 @@ $(function () {
     $(`.test-question--${keyQuestionNow}`).addClass('active');
     keyQuestionArr = keyQuestionArr.slice(0, -1);
     answerArr = answerArr.slice(0, -1);
+    prices = prices.slice(0, -1);
 
 
     if (keyQuestionNow == 1) {
@@ -491,6 +512,7 @@ $(function () {
     keyQuestionArr = keyQuestionArr.slice(0, 1);
 
     answerArr = [];
+    prices = '';
 
     keyQuestionNow = keyQuestionArr[0];
 
