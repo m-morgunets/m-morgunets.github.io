@@ -670,10 +670,11 @@
   }
   .examples {
     .section-subtitle {
+      max-width: 245px;
       display: none;
     }
-    .section-title {
-      padding-bottom: 30px;
+    .subtitlePhone {
+      display: block;
     }
   }
   .services .section-subtitle {
@@ -1446,6 +1447,15 @@
   .faq {
     background: none;
   }
+  .neon-wave__top,
+  .neon-wave__bottom {
+    img {
+      display: none;
+    }
+    .neon-wave__top-phone {
+      display: block;
+    }
+  }
 }
 
 @media (max-width: 780px) {
@@ -1939,6 +1949,18 @@
   .request .request-title {
     font-size: 37px;
     line-height: 35px;
+  }
+
+  .examples {
+    .section-subtitle {
+      max-width: unset;
+      text-align: center;
+      font-size: 14px;
+    }
+  }
+
+  .neon {
+    padding: 180px 0;
   }
 }
 

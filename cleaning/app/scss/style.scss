@@ -568,8 +568,11 @@
   }
 }
 .test-question--8 .test__finish-top,
-.test-question--9 .test__finish-top{
+.test-question--9 .test__finish-top {
   cursor: pointer;
+  .test__finish-title {
+    text-decoration: underline;
+  }
 }
 .test-question--1 {
   .test__answer {
@@ -969,6 +972,9 @@
     margin: 0 auto 35px;
     font-size: 16px;
   }
+  .subtitlePhone {
+    display: none;
+  }
 }
 .examples__box {
   position: relative;
@@ -1254,6 +1260,9 @@
     top: 0;
     transform: scale(1, -1);
   }
+}
+.neon-wave__top-phone {
+  display: none;
 }
 .neon-wave__bottom {
   position: absolute;
