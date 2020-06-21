@@ -522,11 +522,6 @@ $(function () {
   $('.test-question--9 .test__finish-top').on('click', function () {
     $('.mountaineering').fadeIn();
   })
-
-  if (document.documentElement.clientWidth < 830) {
-    $('.neon-wave__top').html('<img src="images/neon-wavePhone.png">');
-    $('.neon-wave__bottom').html('<img src="images/neon-wavePhone.png">');
-  }
 });
 
 "use strict";
