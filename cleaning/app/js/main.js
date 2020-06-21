@@ -22,14 +22,6 @@ $(function () {
     });
   }
 
-  if (BrowserDetect.browser == "Explorer" || BrowserDetect.browser == "Safari" || BrowserDetect.OS == "iPhone/iPod") {
-    $('.test').parallax({ imageSrc: 'images/test-bg.jpg' });
-    $('.bell').parallax({ imageSrc: 'images/bell-bg.jpg' });
-  } else {
-    $('.test').parallax({ imageSrc: 'images/test-bg.webp' });
-    $('.bell').parallax({ imageSrc: 'images/bell-bg.webp' });
-  }
-
   // Slider в секции FAQ
   $('.faq__item-title').on('click', function () {
     console.log(toggleIndex == $(this).parent().index());
