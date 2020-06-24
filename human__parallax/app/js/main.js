@@ -1,5 +1,12 @@
 $(function () {
 
+  let date = new Date;
+  let hours = date.getHours();
+  setInterval(() => {
+    date = new Date;
+    hours = date.getHours();
+  }, 60000);
+
   let windowWidth = $(window).width();
   let windowHeight = $(window).height();
   let X, Y;
@@ -17,7 +24,7 @@ $(function () {
   let eyesOffsetTop = eyesOffset.top;
   let eyesOffsetLeft = eyesOffset.left;
 
-  $('.remove-sleep').on('click', function (e) {
+  if (hours <= 23 && hours >= 7) {
     $('.remove-sleep').addClass('active')
 
     setTimeout(mousemoveOn, 1000)
@@ -44,7 +51,9 @@ $(function () {
       }, 150);
       setTimeout(wink, offEyeRandom)
     };
-  })
+  } else {
+    $('.title-sleep').addClass('active')
+  }
 
 
 
