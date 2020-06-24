@@ -36,7 +36,7 @@ $(function () {
       $('.face-sleepEye').css('opacity', 1)
       setTimeout(() => {
         $('.face-sleepEye').css('opacity', 0)
-      }, 200);
+      }, 100);
     }, 7000);
   })
 
