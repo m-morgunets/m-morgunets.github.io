@@ -3,16 +3,18 @@
 @import "fonts";
 @import "global";
 
-.title {
+.author,
+.name,
+.subtitle,
+.title-sleep {
   position: absolute;
-  top: 50%;
-  left: 100px;
-  transform: translateY(-50%);
+  bottom: 50px;
+  right: 150px;
   text-align: center;
-  font-size: 60px;
+  font-size: 40px;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
-  line-height: 80px;
+  line-height: 60px;
   cursor: default;
   span {
     display: block;
@@ -21,6 +23,38 @@
     }
   }
 }
+.name,
+.subtitle,
+.title-sleep {
+  line-height: 80px;
+  font-size: 50px;
+  right: unset;
+  bottom: unset;
+  left: 100px;
+  top: 100px;
+  transform: none;
+  font-family: "Balsamiq Sans", cursive;
+  font-weight: 700;
+}
+.subtitle {
+  top: unset;
+  bottom: 300px;
+}
+.title-sleep {
+  left: unset;
+  top: 150px;
+  right: 100px;
+  transform: rotate(25deg);
+  text-transform: uppercase;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s;
+  &.active {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
 .remove-sleep {
   opacity: 1;
   transition: all 0.5s;
@@ -44,11 +78,9 @@
 .container {
   width: 405px;
   height: 800px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  transition: all 0.5s;
+  position: relative;
+  margin: auto;
+  margin-top: 80px;
 }
 
 .head {
