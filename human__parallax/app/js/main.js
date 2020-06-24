@@ -17,12 +17,32 @@ $(function () {
   let eyesOffsetTop = eyesOffset.top;
   let eyesOffsetLeft = eyesOffset.left;
 
+  $('.remove-sleep').on('click', function (e) {
+    $('.remove-sleep').addClass('active')
 
-  $(document).mousemove(function (e) {
-    X = e.pageX; // положения по оси X
-    Y = e.pageY; // положения по оси Y
-    // console.log("X: " + X + " Y: " + Y); // вывод результата в консоль
+    setTimeout(mousemoveOn, 1000)
+    function mousemoveOn() {
+      $('.face-sleepEye').css('opacity', 0)
+      setTimeout(() => {
+        $(document).mousemove(function (e) {
+          X = e.pageX;
+          Y = e.pageY;
+          mouseMove()
+        });
+      }, 500)
+    }
 
+    setInterval(() => {
+      $('.face-sleepEye').css('opacity', 1)
+      setTimeout(() => {
+        $('.face-sleepEye').css('opacity', 0)
+      }, 200);
+    }, 7000);
+  })
+
+
+
+  function mouseMove() {
     let hairLine = (hairLineOffsetLeft - X) / 25 + 60;
     let hairAddition = -(hairAdditionOffsetLeft - X) / 25 + 55;
     let faceBoxTop = -(faceBoxOffsetTop - Y) / 25 + 50;
@@ -62,15 +82,6 @@ $(function () {
       }
     )
     $('.face-addition').css('left', `${headBoxLeft}px`)
-  });
-
-  var x_letter, y_letter;
-  $('#game-letter').mousemove(function (e) {
-    e = e || window.event;
-    x_letter = e.offsetX == undefined ? e.layerX : e.offsetX;
-    y_letter = e.offsetY == undefined ? e.layerY : e.offsetY;
-    console.log(x_letter + ' ' + y_letter);
-
-  });
+  }
 
 });

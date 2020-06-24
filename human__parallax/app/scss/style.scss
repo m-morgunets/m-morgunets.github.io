@@ -21,6 +21,24 @@
     }
   }
 }
+.remove-sleep {
+  opacity: 1;
+  transition: all 0.5s;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 100px;
+  transform: translateY(-50%);
+  font-size: 40px;
+  width: 250px;
+  height: 100px;
+  background: #fff;
+  border-radius: 40px;
+  border: 2px solid #000;
+}
+.remove-sleep.active {
+  opacity: 0;
+}
 
 .container {
   width: 405px;
@@ -99,11 +117,24 @@
   right: 0;
 }
 .face-protein,
-.face-eyebrow {
+.face-eyebrow,
+.face-sleepEye {
   position: absolute;
 }
 .face-eyebrow {
   z-index: 4;
+}
+.face-sleepEye {
+  width: 80px;
+  height: 80px;
+  opacity: 1;
+  z-index: 1;
+}
+.face-sleepEye__line {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
 }
 .face-eye__inner {
   width: 80px;
