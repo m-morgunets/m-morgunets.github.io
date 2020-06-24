@@ -3,6 +3,25 @@
 @import "fonts";
 @import "global";
 
+.title {
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  transform: translateY(-50%);
+  text-align: center;
+  font-size: 60px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  line-height: 80px;
+  cursor: default;
+  span {
+    display: block;
+    &::selection {
+      background: transparent;
+    }
+  }
+}
+
 .container {
   width: 405px;
   height: 800px;
