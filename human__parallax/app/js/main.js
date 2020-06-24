@@ -32,12 +32,18 @@ $(function () {
       }, 500)
     }
 
-    setInterval(() => {
+    let offEyeRandom = randomInteger(3, 7) * 1000;
+    setTimeout(wink, offEyeRandom)
+
+    function wink() {
+      offEyeRandom = randomInteger(3, 7) * 1000
       $('.face-sleepEye').css('opacity', 1)
+
       setTimeout(() => {
         $('.face-sleepEye').css('opacity', 0)
-      }, 100);
-    }, 7000);
+      }, 150);
+      setTimeout(wink, offEyeRandom)
+    };
   })
 
 
@@ -82,6 +88,12 @@ $(function () {
       }
     )
     $('.face-addition').css('left', `${headBoxLeft}px`)
+  }
+
+  function randomInteger(min, max) {
+    // случайное число от min до (max+1)
+    let rand = min + Math.random() * (max + 1 - min);
+    return rand;
   }
 
 });
