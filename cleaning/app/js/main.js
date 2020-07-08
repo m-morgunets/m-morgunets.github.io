@@ -362,37 +362,8 @@ $(function () {
   })
 
   // Анимация в секции "exemples"
-  let activeCheck = 0;
-  let rotateRemove = 0;
-  $('.examples__item').on('mouseover', function () {
-    activeCheck++
-    $(this).addClass('active')
-  })
-  let nowTransform = $('.examples__remove').css('transform');
-  $('.examples__remove').on('click', function () {
-    if (activeCheck != 0) {
-      rotateRemove += 180;
-      $(this).css('transform', nowTransform + 'rotate(' + rotateRemove + 'deg)')
-    }
-    activeCheck = 0
-    $('.examples__item').removeClass('active');
-  })
-
-  // Paralax.js в секции "exemples"
-  var scene = document.querySelectorAll('.examples_paralax-item')
-  for (let elem of scene) {
-    var parallaxInstance = new Parallax(elem, {
-      relativeInput: true
-    });
-  }
-
-  // Белый цвет на клик в секции Neon
-  $('.neon__item').on('click', function () {
-    $(this).addClass('white');
-  });
-
-  $('.neon__item').mouseleave(function () {
-    $(this).removeClass('white');
+  $('.examples__item').on('click', function () {
+    $(this).toggleClass('active');
   })
 
   // AJAX отправка из теста
