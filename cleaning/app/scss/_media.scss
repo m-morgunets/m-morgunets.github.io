@@ -450,9 +450,8 @@
   .neon__item--1,
   .neon__item--2 {
     height: 265px;
-    img {
-      width: 300px;
-    }
+    font-size: 46px;
+    line-height: 46px;
   }
   .neon__item {
     height: 565px;
@@ -725,7 +724,7 @@
     height: 132px;
   }
   .neon {
-    padding: 300px 0;
+    padding: 100px 0;
   }
   .neon__box {
     width: 350px;
@@ -733,10 +732,8 @@
   .neon__item--1,
   .neon__item--2 {
     height: 210px;
-  }
-  .neon__item--1 img,
-  .neon__item--2 img {
-    width: 250px;
+    font-size: 36px;
+    line-height: 36px;
   }
   .neon__item {
     padding-left: 23px;
@@ -1444,18 +1441,19 @@
   .examples,
   .customers,
   .reviews,
-  .faq {
+  .faq,
+  .neon {
     background: none;
   }
-  .neon-wave__top,
-  .neon-wave__bottom {
-    img {
-      display: none;
-    }
-    .neon-wave__top-phone {
-      display: block;
-    }
-  }
+  // .neon-wave__top,
+  // .neon-wave__bottom {
+  //   img {
+  //     display: none;
+  //   }
+  //   .neon-wave__top-phone {
+  //     display: block;
+  //   }
+  // }
 }
 
 @media (max-width: 780px) {
@@ -1673,6 +1671,10 @@
   .neon__item--1 {
     display: none;
   }
+  .neon__item--2 {
+    font-size: 30px;
+    line-height: 30px;
+  }
   .neon-inner {
     display: block;
     max-width: 350px;
@@ -1881,9 +1883,6 @@
   }
   .neon__item--2 {
     height: 200px;
-    img {
-      width: 230px;
-    }
   }
   .editorial {
     height: 60px;
@@ -1960,7 +1959,7 @@
   }
 
   .neon {
-    padding: 180px 0;
+    padding: 80px 0;
   }
 }
 
