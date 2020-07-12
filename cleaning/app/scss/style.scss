@@ -1210,7 +1210,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 0;
-  padding: 70px 0 100px;
+  padding: 70px 0 60px;
 }
 .customers-box {
   margin-top: 65px;
@@ -1239,87 +1239,88 @@
 }
 
 .neon {
-  background: url(../images/slider-bg.jpg);
-  background-position: 0 0;
+  background-color: #000;
   position: relative;
-  padding: 100px 0 100px;
+  padding: 400px 0 500px;
 }
-// .neon-wave__top {
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   img {
-//     position: relative;
-//     z-index: 4;
-//     width: 100vw;
-//     overflow: hidden;
-//   }
-//   svg {
-//     overflow: hidden;
-//     z-index: 1;
-//     position: absolute;
-//     top: 0;
-//     transform: scale(1, -1);
-//   }
-// }
-// .neon-wave__top-phone {
-//   display: none;
-// }
-// .neon-wave__bottom {
-//   position: absolute;
-//   bottom: -5px;
-//   left: 0;
-//   img {
-//     position: relative;
-//     z-index: 4;
-//     width: 100vw;
-//     overflow: hidden;
-//     transform: scale(-1, -1);
-//   }
-//   svg {
-//     overflow: hidden;
-//     position: absolute;
-//     z-index: 1;
-//     bottom: 5px;
-//   }
-// }
+.neon-wave__top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  img {
+    position: relative;
+    z-index: 4;
+    width: 100vw;
+    overflow: hidden;
+  }
+  svg {
+    overflow: hidden;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    transform: scale(1, -1);
+  }
+}
+.neon-wave__top-phone {
+  display: none;
+}
+.neon-wave__bottom {
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  img {
+    position: relative;
+    z-index: 4;
+    width: 100vw;
+    overflow: hidden;
+    transform: scale(-1, -1);
+  }
+  svg {
+    overflow: hidden;
+    position: absolute;
+    z-index: 1;
+    bottom: 5px;
+  }
+}
 
-// // Стили для волны
-// .parallax > use {
-//   animation: move-forever 12s linear infinite;
-//   &:nth-child(1) {
-//     animation-delay: -2s;
-//   }
-//   &:nth-child(2) {
-//     animation-delay: -2s;
-//     animation-duration: 5s;
-//   }
-//   &:nth-child(3) {
-//     animation-delay: -4s;
-//     animation-duration: 3s;
-//   }
-// }
-// @keyframes move-forever {
-//   0% {
-//     transform: translate(-90px, 0%);
-//   }
-//   100% {
-//     transform: translate(85px, 0%);
-//   }
-// }
-// .editorial {
-//   display: block;
-//   width: 100vw;
-//   height: 320px;
-//   max-height: 100vh;
-//   margin: 0;
-// }
+// Стили для волны
+.parallax > use {
+  animation: move-forever 12s linear infinite;
+  &:nth-child(1) {
+    animation-delay: -2s;
+  }
+  &:nth-child(2) {
+    animation-delay: -2s;
+    animation-duration: 5s;
+  }
+  &:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 3s;
+  }
+}
+@keyframes move-forever {
+  0% {
+    transform: translate(-90px, 0%);
+  }
+  100% {
+    transform: translate(85px, 0%);
+  }
+}
+.editorial {
+  display: block;
+  width: 100vw;
+  height: 320px;
+  max-height: 100vh;
+  margin: 0;
+}
 
 .neon__title {
+  color: #5aff34;
   font-size: 53px;
   text-align: center;
   font-family: "GillSansNova";
   padding-bottom: 50px;
+  margin-top: 160px;
 }
 .neon-inner {
   display: flex;
@@ -1333,17 +1334,12 @@
 }
 .neon__item--1,
 .neon__item--2 {
-  background: none;
-  border: 5px solid #4e4e4e;
   cursor: pointer;
   width: 100%;
   height: 330px;
   border-radius: 40px;
   position: relative;
-  font-weight: 700;
-  font-size: 53px;
-  span {
-    width: 100%;
+  img {
     transition: 0.4s;
     position: absolute;
     top: 50%;
@@ -1353,22 +1349,66 @@
     visibility: hidden;
   }
   &:hover {
-    span {
+    img {
       opacity: 1;
       visibility: visible;
     }
   }
 }
+.neon__item--1 {
+  border-top: 5px solid #5aff34;
+  border-right: 5px solid #5aff34;
+  border-bottom: 5px solid #ff3434;
+  border-left: 5px solid #ff3434;
+}
+.neon__item--2 {
+  border-top: 5px solid #34fffd;
+  border-right: 5px solid #34fffd;
+  border-bottom: 5px solid #fd34ff;
+  border-left: 5px solid #fd34ff;
+}
 .neon__item {
+  cursor: pointer;
   padding-left: 40px;
   border-radius: 40px;
   position: relative;
   background: transparent;
   height: 700px;
   width: 100%;
-  border: 5px solid #4e4e4e;
+  border: 5px solid #fff;
   z-index: 4;
   transition: all 0.3s;
+  &:before {
+    transition: 0.3s;
+    content: "";
+    z-index: 0;
+    position: absolute;
+    border-radius: 35px;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: 690px;
+    box-shadow: inset 0px 0px 10px 0px rgba(255, 52, 52, 1);
+  }
+  &:hover {
+    &::before {
+      opacity: 0;
+    }
+    color: #000 !important;
+    .neon__item-text::before {
+      background-color: #000 !important;
+    }
+    .neon__item-img {
+      img:nth-child(1) {
+        opacity: 0;
+        visibility: hidden;
+      }
+      img:nth-child(2) {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
 }
 .neon__item.white {
   background-color: #fff !important;
@@ -1389,13 +1429,13 @@
   line-height: 25px;
   &::before {
     content: "";
-    background-color: #000;
     position: absolute;
     top: 0;
     left: -10px;
     height: 5px;
     width: 315px;
     border-radius: 40px;
+    background: #fff;
   }
 }
 .neon__item-img {
@@ -1416,9 +1456,58 @@
 }
 .neon__item.red {
   margin: 30px 0;
+  border-color: #ff3434;
+  color: #ff3434;
+  box-shadow: 0px 0px 10px 0px rgba(255, 52, 52, 1);
+  .neon__item-text::before {
+    background-color: #ff3434;
+  }
+  &:hover {
+    background-color: #ff3434;
+  }
+}
+.neon__item.violet {
+  border-color: #fd34ff;
+  color: #fd34ff;
+  box-shadow: 0px 0px 10px 0px rgba(253, 52, 255, 1);
+  &:before {
+    box-shadow: inset 0px 0px 10px 0px rgba(253, 52, 255, 1);
+  }
+  .neon__item-text::before {
+    background-color: #fd34ff;
+  }
+  &:hover {
+    background-color: #fd34ff;
+  }
+}
+.neon__item.green {
+  border-color: #5aff34;
+  color: #5aff34;
+  box-shadow: 0px 0px 10px 0px rgba(90, 255, 52, 1);
+  &:before {
+    box-shadow: inset 0px 0px 10px 0px rgba(90, 255, 52, 1);
+  }
+  .neon__item-text::before {
+    background-color: #5aff34;
+  }
+  &:hover {
+    background-color: #5aff34;
+  }
 }
 .neon__item.blue {
   margin: 30px 0;
+  border-color: #34fffd;
+  color: #34fffd;
+  box-shadow: 0px 0px 10px 0px rgba(52, 255, 253, 1);
+  &:before {
+    box-shadow: inset 0px 0px 10px 0px rgba(52, 255, 253, 1);
+  }
+  .neon__item-text::before {
+    background-color: #34fffd;
+  }
+  &:hover {
+    background-color: #34fffd;
+  }
 }
 
 .reviews {
@@ -1715,7 +1804,7 @@
 }
 
 .footer {
-  background: url(../images/slider-bg.jpg);
+  background-color: #000;
   padding-bottom: 75px;
   position: relative;
 }
@@ -1723,7 +1812,7 @@
   position: absolute;
   bottom: 0;
   right: 0;
-  color: #000;
+  color: #fff;
   img {
     position: absolute;
     bottom: 0;
@@ -1748,18 +1837,18 @@
 .footer__logo {
   text-align: center;
   padding: 60px 0 80px;
-  color: #000;
+  color: #fff;
   font-size: 30px;
 }
 .footer-box {
   font-size: 15px;
   font-weight: 400;
-  color: #000;
+  color: #fff;
   display: flex;
   justify-content: space-between;
   margin: 0 30px;
   a {
-    color: #000;
+    color: #fff;
   }
 }
 .footer__inner {
@@ -1793,14 +1882,14 @@
 .footer__top-bell {
   margin-bottom: 10px;
   a {
-    color: #000;
+    color: #fff;
     span {
       font-weight: 400;
       display: block;
       font-size: 15px;
     }
     .number {
-      padding-bottom: 5px;
+      padding: 5px 0;
       font-size: 29px;
       font-weight: 700;
     }
