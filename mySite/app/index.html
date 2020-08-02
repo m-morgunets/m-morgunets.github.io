@@ -16,18 +16,21 @@
 <body>
 
   <div class="topic-btn"></div>
-  <div class="whiteCircle topic-anim"></div>
-  <div class="blackCircle topic-anim active"></div>
 
   <section class="home">
     <div class="container">
       <header class="header">
         <img src="images/logoWhite.png" alt="" class="logo topic-white">
         <img src="images/logoBlack.png" alt="" class="logo topic-black">
+        <ul class="burger-btn">
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
         <ul class="header__menu">
           <li class="scroll" id="home">Главная</li>
           <li class="scroll" id="skills">Скиллы</li>
-          <li class="scroll" id="portfolio">Портфолио</li>
+          <li class="scroll" id="portfolio">Кейсы</li>
           <li class="scroll" id="contacts">Контакты</li>
         </ul>
       </header>
@@ -97,60 +100,36 @@
   <section class="portfolio">
     <div class="container">
 
-      <div class="portfolio__title section-title">ПОРТФОЛИО</div>
+      <div class="portfolio__title section-title">КЕЙСЫ</div>
 
       <div class="portfolio-box">
 
         <div class="portfolio__item">
-          <img src="images/portfolio-item--1.jpg" alt="" class="portfolio__item-img">
+          <div class="portfolio__item-img" style="background-image: url(images/portfolio-item--1.jpg);"></div>
           <div class="portfolio__item-btn">
-            <div class="portfolio__item-title">Клининг «CleanPark»</div>
-            <div class="portfolio__item-arrow">
-              <svg width="33" height="24" viewBox="0 0 33 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M32.0607 13.0607C32.6464 12.4749 32.6464 11.5251 32.0607 10.9393L22.5147 1.3934C21.9289 0.807612 20.9792 0.807612 20.3934 1.3934C19.8076 1.97918 19.8076 2.92893 20.3934 3.51472L28.8787 12L20.3934 20.4853C19.8076 21.0711 19.8076 22.0208 20.3934 22.6066C20.9792 23.1924 21.9289 23.1924 22.5147 22.6066L32.0607 13.0607ZM0 13.5H31V10.5H0L0 13.5Z"
-                  fill="white" />
-              </svg>
-            </div>
+            <div class="portfolio__item-title">Лендинг «CleanPark»</div>
+            <div class="portfolio__item-arrow"><img class="svg" src="images/arrow.svg" alt=""></div>
           </div>
         </div>
         <div class="portfolio__item">
-          <img src="images/portfolio-item--2.jpg" alt="" class="portfolio__item-img">
+          <div class="portfolio__item-img" style="background-image: url(images/portfolio-item--2.jpg);"></div>
           <div class="portfolio__item-btn">
-            <div class="portfolio__item-title">Клининг «CleanPark»</div>
-            <div class="portfolio__item-arrow">
-              <svg width="33" height="24" viewBox="0 0 33 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M32.0607 13.0607C32.6464 12.4749 32.6464 11.5251 32.0607 10.9393L22.5147 1.3934C21.9289 0.807612 20.9792 0.807612 20.3934 1.3934C19.8076 1.97918 19.8076 2.92893 20.3934 3.51472L28.8787 12L20.3934 20.4853C19.8076 21.0711 19.8076 22.0208 20.3934 22.6066C20.9792 23.1924 21.9289 23.1924 22.5147 22.6066L32.0607 13.0607ZM0 13.5H31V10.5H0L0 13.5Z"
-                  fill="white" />
-              </svg>
-            </div>
+            <div class="portfolio__item-title">Лендинг «Agro»</div>
+            <div class="portfolio__item-arrow"><img class="svg" src="images/arrow.svg" alt=""></div>
           </div>
         </div>
         <div class="portfolio__item">
-          <img src="images/portfolio-item--3.jpg" alt="" class="portfolio__item-img">
+          <div class="portfolio__item-img" style="background-image: url(images/portfolio-item--3.jpg);"></div>
           <div class="portfolio__item-btn">
-            <div class="portfolio__item-title">Клининг «CleanPark»</div>
-            <div class="portfolio__item-arrow">
-              <svg width="33" height="24" viewBox="0 0 33 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M32.0607 13.0607C32.6464 12.4749 32.6464 11.5251 32.0607 10.9393L22.5147 1.3934C21.9289 0.807612 20.9792 0.807612 20.3934 1.3934C19.8076 1.97918 19.8076 2.92893 20.3934 3.51472L28.8787 12L20.3934 20.4853C19.8076 21.0711 19.8076 22.0208 20.3934 22.6066C20.9792 23.1924 21.9289 23.1924 22.5147 22.6066L32.0607 13.0607ZM0 13.5H31V10.5H0L0 13.5Z"
-                  fill="white" />
-              </svg>
-            </div>
+            <div class="portfolio__item-title">Лендинг «Go-Surf»</div>
+            <div class="portfolio__item-arrow"><img class="svg" src="images/arrow.svg" alt=""></div>
           </div>
         </div>
         <div class="portfolio__item">
-          <img src="images/portfolio-item--4.jpg" alt="" class="portfolio__item-img">
+          <div class="portfolio__item-img" style="background-image: url(images/portfolio-item--4.jpg);"></div>
           <div class="portfolio__item-btn">
-            <div class="portfolio__item-title">Клининг «CleanPark»</div>
-            <div class="portfolio__item-arrow">
-              <svg width="33" height="24" viewBox="0 0 33 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M32.0607 13.0607C32.6464 12.4749 32.6464 11.5251 32.0607 10.9393L22.5147 1.3934C21.9289 0.807612 20.9792 0.807612 20.3934 1.3934C19.8076 1.97918 19.8076 2.92893 20.3934 3.51472L28.8787 12L20.3934 20.4853C19.8076 21.0711 19.8076 22.0208 20.3934 22.6066C20.9792 23.1924 21.9289 23.1924 22.5147 22.6066L32.0607 13.0607ZM0 13.5H31V10.5H0L0 13.5Z"
-                  fill="white" />
-              </svg>
-            </div>
+            <div class="portfolio__item-title">«Розовый Джо»</div>
+            <div class="portfolio__item-arrow"><img class="svg" src="images/arrow.svg" alt=""></div>
           </div>
         </div>
 
@@ -164,14 +143,80 @@
       <div class="contacts__text">Связаться со мной можно в любое время в VK, Telegram или написать письмо на почту
       </div>
       <div class="contacts__links">
-        <a href="https://vk.com/m_morgunets" target="_blank"><img class="svg" src="images/vk.svg" alt=""></a>
-        <a href="https://t.me/m_morgunets" target="_blank"><img class="svg" src="images/telegram.svg" alt=""></a>
-        <a href="mailto:miha123770214@gmail.com"><img class="svg" src="images/mail.svg" alt=""></a>
+        <a href="https://vk.com/m_morgunets" target="_blank"><img class="svg vk" src="images/vk.svg"></a>
+        <a href="https://t.me/m_morgunets" target="_blank"><img class="svg telegram" src="images/telegram.svg"></a>
+        <a href="mailto:miha123770214@gmail.com"><img class="svg mail" src="images/mail.svg"></a>
       </div>
     </div>
   </section>
 
   <section class="copyright">© 2020 by Mikhail Morgunets</section>
+
+
+  <div class="cases">
+
+    <div class="cases__item">
+      <img src="images/portfolio-item--1.jpg" class="cases__item-img"></img>
+      <div class="cases__item-content">
+        <div class="cases__item-title">Лендинг «CleanPark»</div>
+        <div class="cases__item-text">
+          Лендинг для клининговой компании в Санкт-Петербурге <br>
+          <span class="text-bold">Цель</span> была не просто сделать красиво, а создать продающий инструмент, на который
+          можно будет лить трафик и
+          собирать всю нужную инфу о
+          потенциальном клиенте
+        </div>
+      </div>
+      <a href="https://m-morgunets.github.io/cleaning/app/" target="_blank"><button class="cases__item-btn">Открыть
+          сайт</button></a>
+      <div class="cases__item-close"></div>
+    </div>
+
+    <div class="cases__item">
+      <div class="cases__item-close"></div>
+      <img src="images/portfolio-item--2.jpg" class="cases__item-img"></img>
+      <div class="cases__item-content">
+        <div class="cases__item-title">Лендинг «Agro»</div>
+        <div class="cases__item-text">
+          Простая вёрстка лендинга по макету из интернета, ушёл на него один день. <br>
+          Добавен адаптив, анимации и другие мелкие штрихи для полноты сайта
+        </div>
+      </div>
+      <a href="https://m-morgunets.github.io/agro/app/" target="_blank"><button class="cases__item-btn">Открыть
+          сайт</button></a>
+    </div>
+
+    <div class="cases__item">
+      <div class="cases__item-close"></div>
+      <img src="images/portfolio-item--3.jpg" class="cases__item-img"></img>
+      <div class="cases__item-content">
+        <div class="cases__item-title">Лендинг «Go-Surf»</div>
+        <div class="cases__item-text">
+          Достаточно сложный макет лединга из интернета, ушло на него четыре дня. <br>
+          Добавлен адаптив, слайдеры, расчёт цены поездки и т.д., всё можно посмотреть на самом сайте
+        </div>
+      </div>
+      <a href="https://m-morgunets.github.io/go-surf/app/" target="_blank"><button class="cases__item-btn">Открыть
+          сайт</button></a>
+    </div>
+
+    <div class="cases__item">
+      <div class="cases__item-close"></div>
+      <img src="images/portfolio-item--4.jpg" class="cases__item-img"></img>
+      <div class="cases__item-content">
+        <div class="cases__item-title">«Розовый Джо»</div>
+        <div class="cases__item-text">
+          <p>Просто интересная работа сделанная «на коленке» за вечер. Нашёл картинку этого человека в инетрнете и решил
+            анимировать его уже на сайте.</p>
+          Что-то такое, но с другим человеком/героем, можно использовать на полноценном сайте где-то справа, а контент
+          будет двигаться слева. Можно продумать ему неплохую и интересную реализацию на сайте
+        </div>
+      </div>
+      <a href="https://m-morgunets.github.io/human__parallax/app/" target="_blank"><button
+          class="cases__item-btn">Открыть сайт</button></a>
+    </div>
+
+  </div>
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
