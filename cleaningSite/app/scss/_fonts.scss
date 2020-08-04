@@ -1,0 +1,53 @@
+@font-face {
+  font-family: "Gilroy";
+  src: local("Gilroy Bold"), local("Gilroy-Bold"),
+    url(../fonts/Gilroy-Bold.woff2) format("woff2"),
+    url(../fonts/Gilroy-Bold.woff) format("woff"),
+    url(../fonts/Gilroy-Bold.ttf) format("truetype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: local("Gilroy Black"), local("Gilroy-Black"),
+    url(../fonts/Gilroy-Black.woff2) format("woff2"),
+    url(../fonts/Gilroy-Black.woff) format("woff"),
+    url(../fonts/Gilroy-Black.ttf) format("truetype");
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: local("Gilroy Medium"), local("Gilroy-Medium"),
+    url(../fonts/Gilroy-Medium.woff2) format("woff2"),
+    url(../fonts/Gilroy-Medium.woff) format("woff"),
+    url(../fonts/Gilroy-Medium.ttf) format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: local("Gilroy Regular"), local("Gilroy-Regular"),
+    url(../fonts/Gilroy-Regular.woff2) format("woff2"),
+    url(../fonts/Gilroy-Regular.woff) format("woff"),
+    url(../fonts/Gilroy-Regular.ttf) format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "GillSansNova";
+  src: local("GillSansNova Reguler"), local("GillSansNova-Reguler"),
+    url("../fonts/GillSansNova-Regular.ttf") format("truetype"),
+    url("../fonts/GillSansNova-Regular.woff") format("woff"),
+    url("../fonts/GillSansNova-Regular.woff2") format("woff2");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "GillSansNova";
+  src: local("Gill Sans Nova Bold"), local("Gill-Sans-Nova-Bold"),
+    url("../fonts/GillSansNova-Bold.woff2") format("woff2"),
+    url("../fonts/GillSansNova-Bold.woff") format("woff"),
+    url("../fonts/GillSansNova-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
