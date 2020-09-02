@@ -37,7 +37,7 @@ $(function () {
        });
 
        $('.popup').click(function (e) {
-              if ($(e.target).closest('.bell-inner').length == 0) {
+              if ($(e.target).closest('.popup-wraper').length == 0) {
                      $(this).fadeOut();
               }
        });
@@ -72,13 +72,14 @@ $(function () {
        $('.close-case').click(function (event) {
               $('.popup-case').fadeOut();
               $('body').removeClass('noscroll');
-
-
        });
        $('.work-items').click(function (event) {
-              var el = $(this).attr('id');
-              $('.popup-case-' + el).fadeIn();
-              $('body').addClass('noscroll');
+              let el = $(this).attr('id');
+
+              if (el != undefined) {
+                     $('.popup-case-' + el).fadeIn();
+                     $('body').addClass('noscroll');
+              }
        });
 
 
@@ -90,6 +91,71 @@ $(function () {
               }, 500);
        });
 
+       $('.callback .sending').on('click', function () {
+              let name = $('.callback #notHidden-name').val().trim();
+              let phone = $('.callback #phone').val().trim();
 
+
+              if (name == "" & phone == "") {
+                     return false
+              } else if (name == "") {
+                     return false
+              } else if (phone == "") {
+                     return false
+              }
+              $('#errorMess').text("")
+
+              $.ajax({
+                     url: 'php/mail.php',
+                     type: 'POST',
+                     cache: false,
+                     data: { 'name': name, 'phone': phone },
+                     dataType: 'html',
+                     beforeSend: function () {
+                            $('.callback .sending').prop('disabled', true);
+                     },
+                     success: function (data) {
+                            if (data) {
+                                   $('.callback').trigger('reset');
+                                   // Сдесь будет происходить скачивание файла после успешной отправки инфы
+                            }
+                            $('.callback .sending').prop('disabled', false);
+                     },
+              })
+       })
+
+       $('.popup-form .sending').on('click', function () {
+              let name = $('.popup-form #notHidden-name').val().trim();
+              let phone = $('.popup-form #phone').val().trim();
+
+
+              if (name == "" & phone == "") {
+                     return false
+              } else if (name == "") {
+                     return false
+              } else if (phone == "") {
+                     return false
+              }
+              $('#errorMess').text("")
+
+              $.ajax({
+                     url: 'php/mail.php',
+                     type: 'POST',
+                     cache: false,
+                     data: { 'name': name, 'phone': phone },
+                     dataType: 'html',
+                     beforeSend: function () {
+                            $('.popup-form .sending').prop('disabled', true);
+                     },
+                     success: function (data) {
+                            if (data) {
+                                   $('.popup-form').trigger('reset');
+
+                                   // Сдесь будет происходить скачивание файла после успешной отправки инфы
+                            }
+                            $('.popup-form .sending').prop('disabled', false);
+                     },
+              })
+       })
 });
 

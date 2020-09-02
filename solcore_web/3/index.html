@@ -1,0 +1,111 @@
+<html>
+
+<head>
+    <title>Solcore.Design</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css" />
+    <!-- OpenGraph -->
+    <meta property="og:locale" content="ru_RU" />
+    <meta property="og:title" content="Solcore.Design" />
+    <meta property="og:description" content='Сделаем ваш дизайн таким же запоминающимся, как "Palmolive" — мой нежный гель.
+        Наши работы, прямо как баунти — райское наслаждение.
+        А дизайнеры — сыновья маминой подруги.
+        Вы хотите поработать с нами.' />
+    <meta property="og:url" content="http://solcore.design" />
+    <meta property="og:image" content="" />
+    <meta property="og:site_name" content="Solcore.Design" />
+
+</head>
+
+<body>
+    <div id="icons">
+        <div class="icons-box">
+            <a href="">
+                <img src="img/website.png" />
+                <p>Наш сайт</p>
+            </a>
+            <a href="tel:+79268750797">
+                <img src="img/phone1.png" />
+                <p>+7(926)875-07-97</p>
+            </a>
+            <a href="mailto:sell@solcore.design" id="mail">
+                <img src="img/mail.png" />
+                <p>sell@solcore.design</p>
+            </a>
+        </div>
+
+        <div class="icons-box not-mobile">
+            <a href="https://vk.com/solcore.design" target="_blank">
+                <img src="img/vk.png" />
+                <p>ВКонтакте</p>
+            </a>
+            <a href="https://instagram.com/solcore.design" target="_blank">
+                <img src="img/insta.png" />
+                <p>Instagram</p>
+            </a>
+        </div>
+    </div>
+    <div class="icons-box mobile" id="icons">
+        <a href="https://vk.com/solcore.design" target="_blank">
+            <img src="img/vk.png" />
+            <p>ВКонтакте</p>
+        </a>
+        <a href="https://instagram.com/solcore.design" target="_blank">
+            <img src="img/insta.png" />
+            <p>Instagram</p>
+        </a>
+    </div>
+    <div id="form">
+        <div class="title">
+            Оставить заявку
+        </div>
+        <div class="content">
+            Ваше имя
+            <input id="inputName">
+            Ваша почта или телефон
+            <input id="phonemail">
+            <div id="do" class="button" onclick="sendRequest()">Отправить</div>
+            <h2 id="responseText"></h2>
+        </div>
+    </div>
+    <div id="taskbar">
+        <div class="button">solcore.design</div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+
+    </script>
+
+    <script>
+
+        function sendRequest() {
+            const server = "34.107.23.251:80"
+            var name = document.getElementById("inputName").value;
+            var contactData = document.getElementById("phonemail").value;
+
+            if (name == "" || contactData == "")
+                return;
+
+            var http = new XMLHttpRequest();
+            http.open("GET", "http://" + server + "/incoming?name=" + name + "&contact=" + contactData);
+            http.send();
+            document.getElementById("responseText").innerHTML = "Спасибо! Мы свяжемся с вами.";
+            document.getElementById("do").style.visibility = 'hidden';
+            var name = document.getElementById("inputName").readOnly = true;
+            var contactData = document.getElementById("phonemail").readOnly = true;
+            // if (http.response == "ok") {
+            //     console.log("ok");
+            // }
+            // else {
+            //     console.log("error");
+            // }
+
+        }
+    </script>
+</body>
+
+</html>
