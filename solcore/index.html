@@ -28,7 +28,7 @@
 		content='Сделаем ваш дизайн таким же запоминающимся, как "Palmolive" — мой нежный гель...' />
 	<meta itemprop="image" content="images/vk.jpg" />
 
-	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
 
 	<link rel="stylesheet" href="main.css">
@@ -81,10 +81,11 @@
 						<h1 class="icon">Дизайн,который вы полюбите</h1>
 						<p>заполни форму и получи индивидуальный дизайн:</p>
 
-						<form name="callback" class="callback" action="#">
+						<form name="callback" class="callback" method="POST">
 
-							<input type="text" name="name" placeholder="Ваше имя фамилия..." required>
-							<input type="tel" name="tel" placeholder="Ваш номер телефона..." required>
+							<input type="text" name="notHidden-name" id="notHidden-name" placeholder="Ваше имя фамилия..." required>
+							<input type="text" name="name" value="" style="position: absolute; left: -9999px; display: none;">
+							<input type="tel" name="tel" id="phone" placeholder="Ваш номер телефона..." required>
 							<button class="sending" type="submit">Отправить</button>
 						</form>
 					</div>
@@ -224,7 +225,7 @@
 				<div class="reviews-row">
 
 
-					<div class="review-text">
+					<a target="_blank" href="https://vk.com/topic-182115422_39803830?post=4" class="review-text">
 						<h3>Константин</h3>
 						<div class="feedback">Делали логотип для одного бизнес канала по цене среднего пакета. Пришли с готовой
 							концепцией логотипа, желаемым. Рисовка затянулась на полторы недели, т.к. не могли найти именно того
@@ -233,22 +234,22 @@
 							Но в итоге нашли самый-самый вариант, оперативно получили лого в стиле полигон.
 							Логотипы делаются быстро, с заказчиками общение вежливое и с максимальным пониманием. За свою цену
 							достаточно хорошая работа. Однозначно рекомендую к сотрудничеству. </div>
-					</div>
-					<div class="review-text">
+					</a>
+					<a target="_blank" href="https://vk.com/topic-182115422_39803830?post=2" class="review-text">
 						<h3>Артем</h3>
 						<div class="feedback">Для мобильного приложения хорошая иконка это 70% конверсии из просмотра страницы
 							приложения в инсталл. Поэтому нет нужды говорить о важности хорошей графики для мобильного приложения.
 							Ребята со всей ответственностью и креативом подошли к разработке графики для моих приложений, в процессе
 							работы всегда на связи, необходимые коррективы и доработки вносят очень оперативно. Качеством графики я
 							доволен, впрочем. как и сотрудничеством в общем. Работаем дальше. Однозначно рекомендую.</div>
-					</div>
-					<div class="review-text">
+					</a>
+					<a target="_blank" href="https://vk.com/topic-182115422_39803830?post=10" class="review-text">
 						<h3>Максим</h3>
 						<div class="feedback">solcore.design - ребята нарисовали нам классный макет, хочу сказать спасибо за
 							проделанную работу. Макет логотипа действительно очень крутой, стилистика полностью нам подходит. Сначала
 							я думал, что очень сложно что-то подобрать и придумать так, чтобы это мне подошло, даже и не думал что у
 							ребят это получится. Вы превзошли мои ожидания, ещё раз спасибо! Рекомендую.</div>
-					</div>
+					</a>
 
 				</div>
 			</div>
@@ -280,9 +281,10 @@
 		<div class="popup-wraper">
 			<div class="close"></div>
 			<p>Оставьте ваш номер <br> и Мы вам позвоним</p>
-			<form action="#">
-				<input type="text" name="name" placeholder="Ваше имя фамилия..." required>
-				<input type="tel" name="tell" placeholder="Ваш номер телефона">
+			<form class="popup-form" method="POST">
+				<input type="text" name="notHidden-name" id="notHidden-name" placeholder="Ваше имя фамилия..." required>
+				<input type="text" name="name" value="" style="position: absolute; left: -9999px; display: none;">
+				<input type="tel" name="tel" id="phone" placeholder="Ваш номер телефона" required>
 				<button class="sending" type="submit">Отправить</button>
 			</form>
 		</div>
