@@ -26,10 +26,12 @@
                 <a href="https://vk.com/solcore.design" target="_blank" class="bottomline-item">вконтакте</a>
                 <a href="https://solcore.design/" target="_blank" class="bottomline-item">наш сайт</a>
             </div>
+            <div class="bottomline-box">
+                <a href="https://www.behance.net/solcore" target="_blank" class="bottomline-item">@solcore.design</a>
+                <a href="https://solcore.design/" target="_blank" class="bottomline-item">наш сайт</a>
+            </div>
         </div>
         <img class="mainimg" src="img/main.png">
-        <!-- <div class="line" style="top: 0;"></div>
-            <div class="line" style="top: 8.2%;"></div> -->
         <div class="starholder left">
             <img class="roundstar left" src="img/roundstar.png">
         </div>
@@ -56,18 +58,20 @@
             $('input#contact').mask("+7(999)999-99-99");
 
             let fontSize = $('input').width() / 10.6;
+            let imgWidth;
 
-            $('input').css('font-size', fontSize);
-            $('.bottomline-box').width(($('.mainimg').width() * 19) / 67);
-            $('.bottomline-item').css('font-size', ($('.bottomline-box').height() * 5) / 11);
+            windowFunc()
+            $(window).resize(windowFunc);
 
-            if ($('#content').width() - $('.bottomline-box').width() <= 135) {
-                $('.bottomline-box').css('display', 'none');
-            } else {
-                $('.bottomline-box').css('display', 'flex');
-            }
+            function windowFunc() {
 
-            $(window).resize(function () {
+                fontSize = $('input').width() / 10.6;
+                $('input').css('font-size', fontSize);
+
+                $('.bottomline-box:first-child').width(($('.mainimg').width() * 19) / 67);
+                $('.bottomline-box:last-child').width($('.mainimg').width());
+                $('.bottomline-box:last-child .bottomline-item').width($('.mainimg').width() * 0.25);
+                $('.bottomline-item').css('font-size', ($('.bottomline-box').height() * 5) / 11);
 
                 if ($('#content').width() - $('.bottomline-box').width() <= 135) {
                     $('.bottomline-box').css('display', 'none');
@@ -75,12 +79,9 @@
                     $('.bottomline-box').css('display', 'flex');
                 }
 
-                fontSize = $('input').width() / 10.6;
-                $('input').css('font-size', fontSize);
+                $('#content').css('max-width', $('.mainimg').width() + ($('.side').width() * 2))
+            }
 
-                $('.bottomline-box').width(($('.mainimg').width() * 18) / 67);
-                $('.bottomline-item').css('font-size', ($('.bottomline-box').height() * 5) / 11);
-            });
 
         });
         var eye = document.getElementById("eye");
