@@ -8,13 +8,13 @@ body {
 }
 
 #content {
+  margin: 0 auto;
   position: absolute;
-  top: 40px;
-  bottom: 40px;
-  left: 40px;
-  right: 40px;
-  height: auto;
-  width: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vw;
+  height: 90vh;
 
   overflow: hidden;
 
@@ -24,7 +24,6 @@ body {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   /* border: .2222vh solid #333333; */
-  padding: -0.2vh;
   background: #ffff76;
 }
 
@@ -101,6 +100,7 @@ body {
 }
 
 .side {
+  z-index: 4;
   position: absolute;
   height: 100%;
   padding: 0;
@@ -148,6 +148,9 @@ body {
   z-index: 4;
   width: 100%;
   height: 100%;
+}
+.bottomline-box:last-child .bottomline-item {
+  text-align: center;
 }
 .bottomline-item {
   color: #faf5ff;
