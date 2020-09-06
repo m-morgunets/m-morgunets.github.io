@@ -37,14 +37,14 @@
       <li></li>
     </ul>
 
-    <a class="menu__item header-item" href="#">портфолио</a>
-    <a class="menu__item header-item" href="#">команда</a>
-    <a class="menu__item header-item" href="#">связаться</a>
+    <a class="menu__item header-item" target="_blank" href="https://bit.ly/SolcoreWorks">портфолио</a>
+    <a class="menu__item header-item" target="_blank" href="https://vk.com/solcore.design">команда</a>
+    <a class="menu__item header-item" href="tel:+79268750797">связаться</a>
   </header>
 
-  <a href="#" class="orderbutton"><img src="images/orderbutton.png" alt=""></a>
+  <img src="images/orderbutton.png" class="orderbutton">
 
-  <a href="#" class="behance">беханс</a>
+  <a href="https://behance.net/solcore" target="_blank" class="behance">беханс</a>
 
   <ul class="menu">
     <li><a class="menu__item" href="#">портфолио</a></li>
@@ -52,9 +52,22 @@
     <li><a class="menu__item" href="#">связаться</a></li>
   </ul>
 
+  <div class="popup">
+    <form class="bell-inner" id="phoneForm">
+      <a class="popup-close" href="#"></a>
+      <div class="bell__content">
+        <input id="name" type="text" class="bell-content__input" placeholder="Ваше имя">
+        <input id="contact" type="text" class="bell-content__input" placeholder="Ваш телефон">
+        <button class="bell__btn" onclick="sendRequest()">Отправить</button>
+      </div>
+    </form>
+  </div>
+
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="js/jquery.maskedinput.min.js"></script>
   <script src="js/main.js"></script>
+
 </body>
 
 </html>
