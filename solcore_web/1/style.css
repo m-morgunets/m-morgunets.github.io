@@ -27,6 +27,17 @@ body {
   background: #ffff76;
 }
 
+div#content:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0.3vh;
+  background: #37353d;
+  z-index: 3;
+}
+
 .line {
   position: absolute;
   width: 100%;
@@ -114,6 +125,7 @@ body {
 }
 
 #inputbox {
+  z-index: 4;
   position: absolute;
   top: 0;
   left: 50%;

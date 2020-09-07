@@ -1,3 +1,27 @@
+$('.bell__btn').click(sendRequest);
+
+function sendRequest() {
+  const server = "34.107.23.251:80"
+  var name = document.getElementById("name").value;
+  var contactData = document.getElementById("contact").value;
+
+  if (name == "" || contactData == "") {
+    return;
+  }
+
+  try {
+
+    var http = new XMLHttpRequest();
+    http.open("GET", "https://" + server + "/incoming?name=" + name + "&contact=" + contactData);
+    http.send();
+
+  } catch (error) {
+
+    alert("Произошла ошибка: " + error)
+
+  }
+}
+
 $(function () {
 
   $('input#contact').mask("+7(999)999-99-99");
@@ -130,21 +154,3 @@ $(function () {
   PopUp('.ordernow', '.popup');
 
 });
-
-
-function sendRequest() {
-  const server = "34.107.23.251:80"
-  var name = document.getElementById("name").value;
-  var contactData = document.getElementById("contact").value;
-
-  if (name == "" || contactData == "")
-    return;
-
-  var http = new XMLHttpRequest();
-  http.open("GET", "http://" + server + "/incoming?name=" + name + "&contact=" + contactData);
-  http.send();
-  document.getElementById("eye").classList.remove("open");
-  setTimeout(() => { eye.style.display = "none"; }, 1000);
-  var name = document.getElementById("name").readOnly = true;
-  var contactData = document.getElementById("contact").readOnly = true;
-}

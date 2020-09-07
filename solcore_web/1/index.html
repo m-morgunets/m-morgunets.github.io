@@ -83,6 +83,18 @@
             }
 
 
+            $('input').blur(function () {
+                if (input1.value != "" && input2.value != "") {
+                    if (!eye.classList.contains("open")) {
+                        eye.classList.add("open");
+                    }
+                }
+                else {
+                    if (eye.classList.contains("open")) {
+                        eye.classList.remove("open");
+                    }
+                }
+            })
         });
         var eye = document.getElementById("eye");
         var input1 = document.getElementById("name");
@@ -112,19 +124,6 @@
                 }
             }
         };
-
-        $('input').blur(function () {
-            if (input1.value != "" && input2.value != "") {
-                if (!eye.classList.contains("open")) {
-                    eye.classList.add("open");
-                }
-            }
-            else {
-                if (eye.classList.contains("open")) {
-                    eye.classList.remove("open");
-                }
-            }
-        })
 
 
         function sendRequest() {
