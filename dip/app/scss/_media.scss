@@ -5,21 +5,27 @@
   .header-box {
     box-shadow: rgba(0, 0, 0, 0.25) 0 3px 11px 0;
   }
+  .header__menu-box {
+    display: block;
+    padding: 80px 20px 15px;
+    flex: 1 1 auto;
+  }
   .header__menu {
     z-index: 8;
     position: fixed;
     right: 0;
     top: 0;
-    display: block;
-    width: unset;
     transform: translateX(100%);
-    padding: 80px 20px 15px;
     background-color: #000;
     transition: all 0.3s;
     width: 81vw;
+    display: flex;
+    overflow: auto;
+    flex-direction: column;
     height: 100vh;
     * {
       color: #b8b8b8;
+      fill: #b8b8b8;
     }
     &.active {
       transform: unset;
@@ -28,15 +34,119 @@
       padding: 0;
       a {
         padding: 8px 0;
+        transition: all 0.2s;
+      }
+      a::before {
+        display: none;
+      }
+      a:hover {
+        color: #fff;
+        svg {
+          fill: #fff;
+        }
       }
     }
     .select__btn {
-      padding-right: 30px !important;
+      padding-right: 0px !important;
       svg {
+        transition: all 0.2s;
         fill: #b8b8b8;
         width: 13px;
+        right: -30px;
+        transform: none;
+        position: static;
+        margin-left: 11px;
+      }
+      &.active svg {
+        transform: rotate(180deg) !important;
       }
     }
+    .select-1__btn.active svg {
+      transform: rotate(180deg) !important;
+    }
+    .select {
+      background-color: transparent;
+      position: static;
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+      overflow: hidden;
+      width: 100%;
+      a {
+        color: #b8b8b8;
+        font-size: 12px;
+        padding: 5px 12px;
+        width: unset;
+        font-family: "Comfortaa", cursive;
+      }
+      &.animate1 {
+        animation-name: selectAnim1;
+        animation-duration: 1s;
+        height: 100%;
+        opacity: 1;
+      }
+      &.animate2 {
+        animation-name: selectAnim2;
+        animation-duration: 1s;
+        opacity: 0;
+        height: 0;
+      }
+    }
+    .select ul {
+      padding-left: 12px;
+      opacity: 1;
+      visibility: visible;
+      position: static;
+      transform: none;
+      background: none;
+      overflow: hidden;
+      &.animate1 {
+        animation-name: selectAnim1;
+        animation-duration: 1s;
+        height: 100%;
+        opacity: 1;
+      }
+      &.animate2 {
+        animation-name: selectAnim2;
+        animation-duration: 1s;
+        opacity: 0;
+        height: 0;
+      }
+    }
+  }
+
+  @keyframes selectAnim1 {
+    0% {
+      opacity: 0;
+      height: 0;
+    }
+    10% {
+      height: 100%;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes selectAnim2 {
+    0% {
+      opacity: 1;
+      height: 100%;
+    }
+    40% {
+      height: 100%;
+    }
+    50% {
+      height: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  .select-1__btn svg {
+    transform: none;
+    margin: 0;
   }
   .burger-shadow {
     position: fixed;
