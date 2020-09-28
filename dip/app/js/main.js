@@ -112,8 +112,6 @@ $(function () {
 
 var dist = 0
 
-// window.addEventListener('load', function () {
-
 var box1 = document.getElementById('header__menu')
 var burg = document.getElementById('header__burger')
 var shadow = document.getElementById('burger-shadow')
@@ -125,7 +123,6 @@ box1.addEventListener('touchstart', function (e) {
   startx = parseInt(touchobj.clientX) // положение точки касания по x, относительно левого края браузера
   dist = parseInt(touchobj.clientX) - startx
   box1.style.transition = 'none';
-  // console.log('Status: touchstart ClientX: ' + startx + 'px');
 })
 
 box1.addEventListener('touchmove', function (e) {
@@ -134,7 +131,6 @@ box1.addEventListener('touchmove', function (e) {
   if (dist >= 0) {
     box1.style.transform = `translateX(${dist}px)`
   }
-  // console.log('Событие: touchmove Гориз. перемещение: ' + dist + 'px');
 })
 
 box1.addEventListener('touchend', function (e) {
@@ -148,7 +144,4 @@ box1.addEventListener('touchend', function (e) {
   } else {
     box1.style.transform = ''
   }
-  // console.log('Событие: touchend Координаты точки x: ' + touchobj.clientX + 'px');
 })
-
-// }, false)
