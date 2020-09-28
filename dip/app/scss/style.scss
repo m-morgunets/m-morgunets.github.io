@@ -115,7 +115,7 @@ body {
         -webkit-transform 0.3s ease-out;
     }
     li + li {
-      margin-top: 5px;
+      margin-top: 4px;
     }
   }
   &.active {
@@ -123,7 +123,7 @@ body {
       background-color: #fff;
     }
     li:first-child {
-      transform: translateY(7px) rotate(45deg);
+      transform: translateY(6px) rotate(45deg);
     }
     li:last-child {
       transform: translateY(-6px) rotate(-45deg);
@@ -134,12 +134,10 @@ body {
   }
 }
 
-.header__menu-button {
+.header__menu-bottom {
   font-family: "Muli Light";
   font-weight: 300;
-  position: absolute;
-  bottom: 0;
-  padding: 20px 0;
+  padding: 20px;
   .phone {
     margin-top: 10px;
   }
@@ -169,13 +167,14 @@ body {
     }
   }
 }
-
-.header__menu {
+.header__menu-box {
   display: flex;
-  margin-bottom: 1px;
-  font-size: 16px;
   flex-wrap: wrap;
   justify-content: flex-end;
+}
+.header__menu {
+  margin-bottom: 1px;
+  font-size: 16px;
   width: 75%;
   svg {
     fill: #666;
