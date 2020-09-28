@@ -22,8 +22,12 @@ body {
   z-index: 4;
   &.scroll {
     transform: translateY(-43px);
-    .header-box .header__logo img {
-      width: 146px;
+    .header-box .header__logo {
+      padding-right: 2.2%;
+      img {
+        width: 146px;
+        height: 86.26px;
+      }
     }
   }
 }
@@ -73,12 +77,12 @@ body {
   .header__logo {
     width: 25%;
     margin-left: auto;
-    padding-right: 2.2%;
+    padding-right: 1.5%;
     padding-top: 4px;
     img {
       transition: all 0.3s;
       width: 168px;
-      height: 86.26px;
+      height: 99px;
       float: right;
     }
   }
