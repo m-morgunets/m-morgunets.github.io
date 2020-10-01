@@ -20,6 +20,7 @@ body {
   position: fixed;
   width: 100%;
   z-index: 4;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 3px 11px 0 !important;
   &.scroll {
     transform: translateY(-43px);
     .header-box .header__logo {
@@ -67,7 +68,8 @@ body {
   background-color: #fff;
   display: flex;
   justify-content: space-between;
-  box-shadow: rgba(0, 0, 0, 0.5) 0 3px 11px 1px;
+  // box-shadow: rgba(0, 0, 0, 0.5) 0 3px 11px 1px;
+  box-shadow: #999797 0 3px 11px 0 !important;
   position: relative;
   z-index: 4;
   padding: 20px 40px 18px;
@@ -416,7 +418,7 @@ body {
 
 .advantages {
   background-color: #fff;
-  padding: 200px 0 26px;
+  padding: 200px 0 30px;
   .container {
     max-width: 960px;
     margin: 0 auto;
@@ -434,6 +436,7 @@ body {
   &:last-child {
     .advantages__item-text {
       line-height: 18px;
+      margin-top: 18px;
     }
   }
   img {
@@ -441,7 +444,7 @@ body {
     height: 70px;
   }
   .advantages__item-text {
-    margin-top: 17px;
+    margin-top: 19px;
     color: #615f5f;
     line-height: 21px;
   }
@@ -454,13 +457,13 @@ body {
   display: flex;
 }
 .links__item {
-  width: 100%;
+  width: 50%;
   display: block;
-  height: 530px;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: 50% 50%;
   position: relative;
+  padding: 100px 0;
   cursor: pointer;
   &:first-child {
     margin: 25px 25px 50px 50px;
@@ -479,13 +482,10 @@ body {
   }
 }
 .links__item-cube {
-  height: 320px;
-  width: 320px;
+  height: 319px;
+  width: 319px;
+  margin: 0 auto 10px;
   border: 2px solid rgba(255, 255, 255, 0);
-  position: absolute;
-  top: 49%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   transition: all 0.5s;
   span {
     opacity: 0;
@@ -523,7 +523,7 @@ body {
     width: 88px;
     height: 85px;
     border: 1px solid #fff;
-    margin-bottom: 14px;
+    margin-bottom: 13px;
   }
   span {
     font-size: 14px;
@@ -568,6 +568,9 @@ body {
   margin-left: -1px;
   span {
     padding-left: 4px;
+  }
+  &:last-child {
+    margin-bottom: 10px;
   }
 }
 .footer-social {
