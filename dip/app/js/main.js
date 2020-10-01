@@ -119,17 +119,17 @@ var shadow = document.getElementById('burger-shadow')
 var startx = 0
 
 box1.addEventListener('touchstart', function (e) {
-  var touchobj = e.changedTouches[0] // первая точка прикосновения
-  startx = parseInt(touchobj.clientX) // положение точки касания по x, относительно левого края браузера
-  dist = parseInt(touchobj.clientX) - startx
+  var touchobj = e.changedTouches[0]; // первая точка прикосновения
+  startx = parseInt(touchobj.clientX); // положение точки касания по x, относительно левого края браузера
+  dist = parseInt(touchobj.clientX) - startx;
   box1.style.transition = 'none';
 })
 
 box1.addEventListener('touchmove', function (e) {
-  var touchobj = e.changedTouches[0] // первая точка прикосновения для данного события
-  dist = parseInt(touchobj.clientX) - startx
+  var touchobj = e.changedTouches[0]; // первая точка прикосновения для данного события
+  dist = parseInt(touchobj.clientX) - startx;
   if (dist >= 0) {
-    box1.style.transform = `translateX(${dist}px)`
+    box1.style.transform = `translateX(${dist}px)`;
   }
 })
 
@@ -140,8 +140,8 @@ box1.addEventListener('touchend', function (e) {
     box1.classList.remove("active");
     burg.classList.remove("active");
     shadow.classList.remove("active");
-    box1.style.transform = ''
+    box1.style.transform = '';
   } else {
-    box1.style.transform = ''
+    box1.style.transform = '';
   }
 })
