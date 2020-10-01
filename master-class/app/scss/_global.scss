@@ -41,9 +41,9 @@ button {
   font-style: italic;
   font-size: 122px;
   line-height: 68px;
+  text-align: center;
   position: relative;
-  left: 50%;
-  transform: translateX(-50%);
+  width: 100%;
   display: inline-block;
   text-transform: uppercase;
 }
