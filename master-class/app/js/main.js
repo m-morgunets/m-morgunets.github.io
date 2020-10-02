@@ -1,5 +1,9 @@
 $(function () {
 
+  setTimeout(() => {
+    $('body').addClass('scroll');
+  }, 3000);
+
   $('.home__btn').click(function () {
     var destination = $('.prices').offset().top;
     $('html, body').animate({ scrollTop: destination }, 600);
@@ -77,30 +81,41 @@ $(function () {
     if (scroll + ($(window).height() * 0.7) >= leading) {
       $(window).off();
 
+
       let typed1 = new Typed('.leading__item-text.text-1', {
         strings: ["", "Владелец дизайн-студии, сфокусированной на работе с молодёжью"],
-        typeSpeed: 40
+        typeSpeed: 30
       });
-      let typed2 = new Typed('.leading__item-text.text-2', {
-        strings: ["", "Работал с блоггерами разных масштабов."],
-        typeSpeed: 40
-      });
-      let typed3 = new Typed('.leading__item-text.text-3', {
-        strings: ["", "Во время коронавируса привлёк больше 117.000 рублей дополнительной прибыли фирме партнёров за счёт ютуба."],
-        typeSpeed: 40
-      });
-      let typed4 = new Typed('.leading__item-text.text-4', {
-        strings: ["", "Привлекал живых подписчиков на каналы партнёров по цене 2р/шт. (При средней цене по рынку 11р/шт)"],
-        typeSpeed: 40
-      });
-      let typed5 = new Typed('.leading__item-text.text-5', {
-        strings: ["", "Опыт работы с Ютубом >7 лет."],
-        typeSpeed: 40
-      });
-      let typed6 = new Typed('.leading__item-text.text-6', {
-        strings: ["", "При помощи SEO-оптимизации ютуб-каналов партнёров привлекал до +98.000 просмотров."],
-        typeSpeed: 40
-      });
+      setTimeout(() => {
+        let typed2 = new Typed('.leading__item-text.text-2', {
+          strings: ["", "Работал с блоггерами разных масштабов."],
+          typeSpeed: 30
+        });
+      }, 1500);
+      setTimeout(() => {
+        let typed3 = new Typed('.leading__item-text.text-3', {
+          strings: ["", "Во время коронавируса привлёк больше 117.000 рублей дополнительной прибыли фирме партнёров за счёт ютуба."],
+          typeSpeed: 30
+        });
+      }, 3000);
+      setTimeout(() => {
+        let typed4 = new Typed('.leading__item-text.text-4', {
+          strings: ["", "Привлекал живых подписчиков на каналы партнёров по цене 2р/шт. (При средней цене по рынку 11р/шт)"],
+          typeSpeed: 30
+        });
+      }, 4500);
+      setTimeout(() => {
+        let typed5 = new Typed('.leading__item-text.text-5', {
+          strings: ["", "Опыт работы с Ютубом >7 лет."],
+          typeSpeed: 30
+        });
+      }, 6000);
+      setTimeout(() => {
+        let typed6 = new Typed('.leading__item-text.text-6', {
+          strings: ["", "При помощи SEO-оптимизации ютуб-каналов партнёров привлекал до +98.000 просмотров."],
+          typeSpeed: 30
+        });
+      }, 7500);
 
     }
 
