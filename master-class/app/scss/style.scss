@@ -3,38 +3,6 @@
 @import "fonts";
 @import "global";
 
-body {
-  overflow: hidden;
-  &.scroll {
-    overflow: unset;
-    overflow-x: hidden;
-    .plug {
-      opacity: 0;
-      visibility: hidden;
-    }
-  }
-}
-
-.plug {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  background: url(../images/bg.jpg) no-repeat;
-  background-size: cover;
-  background-position: center;
-  z-index: 999;
-  padding: 5%;
-  transition: all 0.3s;
-  img {
-    max-width: 100%;
-    max-height: 100%;
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-}
-
 .home {
   background: url(../images/bg.jpg) no-repeat;
   background-size: cover;
@@ -517,6 +485,7 @@ body {
     z-index: 3;
   }
   video {
+    cursor: pointer;
     position: absolute;
     top: 0px;
     left: 50%;
