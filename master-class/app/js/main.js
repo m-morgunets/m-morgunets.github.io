@@ -1,11 +1,7 @@
 $(function () {
 
-  setTimeout(() => {
-    $('html').scrollTop(0);
-    $('body').addClass('scroll');
-    scroll();
-    $(window).on('scroll', scroll);
-  }, 2000);
+  scroll();
+  $(window).on('scroll', scroll);
 
   $('.home__btn').click(function () {
     var destination = $('.prices').offset().top;
