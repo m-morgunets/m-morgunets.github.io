@@ -1,8 +1,5 @@
 $(function () {
 
-  scroll();
-  $(window).on('scroll', scroll);
-
   $('.home__btn').click(function () {
     var destination = $('.prices').offset().top;
     $('html, body').animate({ scrollTop: destination }, 600);
@@ -116,14 +113,12 @@ $(function () {
         });
       }, 7500);
 
-      $(window).scroll(function () {
+      $(window).on('scroll', function () {
         let scroll = $(this).scrollTop();
 
-        if (scroll + $(window).height() >= $('.leading__video-tv').offset().top) {
-          $('.leading__video-tv').append(`
-          <video width="400" height="300" controls="controls" poster="images/poster.jpg" autoplay="autoplay" poster="video/duel.jpg">
-          <source src="images/video.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
-          </video>
+        if (scroll + ($(window).height() * 0.5) >= $('.leading__video-tv').offset().top) {
+          $('.leading__video-tv video').append(`
+          <source src="images/video-short.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
           `);
 
           $(window).off();
@@ -131,6 +126,9 @@ $(function () {
       })
     }
   }
+
+  scroll();
+  $(window).on('scroll', scroll);
 
 });
 
