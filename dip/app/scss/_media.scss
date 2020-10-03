@@ -286,14 +286,13 @@
     height: 362px;
     margin: 0 !important;
     width: 100%;
+    padding: 20px 15px;
   }
   .links__item-cube {
     width: 322px;
     height: 322px;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 51px;
     border: 2px solid rgba(255, 255, 255, 1);
+    margin: 0px 0px 0px 34px;
     span {
       opacity: 1;
       font-size: 26px;

@@ -22,11 +22,12 @@ body {
   z-index: 4;
   box-shadow: rgba(0, 0, 0, 0.25) 0 3px 11px 0 !important;
   &.scroll {
-    transform: translateY(-43px);
+    transform: translateY(-44px);
     .header-box .header__logo {
       padding-right: 2.2%;
+      width: 168px;
       img {
-        width: 146px;
+        width: 146.15px;
         height: 86.26px;
       }
     }
@@ -34,7 +35,7 @@ body {
 }
 
 .overheader {
-  height: 43px;
+  height: 44px;
   font-weight: 300;
   background-color: #333;
   font-size: 16px;
@@ -48,6 +49,7 @@ body {
 }
 
 .overheader-tel {
+  margin-top: -1px;
   span {
     padding-left: 5px;
   }
@@ -68,11 +70,10 @@ body {
   background-color: #fff;
   display: flex;
   justify-content: space-between;
-  // box-shadow: rgba(0, 0, 0, 0.5) 0 3px 11px 1px;
   box-shadow: #999797 0 3px 11px 0 !important;
   position: relative;
   z-index: 4;
-  padding: 20px 40px 18px;
+  padding: 20px 40px;
   align-items: center;
   font-weight: 400;
   transition: all 0.3s;
@@ -80,11 +81,11 @@ body {
     width: 25%;
     margin-left: auto;
     padding-right: 1.5%;
-    padding-top: 4px;
+    padding-top: 3px;
     img {
       transition: all 0.3s;
       width: 168px;
-      height: 99px;
+      height: 99.17px;
       float: right;
     }
   }
@@ -336,6 +337,7 @@ body {
   font-weight: 300;
   transform: translate3d(100vw, 0, 0);
   text-transform: uppercase;
+  color: #000;
   &.animate {
     animation: bounceInRight;
     animation-duration: 1s;
@@ -379,17 +381,29 @@ body {
   span {
     padding: 0 6px;
   }
-  &::before {
-    content: "";
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   width: 5px;
+  //   height: 5px;
+  //   border-radius: 40px;
+  //   background-color: #505050;
+  //   left: 24px;
+  //   top: 60%;
+  //   transform: translateY(-50%);
+  // }
+  svg {
     position: absolute;
-    width: 5px;
-    height: 5px;
-    border-radius: 40px;
-    background-color: #505050;
-    left: 24px;
     top: 60%;
     transform: translateY(-50%);
+    left: 24px;
+    height: 6px;
+    width: 5px;
+    fill: #505050;
   }
+}
+.about__btn {
+  padding: 10px 0 9px;
 }
 
 .portfolio {
@@ -406,6 +420,9 @@ body {
 }
 .portfolio__box {
   padding: 80px 0px 49px 80px;
+}
+.portfolio__box-btn {
+  padding: 11px 0 9px;
 }
 .portfolio__box-text {
   max-width: 350px;
@@ -487,6 +504,7 @@ body {
   margin: 0 auto 10px;
   border: 2px solid rgba(255, 255, 255, 0);
   transition: all 0.5s;
+  position: relative;
   span {
     opacity: 0;
     transition: all 0.5s;
