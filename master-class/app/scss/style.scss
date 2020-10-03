@@ -488,7 +488,7 @@ body {
   }
 }
 .typed-cursor {
-  color: transparent;
+  visibility: hidden;
 }
 .leading__item-img {
   width: 410px;
@@ -510,6 +510,29 @@ body {
 }
 .leading__video-tv {
   transform: translateY(50px);
+  position: relative;
+  img {
+    pointer-events: none;
+    position: relative;
+    z-index: 3;
+  }
+  video {
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-60%);
+    z-index: 0;
+    height: 740px;
+    width: 1132px;
+  }
+  svg {
+    pointer-events: none;
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
 }
 
 .prices {

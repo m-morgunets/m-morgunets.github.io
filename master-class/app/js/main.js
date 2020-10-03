@@ -1,8 +1,11 @@
 $(function () {
 
   setTimeout(() => {
+    $('html').scrollTop(0);
     $('body').addClass('scroll');
-  }, 3000);
+    scroll();
+    $(window).on('scroll', scroll);
+  }, 2000);
 
   $('.home__btn').click(function () {
     var destination = $('.prices').offset().top;
@@ -78,7 +81,7 @@ $(function () {
       }, 200);
     }
 
-    if (scroll + ($(window).height() * 0.7) >= leading) {
+    if (scroll + $(window).height() >= leading) {
       $(window).off();
 
 
@@ -117,11 +120,21 @@ $(function () {
         });
       }, 7500);
 
-    }
+      $(window).scroll(function () {
+        let scroll = $(this).scrollTop();
 
+        if (scroll + $(window).height() >= $('.leading__video-tv').offset().top) {
+          $('.leading__video-tv').append(`
+          <video width="400" height="300" controls="controls" autoplay="autoplay" poster="video/duel.jpg">
+          <source src="images/video.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+          </video>
+          `);
+
+          $(window).off();
+        }
+      })
+    }
   }
-  scroll();
-  $(window).on('scroll', scroll);
 
 });
 
