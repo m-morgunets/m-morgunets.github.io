@@ -91,13 +91,13 @@ $(function () {
       });
       setTimeout(() => {
         let typed2 = new Typed('.leading__item-text.text-2', {
-          strings: ["", "Работал с блоггерами разных масштабов."],
+          strings: ["", "Работал с блоггерами разных масштабов"],
           typeSpeed: 30
         });
       }, 1500);
       setTimeout(() => {
         let typed3 = new Typed('.leading__item-text.text-3', {
-          strings: ["", "Во время коронавируса привлёк больше 117.000 рублей дополнительной прибыли фирме партнёров за счёт ютуба."],
+          strings: ["", "Во время коронавируса привлёк больше 117.000 рублей дополнительной прибыли фирме партнёров за счёт ютуба"],
           typeSpeed: 30
         });
       }, 3000);
@@ -109,13 +109,13 @@ $(function () {
       }, 4500);
       setTimeout(() => {
         let typed5 = new Typed('.leading__item-text.text-5', {
-          strings: ["", "Опыт работы с Ютубом >7 лет."],
+          strings: ["", "Опыт работы с Ютубом >7 лет"],
           typeSpeed: 30
         });
       }, 6000);
       setTimeout(() => {
         let typed6 = new Typed('.leading__item-text.text-6', {
-          strings: ["", "При помощи SEO-оптимизации ютуб-каналов партнёров привлекал до +98.000 просмотров."],
+          strings: ["", "При помощи SEO-оптимизации ютуб-каналов партнёров привлекал до +98.000 просмотров"],
           typeSpeed: 30
         });
       }, 7500);
@@ -125,7 +125,7 @@ $(function () {
 
         if (scroll + $(window).height() >= $('.leading__video-tv').offset().top) {
           $('.leading__video-tv').append(`
-          <video width="400" height="300" controls="controls" autoplay="autoplay" poster="video/duel.jpg">
+          <video width="400" height="300" controls="controls" poster="images/poster.jpg" autoplay="autoplay" poster="video/duel.jpg">
           <source src="images/video.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
           </video>
           `);
