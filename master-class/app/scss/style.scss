@@ -117,6 +117,9 @@
     animation: animBtn 0.3s infinite;
   }
 }
+.mobile {
+  display: none;
+}
 @keyframes animBtn {
   0% {
     transform: translateX(-61%);
