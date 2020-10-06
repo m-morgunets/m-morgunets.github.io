@@ -44,6 +44,7 @@ $(function () {
   let top3 = $('.skills-box--2 .skills__item:nth-child(2)').offset().top;
   let top4 = $('.skills-box--2 .skills__item:nth-child(4)').offset().top;
   let leading = $('.leading-box').offset().top;
+  let whom = $('.whom-box').offset().top;
 
   function scroll() {
 
@@ -72,6 +73,19 @@ $(function () {
       setTimeout(() => {
         $('.skills-box--2 .skills__item:nth-child(5)').addClass('animate');
       }, 200);
+    }
+
+    if (scroll + $(window).height() * 0.5 >= whom) {
+      $('.whom__item:nth-child(1)').addClass('animate');
+      setTimeout(() => {
+        $('.whom__item:nth-child(2)').addClass('animate');
+      }, 200);
+      setTimeout(() => {
+        $('.whom__item:nth-child(3)').addClass('animate');
+      }, 400);
+      setTimeout(() => {
+        $('.whom__item:nth-child(4)').addClass('animate');
+      }, 600);
     }
 
     if (scroll + $(window).height() >= leading) {
@@ -122,6 +136,14 @@ $(function () {
           `);
 
           $(window).off();
+          if ($(window).width() <= 930) {
+            let videoWidth = $('.leading__video-tv video').width();
+            $('.leading__video-tv video').height(videoWidth * 0.57);
+            $(window).resize(function () {
+              let videoWidth = $('.leading__video-tv video').width();
+              $('.leading__video-tv video').height(videoWidth * 0.57);
+            })
+          }
         }
       })
     }
@@ -129,6 +151,5 @@ $(function () {
 
   scroll();
   $(window).on('scroll', scroll);
-
 });
 
