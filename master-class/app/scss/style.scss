@@ -310,9 +310,28 @@
   letter-spacing: 0.25px;
 }
 
+.slider-arrows {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  z-index: 4;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+}
+.slider-arrows__right {
+  right: -30px;
+}
+.slider-arrows__left {
+  left: -30px;
+}
+
 .program {
   background-color: #ff89bb;
   padding: 80px 0 170px;
+}
+.program-mobile {
+  display: none;
 }
 .program__title {
   color: #fff;
@@ -544,8 +563,10 @@
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 .prices__item {
+  outline: none;
   max-width: 370px;
   width: 100%;
   background: linear-gradient(0deg, #acc3e5, #acc3e5);
