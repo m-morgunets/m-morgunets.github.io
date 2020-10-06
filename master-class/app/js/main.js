@@ -143,6 +143,13 @@ $(function () {
               let videoWidth = $('.leading__video-tv video').width();
               $('.leading__video-tv video').height(videoWidth * 0.57);
             })
+
+            $('.prices-box').slick({
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              prevArrow: '<img class="slider-arrows slider-arrows__left" src="images/arrows-left.svg" alt="">',
+              nextArrow: '<img class="slider-arrows slider-arrows__right" src="images/arrows-right.svg" alt="">',
+            });
           }
         }
       })
