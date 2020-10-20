@@ -1,0 +1,53 @@
+html {
+  box-sizing: border-box !important;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box !important;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  color: #333;
+  font-family: "Comfortaa", cursive;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: #333;
+  outline: none;
+}
+
+ul,
+li,
+button {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+.default-btn {
+  text-align: center;
+  width: 150px;
+  padding: 12px 0 10px;
+  background-color: #000;
+  color: #fff;
+  font-weight: 700;
+  font-size: 18px;
+  border-radius: 40px;
+  line-height: 17px;
+}
