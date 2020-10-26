@@ -1,5 +1,26 @@
 $(function () {
 
+  $('.projects__item:nth-child(odd) .projects__item-img__box').slick({
+    rtl: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    infinite: true,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 10000,
+    speed: 800,
+  });
+
+  $('.projects__item:nth-child(even) .projects__item-img__box').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    infinite: true,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 10000,
+    speed: 800,
+  });
+
   var wow = new WOW(
     {
 
@@ -9,25 +30,15 @@ $(function () {
   wow.init();
 
   function WindowResize() {
-    let itemWidth = $('.portfolio__box-item').width();
 
-    $('.portfolio__box-item').height(itemWidth * 0.749974501);
-    $('.portfolio-item-tall').height(itemWidth * 1.24998067);
+    if ($(window).width() <= 845) {
+      for (let index = 0; index <= $('.projects__item').length; index++) {
+        $(`.projects__item:nth-child(${index})`).append($(`.projects__item:nth-child(${index}) .projects__item-box`))
+      }
+    }
   }
   WindowResize();
   $(window).resize(WindowResize);
-
-  if ($(window).width() <= 845) {
-    let iterator = $('.portfolio-inner').length;
-    for (let index = 1; index <= iterator; index++) {
-      $(`.portfolio-inner:nth-child(${index}) .portfolio__box:first-child`).append($(`.portfolio-inner:nth-child(${index}) .portfolio__box:nth-child(2) .portfolio__box-item:first-child`));
-      $(`.portfolio-inner:nth-child(${index}) .portfolio__box:nth-child(2)`).append($(`.portfolio-inner:nth-child(${index}) .portfolio__box:nth-child(3) .portfolio__box-item:first-child`));
-      $(`.portfolio-inner:nth-child(${index}) .portfolio__box:nth-child(2)`).append($(`.portfolio-inner:nth-child(${index}) .portfolio__box:nth-child(1) .portfolio__box-item:nth-child(2)`));
-      $(`.portfolio-inner:nth-child(${index}) .portfolio__box:nth-child(3)`).append($(`.portfolio-inner:nth-child(${index}) .portfolio__box:nth-child(2) .portfolio__box-item:nth-child(1)`));
-      $(`.portfolio-inner:nth-child(${index}) .portfolio__box:nth-child(3)`).append($(`.portfolio-inner:nth-child(${index}) .portfolio__box:nth-child(3) .portfolio__box-item:nth-child(1)`));
-    }
-
-  }
 
   function scroll() {
     let overheaderHeight = $('.overheader').height();
