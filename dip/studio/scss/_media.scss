@@ -186,7 +186,7 @@
     padding: 10px 0 8px;
   }
   .footer {
-    padding: 47px 0 50px 15px;
+    padding: 47px 0 53px 15px;
   }
   .footer-inner {
     display: block;
@@ -198,7 +198,7 @@
   .footer__logo img {
     width: 68px;
     height: 66px;
-    margin: 0;
+    margin-bottom: 1px;
   }
   .footer__logo span {
     font-size: 10px;
@@ -211,16 +211,18 @@
   }
   .footer__box-text {
     font-size: 12.45px;
-    margin-bottom: 16px;
+    margin-bottom: 14px;
   }
   .footer__box-title {
     font-size: 16px;
-    margin-bottom: 11px;
+    margin-bottom: 12px;
+    padding: 0;
   }
   .footer__box:nth-child(3) {
     padding-top: 3px;
     .footer__box-title {
       padding: 7px 0 2px;
+      margin-bottom: 10px;
     }
   }
   .footer__box {
@@ -242,7 +244,7 @@
     }
     a:first-child svg {
       margin-left: -2px;
-      margin-right: 16px;
+      margin-right: 8px;
     }
   }
 
@@ -254,17 +256,18 @@
   .content-box {
     display: block;
     max-width: unset;
+    padding: 0;
     padding-top: 111px;
   }
   .content__item {
-    padding: 0 15px;
+    padding: 0 15px !important;
     margin: 0 auto;
     max-width: unset;
     width: 100%;
   }
   .content__item-title {
     font-size: 22px;
-    padding-right: 51.5px;
+    text-align: center;
   }
   .content__item:first-child .content__item-img:nth-child(2) {
     margin: 11px 0 40px;
@@ -272,23 +275,23 @@
   .content__item:first-child .content__item-text {
     font-weight: 300;
     font-size: 15px;
-    margin: 51px 0 31px;
+    margin: 50px 0 30px;
     span {
       padding-left: 4.4px;
     }
   }
   .content__item-text {
-    line-height: 23px;
+    line-height: 22px;
   }
   .content__item:first-child .content__item-btn {
     width: 205px;
     margin: 26px 0 10px;
   }
   .content__item:first-child .content__item-img:nth-child(6) {
-    margin-top: 10.5px;
+    margin-top: 11px;
   }
   .content__item:last-child {
-    padding-top: 29px;
+    padding-top: 29px !important;
   }
   .content__item:last-child .content__item-text span.size {
     font-size: 15px;
@@ -308,9 +311,9 @@
   }
   .command-box {
     padding: 5.5px;
-    margin: 47px 0 88px;
+    margin: 49px 0 88px;
   }
-  .command-box a {
+  .command-box div {
     width: 100%;
     margin: 5.5px;
   }
@@ -320,7 +323,7 @@
   .command__title {
     font-size: 20px;
     text-align: center;
-    margin-bottom: 38px;
+    margin-bottom: 37px;
   }
   .container {
     padding: 0 15px;
@@ -329,7 +332,7 @@
     font-size: 18px;
   }
   .command__text:nth-child(2) {
-    line-height: 23px;
+    line-height: 22px;
     br {
       display: block;
     }
@@ -339,7 +342,7 @@
   }
   .command__btn {
     width: 200px;
-    padding: 12px 0 9px;
-    margin: 12px 0 83px;
+    padding: 11px 0 9px;
+    margin: 13px 0 15px;
   }
 }

@@ -191,11 +191,13 @@
   }
   .about__title {
     font-size: 16px;
-    padding-right: 13px;
+    padding-right: 16px;
     color: #000;
+    transform: unset;
+    margin: 74px 0 5px 14px;
   }
   .about {
-    padding: 71px 15px 25px;
+    padding: 71px 15px 26px;
     .container {
       max-width: unset;
     }
@@ -232,9 +234,10 @@
     }
   }
   .portfolio__box {
-    padding: 80px 0 58px;
+    padding: 80px 0 60px;
     max-width: 270px;
     margin: 0 auto;
+    transform: translateX(-1px);
   }
   .portfolio__box-text {
     font-size: 16px;
@@ -264,21 +267,26 @@
     padding: 10px 15px;
     max-width: unset;
     &:nth-child(1) .advantages__item-text {
-      margin: 17px 0 9px;
+      margin: 19px 0 9px;
     }
-    &:nth-child(2) .advantages__item-text {
-      margin: 17px 0 27px;
+    &:nth-child(2) {
+      br {
+        display: block !important;
+      }
+      .advantages__item-text {
+        margin: 19px 0 28px;
+      }
     }
     &:nth-child(3) .advantages__item-text {
-      margin: 17px 0 18px;
+      margin: 19px 0 18px;
     }
     &:nth-child(4) .advantages__item-text {
-      margin: 19px 0 30px;
+      margin: 18px 0 29px;
     }
   }
   .advantages__item .advantages__item-text {
     margin: 22px 0 10px;
-    line-height: 20px;
+    line-height: 19px;
     br {
       display: none;
     }
@@ -305,7 +313,7 @@
   }
 
   .footer {
-    padding: 47px 0 50px 15px;
+    padding: 47px 0 53px 15px;
   }
   .footer-inner {
     display: block;
@@ -317,7 +325,7 @@
   .footer__logo img {
     width: 68px;
     height: 66px;
-    margin: 0;
+    margin-bottom: 1px;
   }
   .footer__logo span {
     font-size: 10px;
@@ -330,16 +338,18 @@
   }
   .footer__box-text {
     font-size: 12.45px;
-    margin-bottom: 16px;
+    margin-bottom: 14px;
   }
   .footer__box-title {
     font-size: 16px;
-    margin-bottom: 11px;
+    margin-bottom: 12px;
+    padding: 0;
   }
   .footer__box:nth-child(3) {
     padding-top: 3px;
     .footer__box-title {
       padding: 7px 0 2px;
+      margin-bottom: 10px;
     }
   }
   .footer__box {
@@ -361,10 +371,7 @@
     }
     a:first-child svg {
       margin-left: -2px;
-      margin-right: 16px;
+      margin-right: 8px;
     }
-  }
-  .about__title {
-    transform: unset;
   }
 }

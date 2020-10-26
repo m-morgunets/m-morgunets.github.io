@@ -1,0 +1,262 @@
+@media (max-width: 845px) {
+  .emptiness {
+    margin-top: 111px;
+    height: 183px;
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: 0 0;
+  }
+  .content {
+    height: 630px;
+  }
+  .overheader {
+    display: none;
+  }
+  .header {
+    box-shadow: none !important;
+  }
+  .header-box {
+    box-shadow: rgba(0, 0, 0, 0.25) 0 3px 11px 0 !important;
+  }
+  .header__menu-box {
+    display: block;
+    padding: 80px 20px 15px;
+    flex: 1 1 auto;
+  }
+  .header__menu {
+    z-index: 8;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transform: translateX(100%);
+    background-color: #000;
+    transition: all 0.3s;
+    width: 81vw;
+    display: flex;
+    overflow: auto;
+    flex-direction: column;
+    height: 100vh;
+    * {
+      color: #b8b8b8;
+      fill: #b8b8b8;
+    }
+    &.active {
+      transform: unset;
+    }
+    .header__menu-item {
+      padding: 0;
+      a {
+        padding: 8px 0;
+        transition: all 0.2s;
+      }
+      a::before {
+        display: none;
+      }
+      a:hover {
+        color: #fff;
+        svg {
+          fill: #fff;
+        }
+      }
+    }
+    .select__btn {
+      padding-right: 0px !important;
+      svg {
+        transition: all 0.2s;
+        fill: #b8b8b8;
+        width: 13px;
+        right: -30px;
+        transform: none;
+        position: static;
+        margin-left: 11px;
+      }
+      &.active svg {
+        transform: rotate(180deg) !important;
+      }
+    }
+    .select-1__btn.active svg {
+      transform: rotate(180deg) !important;
+    }
+    .select {
+      background-color: transparent;
+      position: static;
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+      overflow: hidden;
+      width: 100%;
+      a {
+        color: #b8b8b8;
+        font-size: 12px;
+        padding: 5px 12px;
+        width: unset;
+        font-family: "Comfortaa", cursive;
+      }
+      &.animate1 {
+        animation-name: selectAnim1;
+        animation-duration: 1s;
+        height: 100%;
+        opacity: 1;
+      }
+      &.animate2 {
+        animation-name: selectAnim2;
+        animation-duration: 1s;
+        opacity: 0;
+        height: 0;
+      }
+    }
+    .select ul {
+      padding-left: 12px;
+      opacity: 1;
+      visibility: visible;
+      position: static;
+      transform: none;
+      background: none;
+      overflow: hidden;
+      &.animate1 {
+        animation-name: selectAnim1;
+        animation-duration: 1s;
+        height: 100%;
+        opacity: 1;
+      }
+      &.animate2 {
+        animation-name: selectAnim2;
+        animation-duration: 1s;
+        opacity: 0;
+        height: 0;
+      }
+    }
+  }
+
+  @keyframes selectAnim1 {
+    0% {
+      opacity: 0;
+      height: 0;
+    }
+    10% {
+      height: 100%;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes selectAnim2 {
+    0% {
+      opacity: 1;
+      height: 100%;
+    }
+    40% {
+      height: 100%;
+    }
+    50% {
+      height: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  .select-1__btn svg {
+    transform: none;
+    margin: 0;
+  }
+  .burger-shadow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 7;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+    &.active {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  .mobile {
+    display: block;
+  }
+  .header-box {
+    padding: 28px 0;
+  }
+  .header-box .header__logo {
+    margin: 0 !important;
+    width: 66.66667%;
+    height: 55px;
+    padding: 0 10px;
+    background: url(../images/logo.jpg) no-repeat;
+    background-size: contain;
+    background-position: 50% 50%;
+    img {
+      display: none;
+    }
+  }
+
+  .footer {
+    padding: 47px 0 53px 15px;
+  }
+  .footer-inner {
+    display: block;
+  }
+  .footer__logo {
+    width: unset;
+    padding: 0;
+  }
+  .footer__logo img {
+    width: 68px;
+    height: 66px;
+    margin-bottom: 1px;
+  }
+  .footer__logo span {
+    font-size: 10px;
+    padding-left: 3px;
+  }
+  .footer__box:nth-child(2) {
+    padding: 0;
+    padding-top: 30px;
+    padding-left: 5px;
+  }
+  .footer__box-text {
+    font-size: 12.45px;
+    margin-bottom: 14px;
+  }
+  .footer__box-title {
+    font-size: 16px;
+    margin-bottom: 12px;
+    padding: 0;
+  }
+  .footer__box:nth-child(3) {
+    padding-top: 3px;
+    .footer__box-title {
+      padding: 7px 0 2px;
+      margin-bottom: 10px;
+    }
+  }
+  .footer__box {
+    width: unset !important;
+  }
+  .footer-social .footer__box-title {
+    margin-bottom: 13px;
+    padding: 10px 0 0px;
+  }
+  .footer-social {
+    padding-top: 20px;
+    .footer__box-text {
+      margin: 0;
+    }
+    svg {
+      margin: 0;
+      width: 14px;
+      height: 21px;
+    }
+    a:first-child svg {
+      margin-left: -2px;
+      margin-right: 8px;
+    }
+  }
+}

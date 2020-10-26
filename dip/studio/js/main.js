@@ -9,12 +9,8 @@ $(function () {
   wow.init();
 
   function resizeCommandImg() {
-    let WinWidth = $(this).width();
-
-    if ($(this).width() <= 845) {
-      let imgWidth = $('.command-box a').width();
-      $('.command-box a').height(imgWidth);
-    }
+    let imgWidth = $('.command-box div').width();
+    $('.command-box div').height(imgWidth);
   }
 
   resizeCommandImg();
