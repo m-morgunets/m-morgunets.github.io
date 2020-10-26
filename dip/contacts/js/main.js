@@ -98,6 +98,12 @@ $(function () {
     $('.burger-shadow').toggleClass('active');
   })
 
+  $('.burger-shadow').click(function () {
+    $('.header__burger').toggleClass('active');
+    $('.header__menu').toggleClass('active');
+    $('.burger-shadow').toggleClass('active');
+  })
+
   $('.select__btn svg').click(function () {
     $('.select').toggleClass('animate1');
     $('.select').toggleClass('animate2');
