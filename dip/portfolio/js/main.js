@@ -20,11 +20,11 @@ $(function () {
   if ($(window).width() <= 845) {
     let iterator = $('.portfolio-inner').length;
     for (let index = 1; index <= iterator; index++) {
-      // $(`.portfolio-inner:nth-child(${index}) .portfolio__box:first-child`).append($(`.portfolio-inner:nth-child(${index}) .portfolio__box:nth-child(2) .portfolio__box-item:first-child`));
-      // $(`.portfolio-inner:nth-child(${index}) .portfolio__box:nth-child(2)`).append($(`.portfolio-inner:nth-child(${index}) .portfolio__box:nth-child(3) .portfolio__box-item:first-child`));
-      // $(`.portfolio-inner:nth-child(${index}) .portfolio__box:nth-child(2)`).append($(`.portfolio-inner:nth-child(${index}) .portfolio__box:nth-child(1) .portfolio__box-item:nth-child(2)`));
-      // $(`.portfolio-inner:nth-child(${index}) .portfolio__box:nth-child(3)`).append($(`.portfolio-inner:nth-child(${index}) .portfolio__box:nth-child(2) .portfolio__box-item:nth-child(1)`));
-      // $(`.portfolio-inner:nth-child(${index}) .portfolio__box:nth-child(3)`).append($(`.portfolio-inner:nth-child(${index}) .portfolio__box:nth-child(3) .portfolio__box-item:nth-child(1)`));
+      $(`.portfolio-inner:nth-child(${index}) .portfolio__box:first-child`).append($(`.portfolio-inner:nth-child(${index}) .portfolio__box:nth-child(2) .portfolio__box-item:first-child`));
+      $(`.portfolio-inner:nth-child(${index}) .portfolio__box:nth-child(2)`).append($(`.portfolio-inner:nth-child(${index}) .portfolio__box:nth-child(3) .portfolio__box-item:first-child`));
+      $(`.portfolio-inner:nth-child(${index}) .portfolio__box:nth-child(2)`).append($(`.portfolio-inner:nth-child(${index}) .portfolio__box:nth-child(1) .portfolio__box-item:nth-child(2)`));
+      $(`.portfolio-inner:nth-child(${index}) .portfolio__box:nth-child(3)`).append($(`.portfolio-inner:nth-child(${index}) .portfolio__box:nth-child(2) .portfolio__box-item:nth-child(1)`));
+      $(`.portfolio-inner:nth-child(${index}) .portfolio__box:nth-child(3)`).append($(`.portfolio-inner:nth-child(${index}) .portfolio__box:nth-child(3) .portfolio__box-item:nth-child(1)`));
     }
 
   }
