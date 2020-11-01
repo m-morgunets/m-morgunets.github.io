@@ -5,10 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Home</title>
-  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&family=Roboto&display=swap"
+  <title>Studio</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&family=Roboto&display=block"
     rel="stylesheet">
-  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/style.min.css?1500">
 </head>
 
 <body>
@@ -63,12 +64,12 @@
         </div>
       </div>
 
-      <div class="header__logo">
+      <a href="../home/index.html" class="header__logo">
         <picture>
           <source srcset="images/logo.webp" type="image/webp">
           <img src="images/logo.jpg">
         </picture>
-      </div>
+      </a>
 
       <div class="header__burger mobile " id="header__burger">
         <ul>
@@ -83,11 +84,11 @@
       <div class="header__menu" id="header__menu">
         <ul class="header__menu-box">
 
-          <li class="header__menu-item"><a href="#">Главная</a></li>
-          <li class="header__menu-item"><a href="#">Студия</a></li>
+          <li class="header__menu-item"><a href="../home/index.html">Главная</a></li>
+          <li class="header__menu-item"><a href="../studio/index.html">Студия</a></li>
           <li class="header__menu-item">
-            <div href="#" class="select__btn">
-              <a href="">Проекты</a>
+            <div class="select__btn">
+              <a href="../projects/index.html">Проекты</a>
               <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="284.929px" height="284.929px"
                 viewBox="0 0 284.929 284.929" style="enable-background:new 0 0 284.929 284.929;" xml:space="preserve">
@@ -100,7 +101,7 @@
             <ul class="select animate2">
               <li>
                 <div class="select-1__btn">
-                  <a href="#">Дома</a>
+                  <a href="../houses/index.html">Дома</a>
                   <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="284.929px" height="284.929px"
                     viewBox="0 0 284.929 284.929" style="enable-background:new 0 0 284.929 284.929;"
@@ -112,7 +113,7 @@
                   </svg>
                 </div>
                 <ul class="select-item animate2">
-                  <li><a href="#">Дом Барвиха</a></li>
+                  <li><a href="../barvikha/index.html">Дом Барвиха</a></li>
                   <li><a href="#">Дом NP</a></li>
                   <li><a href="#">Дом BP</a></li>
                   <li><a href="#">Дом NP 74</a></li>
@@ -182,9 +183,9 @@
               </li>
             </ul>
           </li>
-          <li class="header__menu-item"><a href="#">Пресса</a></li>
-          <li class="header__menu-item"><a href="#">Портфолио</a></li>
-          <li class="header__menu-item"><a href="#">Контакты</a></li>
+          <li class="header__menu-item"><a href="../news/index.html">Пресса</a></li>
+          <li class="header__menu-item"><a href="../portfolio/index.html">Портфолио</a></li>
+          <li class="header__menu-item"><a href="../contacts/index.html">Контакты</a></li>
 
 
         </ul>
@@ -265,7 +266,7 @@
           встроенной мебели по индивидуальным чертежам дизайнеров компании, позволяет им объединить пространство
           вокруг одного мотива, идеи, стиля….
         </div>
-        <a href="#" class="content__item-btn">Посмотреть Проекты</a>
+        <a href="../projects/index.html" class="content__item-btn">Посмотреть Проекты</a>
 
         <div class="content__item-img wow animate__fadeInLeft" data-wow-duration="1s" data-wow-offset="0">
           <picture>
@@ -300,7 +301,7 @@
           осуществляются с помощью квалифицированных сотрудников фирм-подрядчиков, имеющих большой опыт совместной
           работы в производстве и реализации эксклюзивных объектов. <br>
         </div>
-        <a href="#" class="content__item-btn">Посмотреть Портфолио</a>
+        <a href="../portfolio/index.html" class="content__item-btn">Посмотреть Портфолио</a>
         <div class="content__item-img wow animate__bounceInLeft" data-wow-duration="1s" data-wow-offset="0">
           <picture>
             <source srcset="images/content-item-2.webp" type="image/webp">
@@ -319,7 +320,7 @@
             <img src="images/content-item-6.jpg">
           </picture>
         </div>
-        <a href="#" class="content__item-btn">Посмотреть Проекты</a>
+        <a href="../projects/index.html" class="content__item-btn">Посмотреть Проекты</a>
 
       </div>
     </div>
@@ -346,7 +347,7 @@
         находим оптимальные компромиссные решения, не противоречащие общей стилистике проекта, соблюдая гармонию между
         функциональностью и эстетикой .</div>
 
-      <a href="#" class="command__btn">Связаться с Нами</a>
+      <a href="../contacts/index.html" class="command__btn">Связаться с Нами</a>
     </div>
   </section>
 
@@ -354,13 +355,13 @@
   <footer class="footer">
     <div class="footer-inner">
 
-      <div class="footer__logo">
+      <a href="../home/index.html" class="footer__logo">
         <picture>
           <source srcset="images/footer-logo.webp" type="image/webp">
           <img src="images/footer-logo.jpg">
         </picture> <br>
         <span>since 1995</span>
-      </div>
+      </a>
       <div class="footer__box">
         <div class="footer__box-title">Адрес</div>
         <div class="footer__box-text">
@@ -375,8 +376,8 @@
       <div class="footer__box">
         <div class="footer__box-title">Контакты</div>
         <div class="footer__box-text">
-          <a href="tel: +74952878600">+7 495 287 86 00</a><br>
-          <a href="tel: +74952323149">+7 495 232 31 49</a>
+          <a href="tel:+74952878600">+7 495 287 86 00</a><br>
+          <a href="tel:+74952323149">+7 495 232 31 49</a>
         </div>
         <div class="footer__box-text">
           <a href="mailto:dip@diproject.com">dip@diproject.com</a>
@@ -419,8 +420,8 @@
   </footer>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="js/libs.min.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/libs.min.js?1500"></script>
+  <script src="js/main.js?1500"></script>
 </body>
 
 </html>
