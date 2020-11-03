@@ -268,7 +268,8 @@
   }
   .content__item-title {
     font-size: 22px;
-    text-align: center;
+    text-align: right;
+    padding-right: 7px;
   }
   .content__item:first-child .content__item-img:nth-child(2) {
     margin: 11px 0 40px;
