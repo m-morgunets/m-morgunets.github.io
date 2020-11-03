@@ -13,13 +13,13 @@ gulp.task('clean', async function () {
 })
 
 gulp.task('scss', function () {
-  return gulp.src('studio/scss/**/*.scss')
+  return gulp.src('news/scss/**/*.scss')
     .pipe(sass({ outputStyle: 'compressed' }))
     .pipe(autoprefixer({
       overrideBrowserslist: ['last 8 versions']
     }))
     .pipe(rename({ suffix: '.min' }))
-    .pipe(gulp.dest('studio/css'))
+    .pipe(gulp.dest('news/css'))
     .pipe(browserSync.reload({ stream: true }))
 });
 
@@ -31,17 +31,17 @@ gulp.task('css', function () {
     'node_modules/animate.css/animate.min.css'
   ])
     .pipe(concat('_libs.scss'))
-    .pipe(gulp.dest('studio/scss'))
+    .pipe(gulp.dest('news/scss'))
     .pipe(browserSync.reload({ stream: true }))
 });
 
 gulp.task('html', function () {
-  return gulp.src('studio/*.html')
+  return gulp.src('news/*.html')
     .pipe(browserSync.reload({ stream: true }))
 });
 
 gulp.task('script', function () {
-  return gulp.src('studio/js/*.js')
+  return gulp.src('news/js/*.js')
     .pipe(browserSync.reload({ stream: true }))
 });
 
@@ -52,39 +52,39 @@ gulp.task('js', function () {
   ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('studio/js'))
+    .pipe(gulp.dest('news/js'))
     .pipe(browserSync.reload({ stream: true }))
 });
 
 gulp.task('browser-sync', function () {
   browserSync.init({
     server: {
-      baseDir: "studio/"
+      baseDir: "news/"
     }
   });
 });
 
 gulp.task('export', function () {
-  let buildHtml = gulp.src('studio/**/*.html')
+  let buildHtml = gulp.src('news/**/*.html')
     .pipe(gulp.dest('dist'));
 
-  let BuildCss = gulp.src('studio/css/**/*.css')
+  let BuildCss = gulp.src('news/css/**/*.css')
     .pipe(gulp.dest('dist/css'));
 
-  let BuildJs = gulp.src('studio/js/**/*.js')
+  let BuildJs = gulp.src('news/js/**/*.js')
     .pipe(gulp.dest('dist/js'));
 
-  let BuildFonts = gulp.src('studio/fonts/**/*.*')
+  let BuildFonts = gulp.src('news/fonts/**/*.*')
     .pipe(gulp.dest('dist/fonts'));
 
-  let BuildImg = gulp.src('studio/img/**/*.*')
+  let BuildImg = gulp.src('news/img/**/*.*')
     .pipe(gulp.dest('dist/img'));
 });
 
 gulp.task('watch', function () {
-  gulp.watch('studio/scss/**/*.scss', gulp.parallel('scss'));
-  gulp.watch('studio/*.html', gulp.parallel('html'))
-  gulp.watch('studio/js/*.js', gulp.parallel('script'))
+  gulp.watch('news/scss/**/*.scss', gulp.parallel('scss'));
+  gulp.watch('news/*.html', gulp.parallel('html'))
+  gulp.watch('news/js/*.js', gulp.parallel('script'))
 });
 
 gulp.task('build', gulp.series('clean', 'export'))
