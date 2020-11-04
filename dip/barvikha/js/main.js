@@ -15,16 +15,6 @@ $(function () {
     });
   wow.init();
 
-  // function WindowResize() {
-  //   if ($(window).width() <= 845) {
-  //     for (let index = 0; index <= $('.houses__item').length; index++) {
-  //       $(`.houses__item:nth-child(${index})`).append($(`.houses__item:nth-child(${index}) .houses__item-box`));
-  //     }
-  //   }
-  // }
-  // WindowResize();
-  // $(window).resize(WindowResize);
-
   function scroll() {
     let overheaderHeight = $('.overheader').height();
 

@@ -13,13 +13,13 @@ gulp.task('clean', async function () {
 })
 
 gulp.task('scss', function () {
-  return gulp.src('news/scss/**/*.scss')
+  return gulp.src('barvikha/scss/**/*.scss')
     .pipe(sass({ outputStyle: 'compressed' }))
     .pipe(autoprefixer({
       overrideBrowserslist: ['last 8 versions']
     }))
     .pipe(rename({ suffix: '.min' }))
-    .pipe(gulp.dest('news/css'))
+    .pipe(gulp.dest('barvikha/css'))
     .pipe(browserSync.reload({ stream: true }))
 });
 
@@ -31,17 +31,17 @@ gulp.task('css', function () {
     'node_modules/animate.css/animate.min.css'
   ])
     .pipe(concat('_libs.scss'))
-    .pipe(gulp.dest('news/scss'))
+    .pipe(gulp.dest('barvikha/scss'))
     .pipe(browserSync.reload({ stream: true }))
 });
 
 gulp.task('html', function () {
-  return gulp.src('news/*.html')
+  return gulp.src('barvikha/*.html')
     .pipe(browserSync.reload({ stream: true }))
 });
 
 gulp.task('script', function () {
-  return gulp.src('news/js/*.js')
+  return gulp.src('barvikha/js/*.js')
     .pipe(browserSync.reload({ stream: true }))
 });
 
@@ -52,39 +52,39 @@ gulp.task('js', function () {
   ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('news/js'))
+    .pipe(gulp.dest('barvikha/js'))
     .pipe(browserSync.reload({ stream: true }))
 });
 
 gulp.task('browser-sync', function () {
   browserSync.init({
     server: {
-      baseDir: "news/"
+      baseDir: "barvikha/"
     }
   });
 });
 
 gulp.task('export', function () {
-  let buildHtml = gulp.src('news/**/*.html')
+  let buildHtml = gulp.src('barvikha/**/*.html')
     .pipe(gulp.dest('dist'));
 
-  let BuildCss = gulp.src('news/css/**/*.css')
+  let BuildCss = gulp.src('barvikha/css/**/*.css')
     .pipe(gulp.dest('dist/css'));
 
-  let BuildJs = gulp.src('news/js/**/*.js')
+  let BuildJs = gulp.src('barvikha/js/**/*.js')
     .pipe(gulp.dest('dist/js'));
 
-  let BuildFonts = gulp.src('news/fonts/**/*.*')
+  let BuildFonts = gulp.src('barvikha/fonts/**/*.*')
     .pipe(gulp.dest('dist/fonts'));
 
-  let BuildImg = gulp.src('news/img/**/*.*')
+  let BuildImg = gulp.src('barvikha/img/**/*.*')
     .pipe(gulp.dest('dist/img'));
 });
 
 gulp.task('watch', function () {
-  gulp.watch('news/scss/**/*.scss', gulp.parallel('scss'));
-  gulp.watch('news/*.html', gulp.parallel('html'))
-  gulp.watch('news/js/*.js', gulp.parallel('script'))
+  gulp.watch('barvikha/scss/**/*.scss', gulp.parallel('scss'));
+  gulp.watch('barvikha/*.html', gulp.parallel('html'))
+  gulp.watch('barvikha/js/*.js', gulp.parallel('script'))
 });
 
 gulp.task('build', gulp.series('clean', 'export'))
