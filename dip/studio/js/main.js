@@ -75,25 +75,25 @@ $(function () {
         $('.select__btn').addClass('active');
       })
     } else {
-      $('.header__burger').click(function () {
+      $('.header__burger').on("click touchstart", function () {
         $('.header__burger').toggleClass('active');
         $('.header__menu').toggleClass('active');
         $('.burger-shadow').toggleClass('active');
       })
 
-      $('.burger-shadow').click(function () {
+      $('.burger-shadow').on("click touchstart", function () {
         $('.header__burger').toggleClass('active');
         $('.header__menu').toggleClass('active');
         $('.burger-shadow').toggleClass('active');
       })
 
-      $('.select__btn svg').click(function () {
+      $('.select__btn svg').on("click touchstart", function () {
         $('.select').toggleClass('animate1');
         $('.select').toggleClass('animate2');
         $('.select__btn').toggleClass('active')
       })
 
-      $('.select-1__btn svg').click(function () {
+      $('.select-1__btn svg').on("click touchstart", function () {
         $(this).parent().siblings('.select-item').toggleClass('animate1');
         $(this).parent().siblings('.select-item').toggleClass('animate2');
         $(this).parent().toggleClass('active')
