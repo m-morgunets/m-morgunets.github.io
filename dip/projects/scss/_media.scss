@@ -312,6 +312,9 @@
     height: 200px;
     background-position: 0% 0%;
     float: none;
+    div {
+      height: inherit;
+    }
   }
   .projects__item-box {
     width: 100%;
