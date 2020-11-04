@@ -23,8 +23,7 @@ $(function () {
 
     let scroll = $(this).scrollTop();
 
-
-    if ($(window).width() >= 845) {
+    if ($('.header__burger').css('display') == 'none') {
 
       if (scroll >= 175) {
         $('.header').addClass('scroll')
@@ -44,7 +43,9 @@ $(function () {
 
   function funcResize() {
 
-    if ($(window).width() >= 845) {
+    $('.header-box *').off();
+
+    if ($('.header__burger').css('display') == 'none') {
       $('.select__btn').mouseenter(function () {
         $('.select').addClass('active');
         $('.select__btn').addClass('active');
