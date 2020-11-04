@@ -266,4 +266,9 @@
   .barvikha__slider {
     height: 250px;
   }
+  .barvikha__slider {
+    div:not(.slider-arrows) {
+      height: 250px;
+    }
+  }
 }

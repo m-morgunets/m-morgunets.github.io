@@ -427,6 +427,10 @@ body {
   height: 660px;
   width: 100%;
   position: relative;
+  div:not(.slider-arrows) {
+    height: 660px;
+    width: 100%;
+  }
 }
 .barvikha__slider-item {
   width: 100%;
