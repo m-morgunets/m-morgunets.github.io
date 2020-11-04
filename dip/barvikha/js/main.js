@@ -19,8 +19,6 @@ $(function () {
   wow.init();
 
   function scroll() {
-    let overheaderHeight = $('.overheader').height();
-
     let scroll = $(this).scrollTop();
 
     if ($('.header__burger').css('display') == 'none') {
