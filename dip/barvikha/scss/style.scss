@@ -395,7 +395,9 @@ body {
   padding-top: 141px;
 }
 .barvikha__bg {
-  background-image: url(../images/barvikha-bg.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
   background-position: 0 50%;
   background-repeat: no-repeat;
@@ -438,8 +440,12 @@ body {
   width: 100%;
   height: 660px;
   background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-color: #000;
 }
 .slider-arrows {
   position: absolute;
