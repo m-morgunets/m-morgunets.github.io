@@ -21,14 +21,6 @@ $(function () {
     speed: 800,
   });
 
-  var wow = new WOW(
-    {
-
-      mobile: false,
-
-    });
-  wow.init();
-
   function scroll() {
     let scroll = $(this).scrollTop();
 
@@ -138,6 +130,14 @@ $(function () {
       })
     }
   }
+
+  var wow = new WOW(
+    {
+
+      mobile: false,
+
+    });
+  wow.init();
 });
 
 var dist = 0
