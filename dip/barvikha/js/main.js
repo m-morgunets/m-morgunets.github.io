@@ -1,8 +1,11 @@
 $(function () {
 
   $('.barvikha__slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
     infinite: true,
     fade: true,
+    arrows: true,
     prevArrow: '<div class="slider-arrows slider-arrows__left"></div>',
     nextArrow: '<div class="slider-arrows slider-arrows__right"></div>',
   });
