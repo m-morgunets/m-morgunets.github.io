@@ -91,30 +91,31 @@ $(function () {
         $(this).siblings('.select-1__btn').addClass('active');
         $('.select__btn').addClass('active');
       })
+    } else {
+      $('.header__burger').click(function () {
+        $('.header__burger').toggleClass('active');
+        $('.header__menu').toggleClass('active');
+        $('.burger-shadow').toggleClass('active');
+      })
+
+      $('.burger-shadow').click(function () {
+        $('.header__burger').toggleClass('active');
+        $('.header__menu').toggleClass('active');
+        $('.burger-shadow').toggleClass('active');
+      })
+
+      $('.select__btn svg').click(function () {
+        $('.select').toggleClass('animate1');
+        $('.select').toggleClass('animate2');
+        $('.select__btn').toggleClass('active')
+      })
+
+      $('.select-1__btn svg').click(function () {
+        $(this).parent().siblings('.select-item').toggleClass('animate1');
+        $(this).parent().siblings('.select-item').toggleClass('animate2');
+        $(this).parent().toggleClass('active')
+      })
     }
-    $('.header__burger').click(function () {
-      $('.header__burger').toggleClass('active');
-      $('.header__menu').toggleClass('active');
-      $('.burger-shadow').toggleClass('active');
-    })
-
-    $('.burger-shadow').click(function () {
-      $('.header__burger').toggleClass('active');
-      $('.header__menu').toggleClass('active');
-      $('.burger-shadow').toggleClass('active');
-    })
-
-    $('.select__btn svg').click(function () {
-      $('.select').toggleClass('animate1');
-      $('.select').toggleClass('animate2');
-      $('.select__btn').toggleClass('active')
-    })
-
-    $('.select-1__btn svg').click(function () {
-      $(this).parent().siblings('.select-item').toggleClass('animate1');
-      $(this).parent().siblings('.select-item').toggleClass('animate2');
-      $(this).parent().toggleClass('active')
-    })
   }
 });
 
