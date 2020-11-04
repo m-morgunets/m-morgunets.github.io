@@ -1,13 +1,5 @@
 $(function () {
 
-  var wow = new WOW(
-    {
-
-      mobile: false,
-
-    });
-  wow.init();
-
   if ($('.header__burger').css('display') != 'none') {
     let iterator = $('.portfolio-inner').length;
     for (let index = 1; index <= iterator; index++) {
@@ -122,6 +114,14 @@ $(function () {
       })
     }
   }
+
+  var wow = new WOW(
+    {
+
+      mobile: false,
+
+    });
+  wow.init();
 });
 
 var dist = 0
