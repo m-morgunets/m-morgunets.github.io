@@ -1,5 +1,7 @@
 $(function () {
 
+  alert('!');
+
   function scroll() {
     let scroll = $(this).scrollTop();
 
