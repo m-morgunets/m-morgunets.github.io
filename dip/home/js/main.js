@@ -8,12 +8,12 @@ $(function () {
     if ($('.header__burger').css('display') == 'none') {
 
       if (scroll >= 175) {
-        $('.header').addClass('scroll')
+        $('.header').toggleClass('scroll')
       } else {
-        $('.header').removeClass('scroll')
+        $('.header').toggleClass('scroll')
       }
     } else {
-      $('.header').removeClass('scroll');
+      $('.header').toggleClass('scroll');
     }
   }
 
@@ -26,7 +26,7 @@ $(function () {
   windowScroll();
   funcResize();
 
-  // $(window).on('scroll', windowScroll);
+  $(window).on('scroll', windowScroll);
   $(window).resize(funcResize);
 
   function funcResize() {
