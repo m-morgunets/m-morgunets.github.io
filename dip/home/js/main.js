@@ -3,7 +3,7 @@ $(function () {
 
 
   function windowScroll() {
-    let scroll = $(window).scrollTop();
+    var scroll = $(window).scrollTop();
 
     if ($('.header__burger').css('display') == 'none') {
 
