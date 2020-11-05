@@ -1,5 +1,5 @@
 $(function () {
-  let isiPad = navigator.userAgent.match(/iPad/i) != null;
+  // let isiPad = navigator.userAgent.match(/iPad/i) != null;
 
 
   function windowScroll() {
