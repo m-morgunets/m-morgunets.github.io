@@ -1,24 +1,24 @@
 $(function () {
 
-  // function scroll() {
-  //   let scroll = $(this).scrollTop();
+  function windowScroll() {
+    let scroll = $(this).scrollTop();
 
-  //   if ($('.header__burger').css('display') == 'none') {
+    if ($('.header__burger').css('display') == 'none') {
 
-  //     if (scroll >= 175) {
-  //       $('.header').addClass('scroll')
-  //     } else {
-  //       $('.header').removeClass('scroll')
-  //     }
-  //   } else {
-  //     $('.header').removeClass('scroll');
-  //   }
-  // }
+      if (scroll >= 175) {
+        $('.header').addClass('scroll')
+      } else {
+        $('.header').removeClass('scroll')
+      }
+    } else {
+      $('.header').removeClass('scroll');
+    }
+  }
 
-  // scroll();
+  windowScroll();
   funcResize();
 
-  // $(window).scroll(scroll);
+  $(window).scroll(windowScroll);
   $(window).resize(funcResize);
 
   function funcResize() {
