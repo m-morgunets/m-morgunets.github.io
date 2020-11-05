@@ -13,13 +13,13 @@ gulp.task('clean', async function () {
 })
 
 gulp.task('scss', function () {
-  return gulp.src('barvikha/scss/**/*.scss')
+  return gulp.src('home/scss/**/*.scss')
     .pipe(sass({ outputStyle: 'compressed' }))
     .pipe(autoprefixer({
       overrideBrowserslist: ['last 8 versions']
     }))
     .pipe(rename({ suffix: '.min' }))
-    .pipe(gulp.dest('barvikha/css'))
+    .pipe(gulp.dest('home/css'))
     .pipe(browserSync.reload({ stream: true }))
 });
 
@@ -31,17 +31,17 @@ gulp.task('css', function () {
     'node_modules/animate.css/animate.min.css'
   ])
     .pipe(concat('_libs.scss'))
-    .pipe(gulp.dest('barvikha/scss'))
+    .pipe(gulp.dest('home/scss'))
     .pipe(browserSync.reload({ stream: true }))
 });
 
 gulp.task('html', function () {
-  return gulp.src('barvikha/*.html')
+  return gulp.src('home/*.html')
     .pipe(browserSync.reload({ stream: true }))
 });
 
 gulp.task('script', function () {
-  return gulp.src('barvikha/js/*.js')
+  return gulp.src('home/js/*.js')
     .pipe(browserSync.reload({ stream: true }))
 });
 
@@ -52,39 +52,39 @@ gulp.task('js', function () {
   ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('barvikha/js'))
+    .pipe(gulp.dest('home/js'))
     .pipe(browserSync.reload({ stream: true }))
 });
 
 gulp.task('browser-sync', function () {
   browserSync.init({
     server: {
-      baseDir: "barvikha/"
+      baseDir: "home/"
     }
   });
 });
 
 gulp.task('export', function () {
-  let buildHtml = gulp.src('barvikha/**/*.html')
+  let buildHtml = gulp.src('home/**/*.html')
     .pipe(gulp.dest('dist'));
 
-  let BuildCss = gulp.src('barvikha/css/**/*.css')
+  let BuildCss = gulp.src('home/css/**/*.css')
     .pipe(gulp.dest('dist/css'));
 
-  let BuildJs = gulp.src('barvikha/js/**/*.js')
+  let BuildJs = gulp.src('home/js/**/*.js')
     .pipe(gulp.dest('dist/js'));
 
-  let BuildFonts = gulp.src('barvikha/fonts/**/*.*')
+  let BuildFonts = gulp.src('home/fonts/**/*.*')
     .pipe(gulp.dest('dist/fonts'));
 
-  let BuildImg = gulp.src('barvikha/img/**/*.*')
+  let BuildImg = gulp.src('home/img/**/*.*')
     .pipe(gulp.dest('dist/img'));
 });
 
 gulp.task('watch', function () {
-  gulp.watch('barvikha/scss/**/*.scss', gulp.parallel('scss'));
-  gulp.watch('barvikha/*.html', gulp.parallel('html'))
-  gulp.watch('barvikha/js/*.js', gulp.parallel('script'))
+  gulp.watch('home/scss/**/*.scss', gulp.parallel('scss'));
+  gulp.watch('home/*.html', gulp.parallel('html'))
+  gulp.watch('home/js/*.js', gulp.parallel('script'))
 });
 
 gulp.task('build', gulp.series('clean', 'export'))

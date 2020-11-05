@@ -112,6 +112,7 @@ body {
   position: relative;
   z-index: 9;
   ul {
+    cursor: pointer;
     float: right;
     padding: 13px;
     li {
@@ -282,6 +283,7 @@ body {
     }
   }
   svg {
+    cursor: pointer;
     width: 8px;
     height: 10px;
     margin-left: 4px;
@@ -301,6 +303,7 @@ body {
     transform: translateY(-50%) rotate(180deg);
   }
   svg {
+    cursor: pointer;
     position: absolute;
     right: 1px;
     width: 9px;

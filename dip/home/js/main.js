@@ -73,7 +73,7 @@ $(function () {
         $('.select__btn').addClass('active');
       })
     } else {
-      $('.header__burger').on("click touchstart", function () {
+      $('.header__burger ul').on("click touchstart", function () {
         $('.header__burger').toggleClass('active');
         $('.header__menu').toggleClass('active');
         $('.burger-shadow').toggleClass('active');
