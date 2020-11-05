@@ -1,4 +1,6 @@
 $(function () {
+  let isiPad = navigator.userAgent.match(/iPad/i) != null;
+
 
   function windowScroll() {
     let scroll = $(this).scrollTop();
@@ -15,10 +17,16 @@ $(function () {
     }
   }
 
+  // if(isiPad){
+
+  // }else{
+
+  // }
+
   windowScroll();
   funcResize();
 
-  $(window).scroll(windowScroll);
+  // $(window).on('scroll', windowScroll);
   $(window).resize(funcResize);
 
   function funcResize() {
