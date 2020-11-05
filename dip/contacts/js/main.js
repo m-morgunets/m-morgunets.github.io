@@ -85,24 +85,28 @@ $(function () {
         $('.header__burger').toggleClass('active');
         $('.header__menu').toggleClass('active');
         $('.burger-shadow').toggleClass('active');
+        return false;
       })
 
       $('.burger-shadow').on("click touchstart", function () {
         $('.header__burger').toggleClass('active');
         $('.header__menu').toggleClass('active');
         $('.burger-shadow').toggleClass('active');
+        return false;
       })
 
       $('.select__btn svg').on("click touchstart", function () {
         $('.select').toggleClass('animate1');
         $('.select').toggleClass('animate2');
-        $('.select__btn').toggleClass('active')
+        $('.select__btn').toggleClass('active');
+        return false;
       })
 
       $('.select-1__btn svg').on("click touchstart", function () {
         $(this).parent().siblings('.select-item').toggleClass('animate1');
         $(this).parent().siblings('.select-item').toggleClass('animate2');
-        $(this).parent().toggleClass('active')
+        $(this).parent().toggleClass('active');
+        return false;
       })
     }
   }
