@@ -1,6 +1,6 @@
-$(function () {
+alert('!');
 
-  alert('!');
+$(function () {
 
   function scroll() {
     let scroll = $(this).scrollTop();
