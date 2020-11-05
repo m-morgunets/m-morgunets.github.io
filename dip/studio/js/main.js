@@ -1,7 +1,7 @@
 $(function () {
 
   function scroll() {
-    let scroll = $(this).scrollTop();
+    var scroll = $(this).scrollTop();
 
     if ($('.header__burger').css('display') == 'none') {
 
@@ -22,7 +22,7 @@ $(function () {
   $(window).resize(funcResize);
 
   function funcResize() {
-    let imgWidth = $('.command-box div').width();
+    var imgWidth = $('.command-box div').width();
     $('.command-box div').height(imgWidth);
 
     $('.header-box *').off();
