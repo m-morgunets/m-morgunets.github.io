@@ -1,8 +1,8 @@
 $(function () {
 
   if ($('.header__burger').css('display') != 'none') {
-    let iterator = $('.portfolio-inner').length;
-    for (let index = 1; index <= iterator; index++) {
+    var iterator = $('.portfolio-inner').length;
+    for (var index = 1; index <= iterator; index++) {
       $(`.portfolio-inner:nth-child(${index}) .portfolio__box:first-child`).append($(`.portfolio-inner:nth-child(${index}) .portfolio__box:nth-child(2) .portfolio__box-item:first-child`));
       $(`.portfolio-inner:nth-child(${index}) .portfolio__box:nth-child(2)`).append($(`.portfolio-inner:nth-child(${index}) .portfolio__box:nth-child(3) .portfolio__box-item:first-child`));
       $(`.portfolio-inner:nth-child(${index}) .portfolio__box:nth-child(2)`).append($(`.portfolio-inner:nth-child(${index}) .portfolio__box:nth-child(1) .portfolio__box-item:nth-child(2)`));
@@ -13,7 +13,7 @@ $(function () {
   }
 
   function scroll() {
-    let scroll = $(this).scrollTop();
+    var scroll = $(this).scrollTop();
 
     if ($('.header__burger').css('display') == 'none') {
 
@@ -34,7 +34,7 @@ $(function () {
   $(window).resize(funcResize);
 
   function funcResize() {
-    let itemWidth = $('.portfolio__box-item').width();
+    var itemWidth = $('.portfolio__box-item').width();
 
     $('.portfolio__box-item').height(itemWidth * 0.749974501);
     $('.portfolio-item-tall').height(itemWidth * 1.24998067);

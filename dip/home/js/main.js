@@ -1,8 +1,7 @@
 $(function () {
-  // let isiPad = navigator.userAgent.match(/iPad/i) != null;
 
 
-  function windowScroll() {
+  function scroll() {
     var scroll = $(window).scrollTop();
 
     if ($('.header__burger').css('display') == 'none') {
@@ -17,16 +16,10 @@ $(function () {
     }
   }
 
-  // if(isiPad){
-
-  // }else{
-
-  // }
-
-  windowScroll();
+  scroll();
   funcResize();
 
-  $(window).on('scroll', windowScroll);
+  $(window).scroll(scroll);
   $(window).resize(funcResize);
 
   function funcResize() {

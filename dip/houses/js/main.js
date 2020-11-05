@@ -1,7 +1,7 @@
 $(function () {
 
   function scroll() {
-    let scroll = $(this).scrollTop();
+    var scroll = $(this).scrollTop();
 
     if ($('.header__burger').css('display') == 'none') {
 
@@ -24,13 +24,13 @@ $(function () {
   function funcResize() {
 
     if ($('.header__burger').css('display') != 'none') {
-      for (let index = 1; index <= $('.houses__item').length; index++) {
+      for (var index = 1; index <= $('.houses__item').length; index++) {
         $(`.houses__item:nth-child(${index})`).append($(`.houses__item:nth-child(${index}) .houses__item-box`));
       }
     }
 
     if ($('.header__burger').css('display') == 'none') {
-      for (let index = 2; index <= $('.houses__item').length; index += 2) {
+      for (var index = 2; index <= $('.houses__item').length; index += 2) {
         $(`.houses__item:nth-child(${index})`).prepend($(`.houses__item:nth-child(${index}) .houses__item-box`));
       }
     }

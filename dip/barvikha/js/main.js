@@ -11,7 +11,7 @@ $(function () {
   });
 
   function scroll() {
-    let scroll = $(this).scrollTop();
+    var scroll = $(this).scrollTop();
 
     if ($('.header__burger').css('display') == 'none') {
 
