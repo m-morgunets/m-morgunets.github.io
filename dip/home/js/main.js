@@ -1,5 +1,3 @@
-alert('!');
-
 $(function () {
 
   function scroll() {
