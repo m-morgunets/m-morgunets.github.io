@@ -1,7 +1,7 @@
 $(function () {
 
   function scroll() {
-    var scroll = $(this).scrollTop();
+    var scroll = $(window).scrollTop();
 
     if ($('.header__burger').css('display') == 'none') {
 
