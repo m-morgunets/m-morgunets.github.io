@@ -7,12 +7,12 @@ $(function () {
     if ($('.header__burger').css('display') == 'none') {
 
       if (scroll >= 175) {
-        $('.header').toggleClass('scroll')
+        $('.header').addClass('scroll')
       } else {
-        $('.header').toggleClass('scroll')
+        $('.header').removeClass('scroll')
       }
     } else {
-      $('.header').toggleClass('scroll');
+      $('.header').removeClass('scroll');
     }
   }
 

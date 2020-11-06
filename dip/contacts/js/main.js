@@ -1,15 +1,7 @@
 $(function () {
 
-  // var wow = new WOW(
-  //   {
-
-  //     mobile: false,
-
-  //   });
-  // wow.init();
-
   function scroll() {
-    var scroll = $(this).scrollTop();
+    var scroll = $(window).scrollTop();
 
     if ($('.header__burger').css('display') == 'none') {
 
