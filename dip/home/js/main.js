@@ -8,10 +8,11 @@ $(function () {
     if ($('.popup__box-input#tel').val().length < 2) {
       return false;
     }
-
-    $('.popup-item').removeClass('active');
-    var popupItem = $('.popup-item:nth-child(2) .popup__box-radio:checked').attr('value');
-    $(`.popup-item.${popupItem}`).addClass('active');
+    if ($('.popup-item:nth-child(2) .popup__box-radio:checked').attr('value') != undefined) {
+      $('.popup-item').removeClass('active');
+      var popupItem = $('.popup-item:nth-child(2) .popup__box-radio:checked').attr('value');
+      $(`.popup-item.${popupItem}`).addClass('active');
+    }
 
   })
 
@@ -21,10 +22,10 @@ $(function () {
   })
 
   $('.popup-shadow').on("click touchstart", function () {
-    $('.popup').fadeOut('active');
+    $('.popup').fadeOut();
   })
   $('.popup-phone').on("click touchstart", function () {
-    $('.popup').fadeIn('active');
+    $('.popup').fadeIn();
   })
 
   function scroll() {
