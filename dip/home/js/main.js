@@ -1,5 +1,31 @@
 $(function () {
 
+  $('.popup__btn.btn-further').on("click touchstart", function () {
+
+    if ($('.popup__box-input#name').val().length < 2) {
+      return false;
+    }
+    if ($('.popup__box-input#tel').val().length < 2) {
+      return false;
+    }
+
+    $('.popup-item').removeClass('active');
+    var popupItem = $('.popup-item:nth-child(2) .popup__box-radio:checked').attr('value');
+    $(`.popup-item.${popupItem}`).addClass('active');
+
+  })
+
+  $('.popup__btn.btn-back').on("click touchstart", function () {
+    $('.popup-item').removeClass('active');
+    $('.popup-item:nth-child(2)').addClass('active');
+  })
+
+  $('.popup-shadow').on("click touchstart", function () {
+    $('.popup').removeClass('active');
+  })
+  $('.popup-phone').on("click touchstart", function () {
+    $('.popup').addClass('active');
+  })
 
   function scroll() {
     var scroll = $(window).scrollTop();
