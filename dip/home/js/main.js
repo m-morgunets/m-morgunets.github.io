@@ -21,10 +21,10 @@ $(function () {
   })
 
   $('.popup-shadow').on("click touchstart", function () {
-    $('.popup').removeClass('active');
+    $('.popup').fadeOut('active');
   })
   $('.popup-phone').on("click touchstart", function () {
-    $('.popup').addClass('active');
+    $('.popup').fadeIn('active');
   })
 
   function scroll() {

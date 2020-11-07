@@ -18,13 +18,13 @@ body {
   width: 100%;
   height: 100%;
   z-index: 20;
-  opacity: 0;
-  visibility: hidden;
+  // opacity: 0;
+  // visibility: hidden;
   transition: all 0.3s;
-  &.active {
-    opacity: 1;
-    visibility: visible;
-  }
+  // &.active {
+  //   opacity: 1;
+  //   visibility: visible;
+  // }
 }
 .popup-shadow {
   cursor: pointer;
@@ -135,8 +135,6 @@ body {
 
 .popup-item.client,
 .popup-item.coop {
-  .popup__box {
-  }
   .popup-comment {
     width: 300px;
     height: 170px;
