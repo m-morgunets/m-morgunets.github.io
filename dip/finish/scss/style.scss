@@ -493,11 +493,11 @@ body {
   bottom: 20px;
   right: 20px;
   text-align: center;
-  padding: 9px 20px;
+  padding: 8px 13px;
   background-color: #000;
   color: #fff;
   font-weight: 700;
-  font-size: 15px;
+  font-size: 14px;
   border-radius: 40px;
 }
 .popup-item.client,
@@ -523,7 +523,7 @@ body {
   z-index: 4;
   width: 60px;
   height: 60px;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.7);
   border-radius: 100%;
   border: 1px solid #333;
   position: fixed;
