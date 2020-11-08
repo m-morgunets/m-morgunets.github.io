@@ -412,26 +412,26 @@
       font-size: 14px;
       width: 100px;
     }
-    .portfolio {
+    .home-portfolio {
       display: block;
-      .portfolio__img {
+      .home-portfolio__img {
         height: 300px;
         width: 100%;
       }
     }
-    .portfolio__box {
+    .home-portfolio__box {
       padding: 80px 0 60px;
       max-width: 270px;
       margin: 0 auto;
       transform: translateX(-1px);
     }
-    .portfolio__box-text {
+    .home-portfolio__box-text {
       font-size: 16px;
       padding: 0;
       margin-bottom: 42px;
       line-height: 30px;
     }
-    .portfolio__box-btn {
+    .home-portfolio__box-btn {
       font-size: 14px;
       width: 100px;
       position: relative;
@@ -711,7 +711,7 @@
 
   //Studio page
   .studio-bg {
-    height: 141px;
+    height: 71px;
     background-size: 640px 285px;
     background-position: 0 111px;
   }
