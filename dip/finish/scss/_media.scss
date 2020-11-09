@@ -249,6 +249,46 @@
       margin-right: 8px;
     }
   }
+  .popup-item {
+    transform: translate(-50%, -50%) scale(1.09);
+    display: block;
+  }
+  .popup__text {
+    // letter-spacing: 0.5px;
+    width: unset;
+    text-align: center;
+    position: static;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    span {
+      position: static;
+      transform: none;
+    }
+  }
+  .popup__btn {
+    right: unset;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .popup__box {
+    margin-left: 0;
+    margin-right: 0;
+    width: 340px;
+  }
+  .popup__box-title span,
+  .popup__box-input {
+    padding-left: 32px;
+  }
+  .popup-phone {
+    bottom: 10px;
+    right: 30px;
+    width: 55px;
+    height: 55px;
+    svg {
+      width: 40px;
+      height: 40px;
+    }
+  }
 
   //Barvikha page
   .barvikha {
