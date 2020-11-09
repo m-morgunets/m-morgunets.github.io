@@ -44,8 +44,10 @@ body {
 }
 .overheader-tel {
   margin-top: -1px;
+  color: #fff;
   span {
-    padding-left: 5px;
+    cursor: pointer;
+    padding-right: 5px;
   }
 }
 .overheader-social {
