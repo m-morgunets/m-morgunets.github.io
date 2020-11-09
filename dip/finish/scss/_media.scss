@@ -281,13 +281,25 @@
   }
   .popup-phone {
     bottom: 10px;
-    right: 30px;
+    right: 15px;
     width: 55px;
     height: 55px;
     svg {
       width: 40px;
       height: 40px;
     }
+  }
+  .popup-phone.twenty {
+    right: 20px;
+  }
+  .popup-phone.thirty {
+    right: 30px;
+  }
+  .popup-phone.zero {
+    right: 0;
+  }
+  .popup-phone.portfolio-popup {
+    right: 16px;
   }
 
   //Barvikha page
@@ -397,6 +409,7 @@
     height: 218px;
     margin: 0;
     max-width: unset;
+    width: 100%;
   }
   .contacts-box:last-child {
     margin: 0;
@@ -659,14 +672,7 @@
   }
   .projects__item {
     display: block;
-    margin: 0 16px;
-    &:nth-child(2),
-    &:nth-child(3) {
-      margin: 0 15px;
-    }
-    &:last-child {
-      margin: 0 13px;
-    }
+    margin: 0 15px;
     &:nth-child(2) {
       .projects__item-img {
         background-position: 50% 50%;
@@ -813,12 +819,11 @@
     width: 200px;
   }
   .command-box {
-    padding: 5.5px;
     margin: 49px 0 88px;
   }
   .command-box div {
     width: 100%;
-    margin: 5.5px;
+    margin: 5.5px 0;
   }
   .command {
     padding: 114px 0 10px;

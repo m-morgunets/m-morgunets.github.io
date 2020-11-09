@@ -47,20 +47,22 @@ $(function () {
 
   //PopUp code
   var timeID;
-  $('.popup-shadow').on("click touchstart", function () {
+  $('.popup-shadow').on("click", function () {
     $('.popup').fadeOut();
     timeID = setTimeout(() => {
       $('.popup-phone').addClass('animation');
     }, 10000);
-    return false;
   })
-  $('.popup-phone').on("click touchstart", function () {
+  $('.popup-phone').on("click", function () {
     $('.popup').fadeIn();
     clearTimeout(timeID);
     $('.popup-phone').removeClass('animation');
-    return false;
   })
-
+  $('.overheader-tel span').on("click", function () {
+    $('.popup').fadeIn();
+    clearTimeout(timeID);
+    $('.popup-phone').removeClass('animation');
+  });
 
   //Header and Wow.js init
   function scroll() {
@@ -85,6 +87,15 @@ $(function () {
   $(window).resize(funcResize);
 
   function funcResize() {
+
+    //PopUp in mobile
+    if ($('.header__burger').css('display') != 'none') {
+      $('.popup-item').css('transform', `translate(-50%, -50%) scale(${($(window).width() - 30) * (1.175 / 400)})`);
+      $('.popup.twenty .popup-item').css('transform', `translate(-50%, -50%) scale(${($(window).width() - 40) * (1.175 / 400)})`);
+      $('.popup.thirty .popup-item').css('transform', `translate(-50%, -50%) scale(${($(window).width() - 60) * (1.175 / 400)})`);
+      $('.popup.zero .popup-item').css('transform', `translate(-50%, -50%) scale(${$(window).width() * (1.175 / 400)})`);
+      $('.popup.portfolio-popup .popup-item').css('transform', `translate(-50%, -50%) scale(${($(window).width() - 32) * (1.175 / 400)})`);
+    }
 
     //Code for Hoses page
     if ($('.header__burger').css('display') != 'none') {
@@ -184,18 +195,16 @@ $(function () {
         return false;
       })
 
-      $('.select__btn svg').on("click touchstart", function () {
+      $('.select__btn svg').on("click", function () {
         $('.select').toggleClass('animate1');
         $('.select').toggleClass('animate2');
         $('.select__btn').toggleClass('active');
-        return false;
       })
 
-      $('.select-1__btn svg').on("click touchstart", function () {
+      $('.select-1__btn svg').on("click", function () {
         $(this).parent().siblings('.select-item').toggleClass('animate1');
         $(this).parent().siblings('.select-item').toggleClass('animate2');
         $(this).parent().toggleClass('active');
-        return false;
       })
     }
   }
