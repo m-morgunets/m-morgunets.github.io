@@ -57,6 +57,7 @@ $(function () {
     $('.popup').fadeIn();
     clearTimeout(timeID);
     $('.popup-phone').removeClass('animation');
+    $('input#name.popup__box-input').focus();
   })
   $('.overheader-tel span').on("click", function () {
     $('.popup').fadeIn();
