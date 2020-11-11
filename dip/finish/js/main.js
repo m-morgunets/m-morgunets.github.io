@@ -59,6 +59,9 @@ $(function () {
     clearTimeout(timeID);
     $('.popup-phone').removeClass('animation');
     $('input#name.popup__box-input').focus();
+    $('input#name.popup__box-input').mouseup(function (e) {
+      e.preventDefault();
+    });
   })
   $('.overheader-tel span').on("click", function () {
     $('.popup').fadeIn();
