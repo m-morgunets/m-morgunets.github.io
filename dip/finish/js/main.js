@@ -52,6 +52,7 @@ $(function () {
     timeID = setTimeout(() => {
       $('.popup-phone').addClass('animation');
     }, 10000);
+    $('input#name.popup__box-input').blur();
   })
   $('.popup-phone').on("click", function () {
     $('.popup').fadeIn();
