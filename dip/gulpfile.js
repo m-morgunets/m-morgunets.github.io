@@ -7,6 +7,13 @@ let gulp = require('gulp'),
   del = require('del'),
   autoprefixer = require('gulp-autoprefixer');
 
+var mapboxgl = require('/node_modules/mapbox-gl/dist/mapbox-gl.js');
+
+mapboxgl.accessToken = 'pk.eyJ1IjoibWloYTEyMzc3MSIsImEiOiJja2hodXhlMGcwbGdrMnFvMXZ6N2N3amhtIn0.D7JYn8PUPxpO2ZnkPU2X4g';
+var map = new mapboxgl.Map({
+  container: 'mapContainer',
+  style: 'mapbox://styles/mapbox/streets-v11'
+});
 
 gulp.task('clean', async function () {
   del.sync('finish')
