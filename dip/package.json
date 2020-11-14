@@ -18,6 +18,7 @@
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.2",
+    "mapbox-gl": "^1.12.0",
     "normalize.css": "^8.0.1",
     "wow.js": "^1.2.2"
   },
