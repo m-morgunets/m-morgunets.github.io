@@ -28,38 +28,94 @@
   </header>
 
   <section class="main">
-    <div class="main__bg">
+    <!-- <div class="main__bg">
       <div class="main__bg-track">
       </div>
+    </div> -->
+    <video class="main__bg" autoplay loop>
+      <source src="images/videoplayback.mp4" type="video/mp4">
+    </video>
+    <div class="main-box">
+      <div class="main__title "><span>Продюсерский центр</span> <br> «Москва и культура»</div>
+      <div class="main__subtitle">Наши события меняют жизни людей</div>
+      <button class="main__btn default-btn">Оставить заявку</button>
     </div>
-    <div class="main__title ">Debitis cum repudiandae</div>
-    </div>
-    <div class="main__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc odio in et, lectus sit
-      lorem id integer.</div>
-    <button class="main__btn default-btn">Primary</button>
   </section>
 
   <section class="about">
-    <div class="about-box">
-      <div class="about__title default-title">About us</div>
-      <div class="about__text">Necessitatibus ut eius rerum aut incidunt voluptatem dolorum atque sit. Nostrum quaerat
-        doloremque deserunt. Beatae corrupti sunt odit quia aut eos in.
-        Numquam exercitationem deserunt ullam. Exercitationem eligendi voluptas quas at et omnis a culpa corporis.
-        Adipisci illum enim incidunt ea rerum doloribus inventore.</div>
-      <button class="about__btn default-btn">Primary</button>
+    <div class="container">
+      <div class="about-box">
+        <div class="about__title default-title">О нас</div>
+        <div class="about__text">Продюсерский центр «Москва и культура»
+          при министерстве культуры приветствует Вас! Мы
+          профессионально организовываем события для тех, кто ценит качество. </div>
+        <button class="about__btn default-btn">Узнать больше</button>
+      </div>
     </div>
     <div class="about-box" style="background-image: url(images/about-img.jpg);"></div>
   </section>
 
-  <!-- <section class="why">
-    <div class="why__title default-title">Why us?</div>
+  <section class="why">
+    <div class="why__title default-title">Почему именно мы?</div>
+    <!-- <img src="images/line.svg" class="svg line-animation"> -->
 
-  </section> -->
+    <div class="why__box">
+      <div class="why__box-dot"></div>
+      <svg class="why__box-line" width="538" height="846" viewBox="0 0 538 846" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <mask id="dash-mask">
+            <path
+              d="M268.999 3.49982L268.999 34.4999C268.999 34.4999 268.999 79.6431 230.534 79.6431L56.2502 79.643C56.2502 79.643 3.75977 91.3451 3.75977 144.364C3.75977 197.384 56.2503 209.596 56.2503 209.596L450.499 209.596C450.499 209.596 532.499 200.999 533.999 274.5C535.498 348 450.498 340 450.498 340L56.2502 340C56.2502 340 3.76028 351.701 3.76028 404.721C3.76029 457.74 56.2508 469.952 56.2508 469.952L450.498 469.952C450.498 469.952 532.499 461.356 533.998 534.856C535.498 608.356 450.498 600.357 450.498 600.357L56.2505 600.357C56.2505 600.357 3.76061 612.059 3.76061 665.078C3.76061 718.097 56.2511 730.309 56.2511 730.309L230 730.309C269 730.309 269 774 269 774L269 842.5"
+              stroke="white" stroke-width="6" stroke-linecap="round" stroke-dasharray="15 15" />
+          </mask>
+        </defs>
+        <path class="line-animation"
+          d="M268.999 3.49982L268.999 34.4999C268.999 34.4999 268.999 79.6431 230.534 79.6431L56.2502 79.643C56.2502 79.643 3.75977 91.3451 3.75977 144.364C3.75977 197.384 56.2503 209.596 56.2503 209.596L450.499 209.596C450.499 209.596 532.499 200.999 533.999 274.5C535.498 348 450.498 340 450.498 340L56.2502 340C56.2502 340 3.76028 351.701 3.76028 404.721C3.76029 457.74 56.2508 469.952 56.2508 469.952L450.498 469.952C450.498 469.952 532.499 461.356 533.998 534.856C535.498 608.356 450.498 600.357 450.498 600.357L56.2505 600.357C56.2505 600.357 3.76061 612.059 3.76061 665.078C3.76061 718.097 56.2511 730.309 56.2511 730.309L230 730.309C269 730.309 269 774 269 774L269 842.5"
+          stroke="white" stroke-width="6" stroke-linecap="round" mask="url(#dash-mask)" />
+      </svg>
+
+      <div class="why__box-item item-1">
+        <img src="images/why-item-1.svg" class="svg">
+        <div class="why-box__item-text">Лучшие цены <br> на рынке</div>
+      </div>
+      <div class="why__box-item item-2">
+        <img src="images/why-item-2.svg" class="svg">
+        <div class="why-box__item-text">Универсальный подход к каждому клиенту</div>
+      </div>
+      <div class="why__box-item item-3">
+        <img src="images/why-item-3.svg" class="svg">
+        <div class="why-box__item-text">Работают только профессионалы своего дела</div>
+      </div>
+      <div class="why__box-item item-4">
+        <img src="images/why-item-4.svg" class="svg">
+        <div class="why-box__item-text">Cделаем все в кратчайшие сроки</div>
+      </div>
+      <div class="why__box-item item-5">
+        <img src="images/why-item-5.svg" class="svg">
+        <div class="why-box__item-text">Опциональность выбора дополнительных услуг
+        </div>
+      </div>
+
+      <img src="images/why-cup.svg" class="svg why__box-cup">
+    </div>
+
+    <button class="why__btn">Оставить заявку!</button>
+
+  </section>
+
+  <section class="napkin">
+    <div class="napkin__title">Как организовать лучшее мероприятие в вашей жизни?</div>
+    <div class="napkin__subtitle"> Все настолько просто, что даже умещается <span>на салфетке!</span></div>
+    <div class="napkin__img">
+      <img src="images/napkin.png">
+    </div>
+  </section>
 
   <section class="portfolio">
     <div class="container">
-      <div class="portfolio__title default-title">Portfolio</div>
-      <div class="portfolio__subtitle default-subtitle">Quos sit iste sit dolorem cumque est doloremque reiciendis.
+      <div class="portfolio__title default-title">Наше портфолио</div>
+      <div class="portfolio__subtitle default-subtitle">Здесь собраны самые яркие моменты из жизни наших клиентов
       </div>
       <div class="portfolio-box">
         <div class="portfolio__item">
@@ -79,7 +135,7 @@
         </div>
       </div>
       <div class="portfolio__btn default-btnArrow">
-        Explore all
+        Просмотреть все
         <svg width="23" height="14" viewBox="0 0 23 14" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M14.5781 1.70711C14.1822 1.31658 14.1822 0.683417 14.5781 0.292893C14.9741 -0.0976311 15.616 -0.0976311 16.0119 0.292893L22.0949 6.29289C22.4908 6.68342 22.4908 7.31658 22.0949 7.70711L16.0119 13.7071C15.616 14.0976 14.9741 14.0976 14.5781 13.7071C14.1822 13.3166 14.1822 12.6834 14.5781 12.2929L18.9304 7.99998H1.11241C0.546313 7.99998 0.0874023 7.55227 0.0874023 6.99998C0.0874023 6.4477 0.546313 5.99998 1.11241 5.99998H18.9304L14.5781 1.70711Z"
@@ -90,29 +146,29 @@
   </section>
 
   <section class="events">
-    <div class="events__title default-title">Events</div>
-    <div class="events__sebtitle default-subtitle">Quos sit iste sit dolorem cumque est doloremque reiciendis.
-      Accusantium et nostrum illum enim temporibus. </div>
+    <div class="events__title default-title">Наши мероприятия</div>
+    <div class="events__sebtitle default-subtitle">Наша цель – дать вам насладиться мероприятиями в полной мере, открыть
+      новое здесь и сейчас</div>
 
     <div class="events-inner">
       <div class="events-box">
-        <div class="events__item low" style="background-image: url(images/events-item-1.jpg);"><span>Direct Markets
-            Architect</span></div>
+        <div class="events__item low" style="background-image: url(images/events-item-1.jpg);"><span>Свадьба
+            липецк</span></div>
         <div class="events__item-box low">
-          <div class="events__item" style="background-image: url(images/events-item-2.jpg);"><span>Central Research
-              Designer</span></div>
-          <div class="events__item" style="background-image: url(images/events-item-3.jpg);"><span>Investor Brand
-              Administrator</span></div>
+          <div class="events__item" style="background-image: url(images/events-item-2.jpg);"><span>Корпоратив 1</span>
+          </div>
+          <div class="events__item" style="background-image: url(images/events-item-3.jpg);"><span>Юбилей 50</span>
+          </div>
         </div>
       </div>
-      <div class="events__item tall" style="background-image: url(images/events-item-4.jpg);"><span>Corporate Security
-          Producer</span></div>
+      <div class="events__item tall" style="background-image: url(images/events-item-4.jpg);"><span>ДР сайта
+          шеветовской</span></div>
     </div>
 
     <div class="events-inner">
       <div class="events-box">
-        <div class="events__item low" style="background-image: url(images/events-item-5.jpg);"><span>Central Identity
-            Engineer</span></div>
+        <div class="events__item low" style="background-image: url(images/events-item-5.jpg);"><span>корпорат
+            агроальянс</span></div>
         <div class="events__item low" style="background-image: url(images/events-item-6.jpg);"><span>Global Assurance
             Designer</span></div>
       </div>
@@ -131,97 +187,59 @@
   </section>
 
   <section class="services">
-    <div class="services__title default-title">Services</div>
-    <div class="services__subtitle default-subtitle">Est vel beatae nam doloribus itaque rerum facilis fuga sed.</div>
+    <div class="services__title default-title">Дополнительные услуги</div>
+    <div class="services__subtitle default-subtitle">Здесь собраны кейсы дополнительных услуг, которые могут пригодиться
+      для организации мероприятия и не только</div>
 
     <div class="services-inner">
 
       <div class="services-box">
-        <div class="services__item">
+        <div class="services__item" style="background-image: url(images/services-item-1.jpg)">
           <img class="services__item-img" src="images/services-item-1.svg" alt="">
-          <div class="services__item-title">Networked heuristic hierarchy</div>
-          <div class="services__item-text">Dolore tempora molestiae quia eaque omnis maiores et molestiae id. Alias quam
-            quisquam.</div>
+          <div class="services__item-title">SMM</div>
+          <div class="services__item-text">Реклама и продвижение в глобальной сети интернет.</div>
           <div class="services__item-btn">
             Explore →
           </div>
         </div>
-        <div class="services__item">
+        <div class="services__item" style="background-image: url(images/services-item-2.jpg)">
           <img class="services__item-img" src="images/services-item-2.svg" alt="">
-          <div class="services__item-title">Mandatory real-time workforce</div>
-          <div class="services__item-text">Recusandae quasi iure odio rerum id. Sunt quia hic rerum sunt et totam nulla.
-            Quisquam ut ducimus rem sequi amet.</div>
+          <div class="services__item-title">Фото и видео съемка</div>
+          <div class="services__item-text">Профессиональная фото и видеосъемка на заказ, обработка фотографий, аренда
+            оборудования.</div>
           <div class="services__item-btn">
-            Explore →
+            Больше →
           </div>
         </div>
-        <div class="services__item">
+        <div class="services__item" style="background-image: url(images/services-item-3.jpg)">
           <img class="services__item-img" src="images/services-item-3.svg" alt="">
-          <div class="services__item-title">Total 24/7 interface</div>
-          <div class="services__item-text">Consequuntur ut quas beatae. Ea et aut. Qui quisquam dolores aliquid iusto
-            aliquam itaque cum ducimus est.</div>
+          <div class="services__item-title">Студия звукозаписи
+          </div>
+          <div class="services__item-text">Создание и обработка вашего аудиоматериала. Запись, сведение, создание
+            минусов под ключ.</div>
           <div class="services__item-btn">
-            Explore →
+            Больше →
           </div>
         </div>
       </div>
 
       <div class="services-box">
-        <div class="services__item">
+        <div class="services__item" style="background-image: url(images/services-item-4.jpg)">
           <img class="services__item-img" src="images/services-item-4.svg" alt="">
-          <div class="services__item-title">Sharable methodical interface</div>
-          <div class="services__item-text">Cum modi omnis illum fuga voluptas et facere optio. Accusantium inventore
-            quam. </div>
+          <div class="services__item-title">Услуги дизайна</div>
+          <div class="services__item-text">Лови скоростной трафик, раскрути свой бизнес
+          </div>
           <div class="services__item-btn">
-            Explore →
+            Больше →
           </div>
         </div>
-        <div class="services__item">
+        <div class="services__item" style="background-image: url(images/services-item-5.jpg)">
           <img class="services__item-img" src="images/services-item-5.svg" alt="">
-          <div class="services__item-title">Fundamental local groupware</div>
-          <div class="services__item-text">Inventore nostrum nobis est commodi quidem. Libero quasi deserunt modi.
-            Tempore aut laudantium maiores.</div>
+          <div class="services__item-title">Рерайт/копирайт <br>
+            и другие текстовые услуги</div>
+          <div class="services__item-text">Наша упаковка = ваша прибыль</div>
           <div class="services__item-btn">
-            Explore →
-          </div>
-        </div>
-        <div class="services__item">
-          <img class="services__item-img" src="images/services-item-6.svg" alt="">
-          <div class="services__item-title">Front-line zero defect ability</div>
-          <div class="services__item-text">Totam et eos natus sint animi vitae iure et esse. Sunt accusamus cum quasi
-            sint rerum dolores voluptatem corrupti.</div>
-          <div class="services__item-btn">
-            Explore →
-          </div>
-        </div>
-      </div>
-
-      <div class="services-box">
-        <div class="services__item">
-          <img class="services__item-img" src="images/services-item-7.svg" alt="">
-          <div class="services__item-title">Diverse client-driven core</div>
-          <div class="services__item-text">Voluptas ipsa aut dolorum. Tempore aliquid dolores. Et et dolorem sit modi
-            non rerum.</div>
-          <div class="services__item-btn">
-            Explore →
-          </div>
-        </div>
-        <div class="services__item">
-          <img class="services__item-img" src="images/services-item-8.svg" alt="">
-          <div class="services__item-title">Exclusive local project</div>
-          <div class="services__item-text">Sunt et eos eius nesciunt enim consequatur magni unde voluptas. Laudantium
-            corrupti cum et illo vel.</div>
-          <div class="services__item-btn">
-            Explore →
-          </div>
-        </div>
-        <div class="services__item">
-          <img class="services__item-img" src="images/services-item-9.svg" alt="">
-          <div class="services__item-title">RAM Investment</div>
-          <div class="services__item-text">Cumque provident blanditiis aspernatur quia omnis assumenda praesentium ipsam
-            dolor.</div>
-          <div class="services__item-btn">
-            Explore →
+            Больше →
           </div>
         </div>
       </div>
@@ -241,10 +259,9 @@
   <section class="window">
     <div class="window-box">
       <img src="images/window-img.svg" class="window__img">
-      <div class="window__title">Study with us!</div>
-      <div class="window__text">Perferendis et ad soluta est ea neque dolore mollitia. Quo rem sed est. Dolores sed sit.
-        Quo rem sed est. Dolores sed sit.</div>
-      <button class="window__btn">let's do it!</button>
+      <div class="window__title">Обучайся вместе с нами!</div>
+      <div class="window__text">Лучшие образовательные курсы от преподавателей высших учебных заведений.</div>
+      <button class="window__btn">За дело!</button>
     </div>
   </section>
 
@@ -257,15 +274,15 @@
   <section class="form">
     <div class="container">
       <div class="form__box">
-        <div class="form__title">Order your event NOW!</div>
+        <div class="form__title">Оставить заявку прямо сейчас!</div>
       </div>
       <div class="form__box">
-        <div class="form__box-title">Write a little about yourself!</div>
-        <input type="text" class="form__box-input" placeholder="Name">
-        <input type="text" class="form__box-input" placeholder="Phone">
-        <input type="text" class="form__box-input" placeholder="E-mail">
+        <div class="form__box-title">Заполните информацию и мы свяжемся с вами</div>
+        <input type="text" class="form__box-input" placeholder="Имя">
+        <input type="text" class="form__box-input" placeholder="Телефон">
+        <input type="text" class="form__box-input" placeholder="Почта">
         <button class="form__box-btn">
-          <span>Order</span>
+          <span>Заказать</span>
           <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M22.074 9.66269L2.40557 0.40698C2.20752 0.313787 1.98709 0.278687 1.76989 0.305758C1.55268 0.332829 1.34761 0.420958 1.17849 0.559913C1.00937 0.698868 0.883141 0.882946 0.814453 1.09077C0.745765 1.2986 0.737441 1.52165 0.790447 1.73402L2.19269 7.34414L11.1684 10.7097L2.19269 14.0754L0.790447 19.6855C0.736444 19.898 0.744073 20.1215 0.812443 20.3299C0.880813 20.5382 1.0071 20.7228 1.17652 20.862C1.34595 21.0012 1.55151 21.0893 1.76916 21.1159C1.98681 21.1426 2.20756 21.1067 2.40557 21.0125L22.074 11.7568C22.2727 11.6634 22.4408 11.5153 22.5585 11.3299C22.6762 11.1445 22.7387 10.9294 22.7387 10.7097C22.7387 10.4901 22.6762 10.275 22.5585 10.0896C22.4408 9.9042 22.2727 9.75612 22.074 9.66269Z"
@@ -278,54 +295,17 @@
 
   <footer class="footer">
     <div class="container">
-      <div class="footer-box">
-        <img class="footer__logo" src="images/logo.png" alt="">
-        <div class="footer__copy">
-          <span>Copyright © 2020</span>
-          <span>All rights reserved</span>
-        </div>
-        <div class="footer__social default-social">
-          <a target="_blank" href="#"><img class="svg" src="images/instagram.svg"></a>
-          <a target="_blank" href="#"><img class="svg" src="images/dribbble.svg"></a>
-          <a target="_blank" href="#"><img class="svg" src="images/twitter.svg"></a>
-          <a target="_blank" href="#"><img class="svg" src="images/youtube.svg"></a>
-        </div>
+      <div class="footer__copy">
+        <span>© 2020 “Москва и Культура”</span>
+        <span>Все права защищены</span>
       </div>
-      <div class="footer-box">
 
-        <div class="footer__link">
-          <div class="footer__title">Company</div>
-          <ul>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Contact us</a></li>
-            <li><a href="#">Pricing</a></li>
-            <li><a href="#">Testimonials</a></li>
-          </ul>
-        </div>
+      <div class="footer__title"><span>задизайнено в</span><img src="images/solcore.png"></div>
 
-        <div class="footer__link">
-          <div class="footer__title">Support</div>
-          <ul>
-            <li><a href="#">Help center</a></li>
-            <li><a href="#">Terms of service</a></li>
-            <li><a href="#">Legal</a></li>
-            <li><a href="#">Privacy policy</a></li>
-            <li><a href="#">Status</a></li>
-          </ul>
-        </div>
-
-        <div class="footer__sub">
-          <div class="footer__title">Stay up to date</div>
-          <div class="footer__sub-input">
-            <input type="text" placeholder="Your email address">
-            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M17.0303 0.969691C17.2341 1.17342 17.3031 1.47584 17.2079 1.74778L11.9579 16.7478C11.8563 17.038 11.5878 17.2369 11.2806 17.2494C10.9733 17.2619 10.6895 17.0856 10.5646 16.8046L7.6818 10.3182L1.1954 7.43538C0.914389 7.31049 0.738092 7.02671 0.750627 6.71945C0.763163 6.41219 0.961991 6.14371 1.25224 6.04213L16.2522 0.792127C16.5242 0.696948 16.8266 0.765962 17.0303 0.969691ZM9.14456 9.91612L11.167 14.4667L14.7064 4.35429L9.14456 9.91612ZM13.6457 3.29362L3.53331 6.83297L8.0839 8.85546L13.6457 3.29362Z"
-                fill="black" />
-            </svg>
-          </div>
-        </div>
+      <div class="footer__social default-social">
+        <a target="_blank" href="#"><img class="svg" src="images/instagram.svg"></a>
+        <a target="_blank" href="#"><img class="svg" src="images/facebook.svg"></a>
+        <a target="_blank" href="#"><img class="svg" src="images/youtube.svg"></a>
       </div>
     </div>
   </footer>
