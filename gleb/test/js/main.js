@@ -10,7 +10,7 @@ $(function () {
 
     loadManager.onLoad = () => {
       renderer.render(scene, camera);
-      $('.three-canvas').addClass('active')
+      $('.three-canvas').addClass('active');
     };
 
     camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
@@ -47,7 +47,7 @@ $(function () {
         new THREE.MeshBasicMaterial({ color: 0x242424, flatShading: true }),
         new THREE.MeshBasicMaterial({ color: 0x242424, flatShading: true }),
         new THREE.MeshBasicMaterial({ color: 0x242424, flatShading: true }),
-        new THREE.MeshBasicMaterial({ map: loader.load('../images/' + iterator.nameImg) }),
+        new THREE.MeshBasicMaterial({ map: loader.load('./images/' + iterator.nameImg) }),
         new THREE.MeshBasicMaterial({ color: 0x242424, flatShading: true }),
       ];
       mesh = new THREE.Mesh(geometry, materials);
