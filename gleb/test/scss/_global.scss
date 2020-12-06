@@ -1,0 +1,104 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  color: #000;
+  position: relative;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: #000;
+  outline: none;
+}
+
+ul,
+li,
+button {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1140px;
+  padding: 0 15px;
+}
+
+.default-btn {
+  width: 269px;
+  height: 80px;
+  background-color: transparent;
+  border-radius: 15px;
+  font-size: 18px;
+  color: #000;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+}
+.default-btnArrow{
+  cursor: pointer;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 220px;
+  height: 74px;
+  padding: 16px 0 15px 43px;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 43px;
+  background-color: transparent;
+  svg {
+    margin-left: 8px;
+  }
+}
+.default-title {
+  font-size: 64px;
+  font-weight: 700;
+}
+.default-subtitle {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  padding: 20px 0 50px;
+}
+.default-social{
+  width: 176px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  a{
+    width: 32px;
+    height: 32px;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 100%;
+  }
+  svg{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

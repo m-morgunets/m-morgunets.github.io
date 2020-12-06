@@ -19,6 +19,8 @@
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.2",
     "normalize.css": "^8.0.1",
+    "three": "^0.123.0",
+    "threex-domevents": "^1.0.0",
     "wow.js": "^1.2.2"
   },
   "dependencies": {
