@@ -10,11 +10,13 @@
   top: 5%;
   left: 0;
   transform: translateX(-36%) rotate(25deg);
+  z-index: -1;
 }
 .bg-item-2 {
   top: 42.2%;
   right: 0;
   transform: translateX(40%) rotate(-3deg);
+  z-index: -1;
 }
 
 .header {
