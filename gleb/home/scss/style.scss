@@ -493,6 +493,7 @@
   height: 50%;
   &::before {
     content: "";
+    border-radius: 20px;
     position: absolute;
     top: 0;
     left: 0;
@@ -848,6 +849,10 @@
   a {
     width: 49px;
     height: 49px;
+    transition: all 0.3s;
+    &:hover {
+      transform: scale(1.2);
+    }
   }
   svg {
     width: 26px;

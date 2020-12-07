@@ -131,21 +131,27 @@
 }
 
 .main {
-  padding-top: 150px;
+  padding-top: 172px;
+}
+.main__title {
+  font-weight: 800;
+  font-size: 64px;
+  line-height: 58px;
+  text-align: center;
 }
 .main__content {
   max-width: 545px;
 }
 .main__content-title {
   font-weight: 800;
-  font-size: 48px;
-  line-height: 58px;
+  font-size: 36px;
+  line-height: 46px;
 }
 .main__content-text {
   font-weight: 500;
   font-size: 24px;
-  line-height: 40px;
-  padding: 20px 0 65px;
+  line-height: 36px;
+  padding-top: 20px;
 }
 .main__content-btn {
   width: 350px;
@@ -168,49 +174,59 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  &:last-child {
-    padding-top: 80px;
-  }
+  padding-top: 75px;
 }
 
-.skills {
-  margin-top: 150px;
+.tasks {
+  padding-top: 100px;
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
 }
-.skills__title {
-  padding-bottom: 85px;
-  font-size: 36px;
-  line-height: 24px;
-  font-weight: 700;
-  letter-spacing: 0.25px;
-  text-align: center;
+.tasks-box {
+  &:nth-child(2) {
+    margin: 0 30px;
+  }
 }
-.skills-inner {
-  display: flex;
-  width: 100%;
-  justify-content: center;
+.tasks__item {
+  max-width: 350px;
+  padding: 40px 25px 30px;
+  background: linear-gradient(90deg, #3d4e81 0%, #5753c9 48%, #6e7ff3 100%);
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 30px;
   & + & {
-    margin-top: 40px;
+    margin-top: 30px;
   }
 }
-.skills__item {
-  max-width: 317px;
-  width: 100%;
-  font-size: 18px;
+.tasks__item-title {
+  font-weight: 600;
+  font-size: 22px;
   line-height: 24px;
   letter-spacing: 0.25px;
-  font-weight: 400;
-  svg {
-    display: block;
-    margin-bottom: 13px;
-  }
-  & + & {
-    margin-left: 80px;
-  }
+}
+.tasks__item-subtitle {
+  padding: 3px 11px;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 24px;
+  letter-spacing: 0.25px;
+  background: #000000;
+  border-radius: 8px;
+  color: #fff;
+  display: inline-block;
+  margin: 15px 0 20px;
+}
+.tasks__item-text {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  color: #fff;
 }
 
 .form {
-  margin: 150px 0;
+  margin: 100px 0;
   .container {
     padding: 64px 95px 95px;
     border: 2px solid #000000;
