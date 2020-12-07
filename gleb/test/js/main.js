@@ -75,15 +75,6 @@ $(function () {
   function lerp(a, b, t) { return a + (b - a) * t };
   function ease(t) { return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t };
   function cameraAnimate() {
-    // animate = requestAnimationFrame(cameraAnimate);
-    // if (camera.position.x == newPosX && camera.position.z == newPosZ && camera.rotation.y == newRotationY) {
-    //   cancelAnimationFrame(animate);
-    // }
-    // camera.position.x += (newPosX + Math.sin(newRotationY) - nowPosX) / 100;
-    // camera.position.z += (newPosZ + Math.cos(newRotationY) - nowPosY) / 100;
-    // camera.rotation.y += (newRotationY - nowRotationY) / 100;
-    // console.log(Math.cos(newRotationY));
-    // renderer.render(scene, camera);
 
     animate = requestAnimationFrame(cameraAnimate);
 

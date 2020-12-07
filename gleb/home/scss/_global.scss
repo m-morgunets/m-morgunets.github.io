@@ -55,12 +55,12 @@ button {
   border: none;
   cursor: pointer;
 }
-.default-btnArrow{
+.default-btnArrow {
   cursor: pointer;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-  width: 220px;
+  width: 287px;
   height: 74px;
   padding: 16px 0 15px 43px;
   border: 1px solid #000000;
@@ -71,6 +71,20 @@ button {
   background-color: transparent;
   svg {
     margin-left: 8px;
+  }
+  &:hover svg {
+    animation: btnArrowAnim 1s infinite;
+  }
+}
+@keyframes btnArrowAnim {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
 .default-title {
@@ -84,18 +98,18 @@ button {
   text-align: center;
   padding: 20px 0 50px;
 }
-.default-social{
+.default-social {
   width: 176px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  a{
+  a {
     width: 32px;
     height: 32px;
-    background-color: rgba(255,255,255,0.1);
+    background-color: rgba(255, 255, 255, 0.1);
     border-radius: 100%;
   }
-  svg{
+  svg {
     position: relative;
     top: 50%;
     left: 50%;
