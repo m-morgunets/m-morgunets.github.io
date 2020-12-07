@@ -241,6 +241,7 @@
   background-color: #0d2640;
   text-align: center;
   padding: 75px 0;
+  position: relative;
 }
 .line-animation {
   stroke-dashoffset: 500%;
@@ -939,5 +940,86 @@
 //     cursor: pointer;
 //   }
 // }
+.why {
+  .bg-item-1 {
+    top: 0;
+    right: 0;
+    // transform: translate(50%, -16.3%);
+  }
+  .bg-item-2 {
+    bottom: 0;
+    left: 0;
+  }
+  * {
+    z-index: 1;
+  }
+  .why__btn,
+  .why__title {
+    position: relative;
+  }
+}
+.bg-item {
+  position: absolute !important;
+  z-index: 0 !important;
+}
+.napkin {
+  position: relative;
+  .bg-item-3 {
+    top: 0;
+    left: 0;
+  }
+  .bg-item-4 {
+    bottom: -137px;
+    left: 0;
+  }
+  * {
+    position: relative;
+    z-index: 1;
+  }
+}
+.portfolio {
+  position: relative;
+  .bg-item-5 {
+    bottom: 0;
+    right: 0;
+  }
+  * {
+    position: relative;
+    z-index: 1;
+  }
+}
+.events {
+  position: relative;
+  .bg-item-6 {
+    top: 0;
+    right: 0;
+  }
+  .bg-item-7 {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+  .bg-item-8 {
+    bottom: 0;
+    right: 0;
+  }
+  * {
+    position: relative;
+    z-index: 1;
+  }
+}
+.services {
+  position: relative;
+  .bg-item-9 {
+    top: 0;
+    right: 0;
+  }
+  .services__title,
+  .services__subtitle,
+  .services-inner {
+    position: relative;
+    z-index: 1;
+  }
+}
 
 @import "media";
