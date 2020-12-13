@@ -1,4 +1,5 @@
 $(function () {
+    const swup = new Swup();
 
     var wow = new WOW();
     wow.init();
@@ -8,12 +9,9 @@ $(function () {
     let height = $('.why__box-line').height();
     scroll();
     function scroll() {
-        // if (scroll + $(window).height() * 0.25 >= $('.why').offset().top) {
-        //     lineAnimate();
-        // }
 
         let scroll = $(this).scrollTop();
-        let scrollInSection = scroll + $(this).height() / 3 - $('.why__box').offset().top;
+        let scrollInSection = scroll + $(this).height() / 2 - $('.why__box').offset().top;
 
         if (scrollInSection >= 0) {
             $('.why__box-dot').fadeIn();
@@ -46,91 +44,47 @@ $(function () {
     }
 
     $(window).on('scroll', scroll);
-    function lineAnimate() {
-        $('.why__box-dot').fadeIn();
-        setTimeout(() => {
-            $('.why__box-line path').addClass('animate');
-        }, 300);
-        setTimeout(() => {
-            $('.why__box-item.item-1').fadeIn();
-        }, 1500);
-        setTimeout(() => {
-            $('.why__box-item.item-2').fadeIn();
-        }, 2500);
-        setTimeout(() => {
-            $('.why__box-item.item-3').fadeIn();
-        }, 3500);
-        setTimeout(() => {
-            $('.why__box-item.item-4').fadeIn();
-        }, 4500);
-        setTimeout(() => {
-            $('.why__box-item.item-5').fadeIn();
-        }, 6100);
-        setTimeout(() => {
-            $('.why__box-cup').addClass('visible');
-        }, 7800);
-    }
 
+    $('.scroll-btn').on('click', function (e) {
+        let objectSelect = $(this).attr('data-onScroll');
+        $('html,body').stop().animate({ scrollTop: $(objectSelect).offset().top - $('.header').height() }, 1000);
+        e.preventDefault();
+    });
 
-    // function bgAnimate() {
-    //     var leftIndex = 0;
-    //     var widthTrack = $('.main__bg-track').width();
-    //     for (var i = 1; i <= 2; i++) {
-    //         newBgBox();
-    //     }
-    //     var transformTrack = 0;
-    //     var trackIndicator = 0;
-    //     var indexItem = 1;
-    //     setInterval(() => {
-    //         $('.main__bg-track').css('transform', 'translateX(' + transformTrack + 'px)');
-    //         transformTrack -= 15;
-    //         trackIndicator += 15;
-    //         if (-(transformTrack / indexItem) >= widthTrack) {
-    //             indexItem++;
-    //             $('.main__bg-box:first-child').detach();
-    //             trackIndicator = 0;
-    //             newBgBox();
-    //         }
-    //     }, 100);
-    //     function newBgBox() {
-    //         $('.main__bg .main__bg-track').append('<div class="main__bg-box"></div>');
-    //         for (var j = 0; j < 30; j++) {
-    //             $('.main__bg .main__bg-box:last-child').append('<div class="main__bg-item"></div>');
-    //         }
-    //         $('.main__bg .main__bg-box:last-child').css('transform', 'translateX(' + (widthTrack * leftIndex) + 'px)');
-    //         leftIndex += 1;
-    //         for (var iterator of $('.main__bg-box:last-child .main__bg-item')) {
-    //             randomStyles(iterator);
-    //         }
-    //     }
+    let portfolioBoxHeight = 0;
+    $('.portfolio__btn').on('click', function () {
+        for (const iterator of $('.portfolio-inner .portfolio-box')) {
+            portfolioBoxHeight += $(iterator).innerHeight();
+        }
+        $('.portfolio').addClass('showAll');
+        $('.portfolio-inner').css('height', portfolioBoxHeight + 'px');
+    });
 
-    //     function randomStyles(object) {
-    //         var arrColor = ['rgba(255, 0, 0, ', 'rgba(255, 170, 0, ', 'rgba(0, 255, 170, ', 'rgba(153, 0, 255, ']
-    //         var positionX = randomInteger(0, 1) * $('.main__bg').width();
-    //         var positionY = randomInteger(0, 1) * $('.main__bg').height();
-    //         var opacity = randomInteger(0.1, 0.6);
-    //         var blur = randomInteger(1, 10);
-    //         var colorIndex = Math.round(randomInteger(0, 3));
-    //         var animate = Math.round(randomInteger(0, 1));
-    //         var timeOut = Math.round(randomInteger(1, 1000));
-    //         if (animate) {
-    //             setTimeout(() => {
-    //                 $(object).addClass('animate');
-    //             }, timeOut);
-    //         }
-    //         $(object).css({
-    //             'left': positionX,
-    //             'top': positionY,
-    //             'filter': 'blur(' + blur + 'px)',
-    //             'background': arrColor[colorIndex] + opacity + ')',
-    //         })
-    //     }
-    // }
-    // function randomInteger(min, max) {
-    //     // случайное число от min до (max)
-    //     let rand = min + Math.random() * (max - min);
-    //     return rand;
-    // }
+    $('.about__btn').on('click', function () {
+        $('.aboutUs').fadeIn();
+    });
+    $('.why__btn').on('click', function () {
+        $('.first-popup').fadeIn();
+    });
+    $('.form__box-btn').on('click', function () {
+        $('.section-popup').fadeIn();
+    });
+    $('.popup__shadow').on('click', function () {
+        $(this).parent().fadeOut();
+    });
+    $('.first-popup .popup__btn').on('click', function () {
+        $('.first-popup').fadeOut();
+        $('.finish-popup').fadeIn();
+    });
+    $('.done-popup .popup__btn').on('click', function () {
+        $('.done-popup').fadeOut();
+    });
+    $('.aboutUs__btn').on('click', function (e) {
+        $('.aboutUs').fadeOut();
+        $('html,body').stop().animate({ scrollTop: $('.why').offset().top - $('.header').height() }, 1000);
+        e.preventDefault();
+    });
+
 
     jQuery('img.svg').each(function () {
         var $img = jQuery(this);
@@ -162,6 +116,5 @@ $(function () {
             $img.replaceWith($svg);
         }, 'xml');
     });
-
 
 });

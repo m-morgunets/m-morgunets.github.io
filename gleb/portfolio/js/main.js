@@ -1,4 +1,5 @@
 $(function () {
+  const swup = new Swup();
 
   $('.content__sliderFor').slick({
     slidesToShow: 1,
@@ -13,7 +14,6 @@ $(function () {
     slidesToScroll: 1,
     asNavFor: '.content__sliderFor',
     arrows: false,
-    // focusOnSelect: true
   });
 
   jQuery('img.svg').each(function () {
