@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Html</title>
+  <link rel="shortcut icon" href="app/images/logo.svg" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/app/css/reset.css">
@@ -16,7 +17,7 @@
 
   <header class="header">
     <div class="container">
-      <div class="header__logo"><img src="/app/images/logo.svg" alt=""></div>
+      <a href="index.html" class="header__logo"><img src="/app/images/logo.svg" alt=""></a>
       <ul class="header__menu">
         <li><a href="html.html">Html</a></li>
         <li><a href="css.html">СSS</a></li>
@@ -52,10 +53,16 @@
   </section>
 
   <section class="definition">
-    <div class="definition__img"><img src="app/images/html.png" alt=""></div>
-    <p class="definition__text default-text">HTML (от английского HyperText Markup Language) — это язык гипертекстовой
-      разметки страницы. Он используется для того, чтобы дать браузеру понять, как нужно отображать загруженный сайт.
-    </p>
+    <div class="container">
+      <div class="definition__box">
+        <div class="definition__box-img"><img src="app/images/html.png" alt=""></div>
+        <p class="definition__box-text default-text">HTML (от английского HyperText Markup Language) — это язык
+          гипертекстовой
+          разметки страницы. Он используется для того, чтобы дать браузеру понять, как нужно отображать загруженный
+          сайт.
+        </p>
+      </div>
+    </div>
   </section>
 
   <section class="html">
@@ -67,10 +74,10 @@
         обязательный атрибут src, в котором указывается ссылка на файл.
       </p>
       <h3 class="html__subtitle default-subtitle">Принцип работы разметки следующий:</h3>
-      <ul class="skills__list default-list">
-        <li>Вы вводите в адресную строку адрес сайта или страницы.</li>
-        <li>Браузер делает запрос по этому адресу и получает файл в формате.html.</li>
-        <li>Код из полученного файла преобразуется в визуальные объекты.</li>
+      <ul class="html__list default-list">
+        <li>Вы вводите в адресную строку адрес сайта или страницы</li>
+        <li>Браузер делает запрос по этому адресу и получает файл в формате .html</li>
+        <li>Код из полученного файла преобразуется в визуальные объекты</li>
       </ul>
       <p class="html__text default-text">При этом браузер следует правилам преобразования, которые немного отличаются в
         зависимости от системы, версии и типа обозревателя. Если в коде допущена ошибка, то на странице может появиться
@@ -84,21 +91,21 @@
       <h3 class="nottodo__subtitle default-subtitle">Простыми словами, HTML — это каркас сайта. В нем могут быть
         прописаны</h3>
       <ul class="nottodo__list default-list">
-        <li>ссылки;</li>
-        <li>таблицы;</li>
-        <li>изображения;</li>
-        <li>блоки;</li>
-        <li>абзацы;</li>
-        <li>формы;</li>
-        <li>заголовки и так далее.</li>
+        <li>ссылки</li>
+        <li>таблицы</li>
+        <li>изображения</li>
+        <li>блоки</li>
+        <li>абзацы</li>
+        <li>формы</li>
+        <li>заголовки и так далее</li>
       </ul>
       <h3 class="nottodo__subtitle default-subtitle">Также есть ограниченные возможности по изменению внешнего вида:
       </h3>
       <ul class="nottodo__list default-list">
-        <li>поменять цвет;</li>
-        <li>указать фоновое изображение;</li>
-        <li>изменить шрифт;</li>
-        <li>сделать текст жирным, курсивным, подчеркнутым, зачеркнутым и так далее.</li>
+        <li>поменять цвет</li>
+        <li>указать фоновое изображение</li>
+        <li>изменить шрифт</li>
+        <li>сделать текст жирным, курсивным, подчеркнутым, зачеркнутым и так далее</li>
       </ul>
       <p class="nottodo__text default-text">
         На данный момент выпущено пять версий языка. Первая версия была разработана между 1986 и 1991 годами, а

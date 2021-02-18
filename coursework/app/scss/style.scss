@@ -344,15 +344,35 @@ body.page-vue .main {
 }
 
 .definition {
-  display: flex;
-  max-width: 840px;
-  margin: 0 auto;
-  align-items: center;
   padding-top: 100px;
 }
-.definition__text {
+.definition__box-img img {
+  height: 270px;
+}
+.definition__box {
+  display: flex;
+  align-items: center;
+  max-width: 840px;
+  margin: 0 auto;
+}
+.definition__box-text {
   padding: 0;
   padding-left: 15px;
+}
+
+.secondproperty__text:last-child {
+  padding-top: 15px;
+}
+.versions__text:nth-child(2) {
+  padding: 30px 0;
+}
+
+.components__img {
+  padding-top: 30px;
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
 }
 
 @import "media";

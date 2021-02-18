@@ -4,26 +4,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="app/images/logo.svg" type="image/x-icon">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Html</title>
+  <title>PHP</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/app/css/reset.css">
-  <link rel="stylesheet" href="/app/css/style.min.css">
+  <link rel="stylesheet" href="app/css/reset.css">
+  <link rel="stylesheet" href="app/css/style.min.css">
 </head>
 
 <body class="page-php">
 
   <header class="header">
     <div class="container">
-      <div class="header__logo"><img src="/app/images/logo.svg" alt=""></div>
+      <a href="index.html" class="header__logo"><img src="app/images/logo.svg" alt=""></a>
       <ul class="header__menu">
         <li><a href="html.html">Html</a></li>
         <li><a href="css.html">СSS</a></li>
         <li><a href="javascript.html">JS</a></li>
         <li><a href="php.html">PHP</a></li>
         <li>
-          <img src="/app/images/down-arrow.svg" alt=""> Frameworks
+          <img src="app/images/down-arrow.svg" alt=""> Frameworks
 
           <ul class="header__menu-list">
             <li><a href="jquery.html">JQuery</a></li>
@@ -39,7 +40,130 @@
     <div class="main__subtitle">php</div>
   </section>
 
+  <section class="information">
+    <h3 class="information__title">Основная информация</h3>
+    <div class="information__item">
+      <div class="information__item-img"><img src="app/images/smile.svg" alt=""></div>
+      <div class="information__item-text">Расмус Лердорф</div>
+    </div>
+    <div class="information__item">
+      <div class="information__item-img"><img src="app/images/date.svg" alt=""></div>
+      <div class="information__item-text">1995 г.</div>
+    </div>
+  </section>
 
+  <section class="definition">
+    <div class="container">
+      <div class="definition__box">
+        <div class="definition__box-img"><img src="app/images/php.png" alt=""></div>
+        <p class="definition__box-text default-text">
+          PHP: Hypertext Preprocessor (изначально Personal Home Page Tools, «Инструменты для создания персональных
+          веб-страниц») — один из лидирующих языков современной веб-разработки. Его отцом считается датский программист
+          Расмус Лердорф, который в 1994 году создал набор скриптов на Perl — ту самую «персональную домашнюю страницу»,
+          которая легла в основу PHP.
+        </p>
+      </div>
+      <p class="definition__text default-text">
+        Со временем к работе над ним подключились разработчики со всего мира. PHP — один из старейших языков в рамках
+        open source-проекта. Сейчас его поддерживает и разрабатывает группа энтузиастов во главе с компанией Zend
+        Technologies. Ей руководят Зеев Сураски и Энди Гутманс: в 1997 году они создали третью версию PHP и активно
+        развивают язык по сегодняшний день.
+      </p>
+    </div>
+  </section>
+
+  <section class="firstproperty">
+    <div class="container">
+      <h2 class="firstproperty__title default-title">
+        Первое свойство: интерпретируемость
+      </h2>
+      <p class="firstproperty__text default-text">
+        Главная характеристика PHP — интерпретируемость. В отличие от Java, которая компилируется, а затем запускается в
+        работу, PHP создается во время обращения к нему. Человек открывает сайт, на сервер посылается запрос, и в это
+        время компилируется код. Каждый скрипт компилируется в реальном времени, а затем выполняется.
+        <br><br>
+        Благодаря этому свойству PHP — очень гибкий язык. Например, Java-программист вводит название класса один раз —
+        теперь оно неизменно. PHP же компилируется в рантайме и можно подставить любое название класса из переменной.
+        <br><br>
+        Однако ради гибкости разработчик жертвует скоростью работы сайта. В случае с Java программу создают, а затем
+        запускают. В случае с PHP приходится занимать время пользователя на процесс компиляции кода.
+      </p>
+    </div>
+  </section>
+
+  <section class="secondproperty">
+    <div class="container">
+      <h2 class="secondproperty__title default-title">
+        Второе свойство: динамическая типизация
+      </h2>
+      <h3 class="secondproperty__subtitle default-subtitle">
+        Языки программирования бывают:
+      </h3>
+      <ul class="secondproperty__list default-list">
+        <li>со статической типизацией</li>
+        <li>с динамической типизацией</li>
+      </ul>
+      <p class="secondproperty__text default-text">
+        В первом случае тип переменной определен жестко и заранее. Если это число, программист напишет тип int. Если
+        строка — string. Во втором случае переменная может быть одновременно числом, строкой, массивом, объектом — чем
+        угодно. Одной переменной можно присвоить число, затем массив, объект — и язык программирования это позволит. PHP
+        относится ко второй группе.
+      </p>
+      <h3 class="secondproperty__subtitle default-subtitle">Но есть проблема</h3>
+      <p class="secondproperty__text default-text">
+        Проблема динамической типизации в том, что она приводит к уменьшению скорости работы и потреблению большого
+        количества оперативной памяти. Но динамическая типизация гибкая и удобная, поэтому PHP так популярен.
+        <br><br>
+        Команда разработки PHP сейчас трудится над тем, чтобы он занимал меньше памяти при работе, но сохранил гибкость
+        статически нетипизированного языка.
+      </p>
+    </div>
+  </section>
+
+  <section class="versions">
+    <div class="container">
+      <h2 class="versions__title default-title">
+        Обзор версий: между первой и седьмой
+      </h2>
+      <p class="versions__text default-text">
+        Версии с первой по третью были «сырыми»: мало возможностей, хотя для создания простых сайтов их хватало. С
+        версии 5.4 PHP стал отлаженной технологией. До этого было слишком много нюансов, и работать с ними было
+        непросто.
+        <br><br>
+        Релизы 5.5 и 5.6 — серьезные, проверенные временем вещи. Они отлично себя показали и достаточно защищены от
+        инъекций и возможностей взлома.
+        <br><br>
+        Шестую версию пропустили: она должна была поддерживать Unicode на уровне ядра, но релиз не состоялся. «PHP6 был
+        амбициозным, но отстойным. Вот почему мы занялись PHP 7, в процессе пропустив шестую версию», — прокомментировал
+        в своем блоге Vilson Duka, один из разработчиков.
+      </p>
+
+      <iframe width="100%" height="660" src="https://www.youtube.com/embed/SXkaP_r-c5k" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+
+      <p class="versions__text default-text">
+        Седьмая версия считается революционной в плане скорости. 5.6 медленно работала с массивами и вообще с
+        переменными: обработка статически нетипизированных данных происходила долго. Строка обрабатывалась в 60 раз
+        медленнее, чем на C#. Это не бросается в глаза — речь о долях секунды. Но когда у тебя миллиард пользователей,
+        как на Facebook, скорость критична.
+      </p>
+    </div>
+  </section>
+
+  <section class="usephp">
+    <div class="container">
+      <h2 class="usephp__title default-title">Для чего используют PHP</h2>
+      <p class="usephp__text default-text">
+        Единственное применение — это веб-разработка. На PHP невозможно сделать десктопные приложения, он не
+        используется в мобильной разработке — только веб. Но сегодня эта область огромна. Даже некоторые десктопные
+        приложения уходят в веб — тот же Microsoft Office имеет облачный сервис. Ранее считалось, что PHP не подходит
+        для больших высоконагруженных проектов, но опыт Facebook доказывает обратное. «Авито» — еще один пример удачной
+        реализации. Подробнее о том, как использовать PHP — в нашей статье Для чего используют PHP и почему его
+        ненавидят.
+      </p>
+    </div>
+  </section>
 
   <section class="form">
     <div class="container">
@@ -69,7 +193,7 @@
   </footer>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="/app/js/main.js"></script>
+  <script src="app/js/main.js"></script>
 </body>
 
 </html>

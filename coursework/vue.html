@@ -5,25 +5,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Html</title>
+  <title>Vue.js</title>
+  <link rel="shortcut icon" href="app/images/logo.svg" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/app/css/reset.css">
-  <link rel="stylesheet" href="/app/css/style.min.css">
+  <link rel="stylesheet" href="app/css/reset.css">
+  <link rel="stylesheet" href="app/css/style.min.css">
 </head>
 
 <body class="page-vue">
 
   <header class="header">
     <div class="container">
-      <div class="header__logo"><img src="/app/images/logo.svg" alt=""></div>
+      <a href="index.html" class="header__logo"><img src="app/images/logo.svg" alt=""></a>
       <ul class="header__menu">
         <li><a href="html.html">Html</a></li>
         <li><a href="css.html">СSS</a></li>
         <li><a href="javascript.html">JS</a></li>
         <li><a href="php.html">PHP</a></li>
         <li>
-          <img src="/app/images/down-arrow.svg" alt=""> Frameworks
+          <img src="app/images/down-arrow.svg" alt=""> Frameworks
 
           <ul class="header__menu-list">
             <li><a href="jquery.html">JQuery</a></li>
@@ -39,7 +40,79 @@
     <div class="main__subtitle">vue.js</div>
   </section>
 
+  <section class="information">
+    <h3 class="information__title">Основная информация</h3>
+    <div class="information__item">
+      <div class="information__item-img"><img src="app/images/smile.svg" alt=""></div>
+      <div class="information__item-text">Эваном Ю.</div>
+    </div>
+    <div class="information__item">
+      <div class="information__item-img"><img src="app/images/date.svg" alt=""></div>
+      <div class="information__item-text">2014 г.</div>
+    </div>
+  </section>
 
+  <section class="definition">
+    <div class="container">
+      <div class="definition__box">
+        <div class="definition__box-img"><img src="app/images/vue.png" alt=""></div>
+        <p class="definition__box-text default-text">Vue (произносится /vjuː/, примерно как view) — это прогрессивный
+          фреймворк для создания пользовательских интерфейсов.
+        </p>
+      </div>
+      <p class="definition__text default-text">
+        В отличие от фреймворков-монолитов, Vue создан пригодным для постепенного внедрения. Его ядро в первую очередь
+        решает задачи уровня представления (view), что упрощает интеграцию с другими библиотеками и существующими
+        проектами. С другой стороны, Vue полностью подходит и для создания сложных одностраничных приложений (SPA,
+        Single-Page Applications), если использовать его совместно с современными инструментами и дополнительными
+        библиотеками.
+      </p>
+    </div>
+  </section>
+
+  <section class="vue">
+    <div class="container">
+      <h2 class="vue__title default-title">Все о Vue.js</h2>
+      <p class="vue__text default-text">
+        Фреймворки разрабатываются для того, чтобы упростить нам жизнь и освободить от написания однотипного кода. Но,
+        по мере того как кодовая база некоторых фреймворков сильно разрастается, они начинают привносить свою долю
+        сложности в проект. Из-за этого при планировании разработки мы должны учитывать два фактора:
+      </p>
+      <ul class="vue__list default-list">
+        <li>сложность нашего приложения</li>
+        <li>ложность фреймворка, который мы используем</li>
+      </ul>
+      <p class="vue__text default-text">
+        Немного абстрагируемся и назовём это внутренней сложностью (то есть сложностью, от которой мы не можем
+        избавиться при разработке) и сложностью инструмента, с помощью которого мы достигаем той или иной цели.
+        Естественно манипулировать мы можем только сложностью инструмента.
+      </p>
+      <p class="vue__text default-text">Из вышесказанного, у нас получается два варианта выбора инструмента:</p>
+      <ul class="vue__list default-list">
+        <li><b>Вариант недостаточности.</b> Когда инструмента недостаточно, чтобы перекрыть внутреннюю сложность.
+          Функции, необходимые для реализации приложения, отсутствуют в фреймворке, и нам приходится вручную
+          дорабатывать и добавлять необходимый инструментарий</li>
+        <li><b>Вариант избыточности.</b> Когда необходимый для приложения функционал перекрывается только небольшой
+          частью инструмента. Остальная же часть инструментария висит мертвым грузом и только создает нам проблемы:
+          ограничения при разработке, замедление загрузки приложения и т.п.</li>
+      </ul>
+      <p class="vue__text default-text">Так что же делать? Возможно, буду немного Капитаном Очевидностью, но надо
+        действовать по принципу: “Для каждой цели — свой инструмент”. При планировании нам необходимо искать золотую
+        середину так, чтобы сложность (и, следовательно, функциональность) приложения были на одном уровне.</p>
+    </div>
+  </section>
+
+  <section class="components">
+    <div class="container">
+      <h2 class="components__title default-title">Разбиение приложения на компоненты</h2>
+      <p class="components__text default-text">
+        Важной концепцией Vue являются компоненты. Эта абстракция позволяет собирать большие приложения из маленьких
+        «кусочков». Они представляют собой пригодные к повторному использованию объекты. Если подумать, почти любой
+        интерфейс можно представить как дерево компонентов:
+      </p>
+      <div class="components__img"><img src="app/images/components.png" alt=""></div>
+    </div>
+  </section>
 
   <section class="form">
     <div class="container">
@@ -69,7 +142,7 @@
   </footer>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="/app/js/main.js"></script>
+  <script src="app/js/main.js"></script>
 </body>
 
 </html>
