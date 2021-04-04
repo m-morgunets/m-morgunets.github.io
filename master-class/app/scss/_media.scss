@@ -535,7 +535,7 @@
       width: 110px;
       height: unset;
     }
-    img:nth-child(3) {
+    a img {
       width: 200px;
       height: unset;
     }
@@ -820,7 +820,7 @@
   .footer img {
     width: 90px;
   }
-  .footer img:nth-child(3) {
+  .footer a img {
     width: 170px;
   }
   .prices__title {
@@ -1022,10 +1022,13 @@
   .footer img:nth-child(5) {
     display: none;
   }
+  .footer a img {
+    display: block !important;
+  }
   .footer img {
     width: 80px;
   }
-  .footer img:nth-child(3) {
+  .footer a img {
     width: 140px;
   }
 }

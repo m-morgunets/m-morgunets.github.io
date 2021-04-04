@@ -566,6 +566,7 @@
   position: relative;
 }
 .prices__item {
+  cursor: pointer;
   outline: none;
   max-width: 370px;
   width: 100%;
@@ -673,7 +674,7 @@
     width: 151px;
     height: 165px;
   }
-  img:nth-child(3) {
+  a img {
     width: 252px;
     height: 252px;
   }
