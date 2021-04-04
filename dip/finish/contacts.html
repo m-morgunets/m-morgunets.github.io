@@ -313,7 +313,10 @@
 
         <div class="contacts-box">
           <div class="contacts__item">
-            <div id="map" style="width: 100%; height: 100%;"></div>
+            <iframe
+              src="https://yandex.ru/map-widget/v1/?um=constructor%3A13c57e8e9a2ba23f55effdb77719668aecbedbc0143dbae33eb8b9461273ea08&amp;source=constructor"
+              width="100%" height="100%" frameborder="0">
+            </iframe>
           </div>
           <div class="contacts__item" style="background: url(images/contacts-item-2.png);">
             <div class="contacts__item-title">
@@ -424,7 +427,16 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="js/libs.min.js?3000"></script>
-  <script type="text/javascript">
+  <style>
+    .ymaps-layers-pane {
+      filter: grayscale(1);
+      -ms-filter: grayscale(1);
+      -webkit-filter: grayscale(1);
+      -moz-filter: grayscale(1);
+      -o-filter: grayscale(1);
+    }
+  </style>
+  <!-- <script type="text/javascript">
     var map;
     function initMap() {
       map = new google.maps.Map(document.getElementById('map'), {
@@ -600,9 +612,9 @@
       ];
       map.setOptions({ styles: styles });
     }
-  </script>
-  <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYd2PI0_5gnsqF3w94N7HYXR36Ht6nckQ&callback=initMap"></script>
+  </script> -->
+  <!-- <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYd2PI0_5gnsqF3w94N7HYXR36Ht6nckQ&callback=initMap"></script> -->
   <script src="js/main.js?3000"></script>
 </body>
 
