@@ -31,11 +31,10 @@
   top: 70%;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #000;
+  background-color: transparent;
   padding: 16px;
   visibility: hidden;
   opacity: 0;
-  transition: all 0.3s;
   .menu-item{
     margin-left: 0;
     a{
@@ -54,7 +53,8 @@
 .menu-item:hover .menu-box{
   visibility: visible;
   opacity: 1;
-  top: 120%;
+  top: 100%;
+  transition: all 0.3s;
 }
 .main__social {
   position: absolute;
@@ -325,7 +325,7 @@
     padding: 15px 0 0 38px;
   }
   .section__form-box {
-    padding: 60px 65px 60px 0;
+    padding: 42px 45px 42px 0;
   }
   .section__form-item {
     display: block;
@@ -334,13 +334,13 @@
       padding-right: 15px;
     }
     input{
-      width: 550px;
+      width: 542px;
       background: #C4C4C4;
       padding-left: 10px;
     }
   }
   .section__form-item + .section__form-item{
-    margin-top: 35px;
+    margin-top: 30px;
   }
   .section__form-btn {
     position: relative;
