@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Html</title>
+  <!-- Фавикон сайта -->
+  <link rel="shortcut icon" href="images/logo.svg" type="image/x-icon">
+  <!-- Шрифты подгружаются из Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Reset.css сбрасывает встроенные стили браузера -->
+  <link rel="stylesheet" href="css/reset.css">
+  <!-- Подключение стилей -->
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body class="page-html">
+
+  <!-- Верхнее меню сайта, повторяется на всех страницах -->
+  <header class="header">
+    <div class="container">
+      <!-- Логотип сайта -->
+      <a href="index.html" class="header__logo"><img src="images/logo.svg" alt=""></a>
+      <!-- Меню -->
+      <ul class="header__menu">
+        <li><a href="html.html">Html</a></li>
+        <li><a href="css.html">СSS</a></li>
+        <li><a href="javascript.html">JS</a></li>
+        <li><a href="php.html">PHP</a></li>
+        <li>
+          <!-- Выподающее пункты меню -->
+          <img src="images/down-arrow.svg" alt=""> Frameworks
+
+          <ul class="header__menu-list">
+            <li><a href="jquery.html">JQuery</a></li>
+            <li><a href="vue.html">Vue.js</a></li>
+            <li><a href="react.html">React.js</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Первый экран, растянут на всю высоту экрана -->
+  <section class="main">
+    <div class="main__subtitle">html</div>
+  </section>
+
+  <!-- Основная информация о создателе -->
+  <section class="information">
+    <h3 class="information__title">Основная информация</h3>
+    <div class="information__item">
+      <div class="information__item-img"><img src="images/smile.svg" alt=""></div>
+      <!-- ФИО создателя -->
+      <div class="information__item-text">Тим Бернерсон-Ли</div>
+    </div>
+    <div class="information__item">
+      <div class="information__item-img"><img src="images/date.svg" alt=""></div>
+      <!-- Год создания -->
+      <div class="information__item-text">1990 г.</div>
+    </div>
+  </section>
+
+  <!-- Основная информация о HTML -->
+  <section class="definition">
+    <div class="container">
+      <div class="definition__box">
+        <div class="definition__box-img"><img src="images/html.png" alt=""></div>
+        <p class="definition__box-text default-text">HTML (от английского HyperText Markup Language) — это язык
+          гипертекстовой
+          разметки страницы. Он используется для того, чтобы дать браузеру понять, как нужно отображать загруженный
+          сайт.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Информация о HTML -->
+  <section class="html">
+    <div class="container">
+      <h2 class="html__title default-title">Как работает HTML</h2>
+      <p class="html__text default-text">
+        Язык состоит из тегов — это своеобразные команды, которые преобразовываются в визуальные объекты в браузере
+        пользователя. Например, тег &lt;img&gt; используется для размещения изображений на странице. У него есть
+        обязательный атрибут src, в котором указывается ссылка на файл.
+      </p>
+      <h3 class="html__subtitle default-subtitle">Принцип работы разметки следующий:</h3>
+      <!-- Список о принципе работы разметки -->
+      <ul class="html__list default-list">
+        <li>Вы вводите в адресную строку адрес сайта или страницы</li>
+        <li>Браузер делает запрос по этому адресу и получает файл в формате .html</li>
+        <li>Код из полученного файла преобразуется в визуальные объекты</li>
+      </ul>
+      <p class="html__text default-text">При этом браузер следует правилам преобразования, которые немного отличаются в
+        зависимости от системы, версии и типа обозревателя. Если в коде допущена ошибка, то на странице может появиться
+        что-то неожиданное.</p>
+    </div>
+  </section>
+
+  <!-- Информация о HTML -->
+  <sectiom class="nottodo">
+    <div class="container">
+      <h2 class="nottodo__title default-title">Что нельзя сделать на HTML</h2>
+      <h3 class="nottodo__subtitle default-subtitle">Простыми словами, HTML — это каркас сайта. В нем могут быть
+        прописаны</h3>
+        <!-- Список что может быть прописано в HTML -->
+      <ul class="nottodo__list default-list">
+        <li>ссылки</li>
+        <li>таблицы</li>
+        <li>изображения</li>
+        <li>блоки</li>
+        <li>абзацы</li>
+        <li>формы</li>
+        <li>заголовки и так далее</li>
+      </ul>
+      <h3 class="nottodo__subtitle default-subtitle">Также есть ограниченные возможности по изменению внешнего вида:
+      </h3>
+      <!-- Список из возможностей по изменению внешнего вида сайта в HTML файле -->
+      <ul class="nottodo__list default-list">
+        <li>поменять цвет</li>
+        <li>указать фоновое изображение</li>
+        <li>изменить шрифт</li>
+        <li>сделать текст жирным, курсивным, подчеркнутым, зачеркнутым и так далее</li>
+      </ul>
+      <p class="nottodo__text default-text">
+        На данный момент выпущено пять версий языка. Первая версия была разработана между 1986 и 1991 годами, а
+        последняя (5.2) — в 2017. Изначально он должен был стать независимым от каких-либо платформ — отображаться везде
+        одинаково. Но этого не случилось, потому что у пользователей росли требования к мультимедиа.
+        <br><br>
+        Как итог, код интерпретируется по-разному не только на разных устройствах, но и в разных браузерах. Это не
+        плохо, потому что требования отличаются: пользователь, заходящий на сайт с телефона, готов к ограниченному
+        функционалу и минималистичному дизайну, а владелец ПК зачастую хочет большего.
+        <br><br>
+        В пятой редакции HTML стал чуть независимее от других языков. Раньше проверка правильного заполнения форм была
+        исключительно на JS, а теперь часть задач можно переложить на HTML.
+        <br><br>
+        Например, можно указать тип данных, которые должны вводиться в поле. Если пользователь попробует ввести что-то
+        не то, у него не получится. Сами же поля стали более дружелюбными: пользователь может выбрать дату, время и даже
+        цвет, может указать число из интервала, корректный адрес электронной почты или ссылку на сайте.
+        <br><br>
+        Для создания полноценной страницы все еще нужно подключить таблицу стилей CSS и язык скриптов JavaScript. В CSS
+        прописываются отступы, выравнивания, позиционирование, прозрачность, границы, тени и многое другое. Можно даже
+        указать стили для разных состояний элемента — например, поменять фон кнопки при наведении.
+        <br><br>
+        Пока HTML стремится к тому, чтобы ускорить разработку и снизить нагрузку на браузер, но без других языков ему
+        пока не обойтись, как и им без него.
+      </p>
+    </div>
+  </sectiom>
+
+  <section class="video">
+    <div class="container">
+      <h2 class="video__title default-title">HTML за 1 час</h2>
+      <!-- Ссыка на оригинал видео -->
+      <p class="video__link default-text">Ссылка на оригинальное видео: <a
+          href="https://youtu.be/bWNmJqgri4Q">https://youtu.be/bWNmJqgri4Q</a></p>
+      <!-- Видео о HTML -->
+      <video width="100%" controls>
+        <!-- Формат mp4 -->
+        <source src="video/video.mp4" type='video/mp4'>
+        <!-- Формат ogv -->
+        <source src="video/video.ogv" type='video/ogg'>
+        <!-- Формат webm -->
+        <source src="video/video.webm" type='video/webm'>
+        <!-- Выводится если браузер не поддерживает ни один из представленных форматов -->
+        Тег video не поддерживается вашим браузером.
+      </video>
+    </div>
+  </section>
+
+  <!-- Дополнительная информация о HTML, представлены ссылки на сторонние ресурсы -->
+  <section class="sources">
+    <div class="container">
+      <h2 class="sources__title default-title">
+        Дополнительная информация о HTML:
+      </h2>
+      <ul class="sources__links default-list">
+        <li class="sources__links-item"><a target="_blank" href="https://dev.w3.org/html5/html-author/">Документация по
+            HTML5 на сайте
+            W3C</a></li>
+        <li class="sources__links-item"><a target="_blank"
+            href="https://developer.mozilla.org/ru/docs/Web/Guide/HTML/HTML5#семантика">Семантика HTML5 на сайте MDN</a>
+        </li>
+        <li class="sources__links-item"><a target="_blank" href="http://htmlbook.ru/html5">Основная информация по HTML5
+            на сайте
+            htmlbook.ru</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Footer сайта, повторяется на всех страницах -->
+  <footer class="footer">
+    <div class="footer__text">
+      Моргунец Михаил <br> © 2021
+    </div>
+  </footer>
+
+  <!-- Подключение JQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- Подключение JavaScript файла -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>

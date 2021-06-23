@@ -22,19 +22,19 @@ function cleanDist() {
 
 function images() {
 	return src('app/images/**/*')
-		.pipe(imagemin(
-			[
-				imagemin.gifsicle({ interlaced: true }),
-				imagemin.mozjpeg({ quality: 75, progressive: true }),
-				imagemin.optipng({ optimizationLevel: 5 }),
-				imagemin.svgo({
-					plugins: [
-						{ removeViewBox: true },
-						{ cleanupIDs: false }
-					]
-				})
-			]
-		))
+		// .pipe(imagemin(
+		// 	[
+		// 		imagemin.gifsicle({ interlaced: true }),
+		// 		imagemin.mozjpeg({ quality: 75, progressive: true }),
+		// 		imagemin.optipng({ optimizationLevel: 5 }),
+		// 		imagemin.svgo({
+		// 			plugins: [
+		// 				{ removeViewBox: true },
+		// 				{ cleanupIDs: false }
+		// 			]
+		// 		})
+		// 	]
+		// ))
 		.pipe(dest('dist/images'))
 }
 
@@ -78,7 +78,8 @@ function watching() {
 
 function build() {
 	return src([
-		'app/css/style.min.css',
+		'app/css/style.css',
+		'app/css/reset.css',
 		'app/fonts/**/*',
 		'app/js/main.min.js',
 		'app/*.html'

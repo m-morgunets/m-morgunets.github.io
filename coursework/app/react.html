@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>React.js</title>
+  <!-- Фавикон сайта -->
+  <link rel="shortcut icon" href="images/logo.svg" type="image/x-icon">
+  <!-- Шрифты подгружаются из Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Reset.css сбрасывает встроенные стили браузера -->
+  <link rel="stylesheet" href="css/reset.css">
+  <!-- Подключение стилей -->
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body class="page-react">
+
+  <!-- Верхнее меню сайта, повторяется на всех страницах -->
+  <header class="header">
+    <div class="container">
+      <!-- Логотип сайта -->
+      <a href="index.html" class="header__logo"><img src="images/logo.svg" alt=""></a>
+      <!-- Меню -->
+      <ul class="header__menu">
+        <li><a href="html.html">Html</a></li>
+        <li><a href="css.html">СSS</a></li>
+        <li><a href="javascript.html">JS</a></li>
+        <li><a href="php.html">PHP</a></li>
+        <li>
+          <!-- Выподающее пункты меню -->
+          <img src="images/down-arrow.svg" alt=""> Frameworks
+
+          <ul class="header__menu-list">
+            <li><a href="jquery.html">JQuery</a></li>
+            <li><a href="vue.html">Vue.js</a></li>
+            <li><a href="react.html">React.js</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Первый экран, растянут на всю высоту экрана -->
+  <section class="main">
+    <div class="main__subtitle">react.js</div>
+  </section>
+
+  <!-- Основная информация о создателе -->
+  <section class="information">
+    <h3 class="information__title">Основная информация</h3>
+    <div class="information__item">
+      <div class="information__item-img"><img src="images/smile.svg" alt=""></div>
+      <!-- ФИО создателя -->
+      <div class="information__item-text">Джордан Валке</div>
+    </div>
+    <div class="information__item">
+      <div class="information__item-img"><img src="images/date.svg" alt=""></div>
+      <!-- Год создания -->
+      <div class="information__item-text">2013 г.</div>
+    </div>
+  </section>
+
+  <!-- Основная информация о React -->
+  <section class="definition">
+    <div class="container">
+      <div class="definition__box">
+        <div class="definition__box-img"><img src="images/react.png" alt=""></div>
+        <p class="definition__box-text default-text">React - это декларативная, эффективная и гибкая библиотека
+          JavaScript для создания пользовательских интерфейсов (UI). Она позволяет вам создавать сложные UI из небольших
+          и изолированных частей кода, называемых «компонентами».
+        </p>
+      </div>
+      <p class="definition__text default-text">
+        С помощью React разработчики создают веб-приложения, которые изменяют отображение без перезагрузки страницы.
+        Благодаря этому приложения быстро реагируют на действия пользователя, например, заполнение форм, применение
+        фильтров, добавление товаров в корзину и так далее.
+        <br><br>
+        React применяют для отрисовки компонентов пользовательского интерфейса. Также библиотека может полностью
+        управлять фронтендом. В этом случае React используют с библиотеками для управления состоянием и роутинга,
+        например, Redux и React Router.
+      </p>
+    </div>
+  </section>
+
+  <!-- Информация о React -->
+  <section class="features">
+    <div class="container">
+      <h2 class="features__title default-title">Ключевые особенности React</h2>
+      <p class="features__text default-text">
+        Одна из ключевых особенностей React — универсальность. Эту библиотеку можно использовать на сервере и на
+        мобильных платформах с помощью React Native. Это принцип Learn Once, Write Anywhere или «Научитесь один раз,
+        пишите где угодно».
+        <br><br>
+        Ещё одна важная особенность библиотеки — декларативность. С помощью React разработчик описывает, как компоненты
+        интерфейса выглядят в разных состояниях. Декларативный подход сокращает код и делает его понятным.
+        <br><br>
+        React основан на компонентах, это ещё одна ключевая особенность библиотеки. Каждый компонент возвращает часть
+        пользовательского интерфейса со своим состоянием. Объединяя компоненты, программист создаёт завершённый
+        интерфейс веб-приложения.
+        <br><br>
+        Важная особенность React — использование JSX. Это расширение синтаксиса JavaScript, которое удобно использовать
+        для описания интерфейса. JSX похож на HTML, тем не менее это всё-таки JavaScript. Пример JSX можно увидеть ниже:
+      </p>
+      <!-- Представленный код сделан с помощью мнемоники -->
+      <div class="default-code">
+        const header = text ? &lt;h1&gt;{text}&lt;/h1&gt; : null;
+        <br><br>
+        const vdom = (<br>
+        &nbsp;&nbsp;&lt;div&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;{header}<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;Hello /&gt;<br>
+        &nbsp;&nbsp;&lt;/div&gt;<br>
+        );<br>
+      </div>
+      <p class="features__text default-text">
+        JSX позволяет писать JavaScript-код с помощью готовых компонентов, которые практически полностью повторяют HTML.
+        Это упрощает разработку.
+        <br><br>
+        К важным особенностям React относится использование виртуального DOM (Virtual DOM). Виртуальный DOM — объект, в
+        котором хранится информация о состоянии интерфейса. При изменении состояния, например, после отправки формы или
+        нажатия кнопки, React рассчитывает разницу между старым и новым состоянием. После этого библиотека отрисовывает
+        новое состояние. Использование виртуального DOM позволяет библиотеке эффективно обновлять реальный DOM.
+      </p>
+    </div>
+  </section>
+
+  <!-- Информация о React -->
+  <section class="demand">
+    <div class="container">
+      <h2 class="demand__title default-title">Востребованность React</h2>
+      <p class="demand__text default-text">
+        По информации сооснователя npm Inc Лорри Восса (Laurie Voss), доля React на рынке фронтенд-библиотек и
+        фреймворков в конце 2018 года достигла 60 %. Данные о популярности библиотек и фреймворков получены в ходе
+        опроса пользователей системы управления пакетами npm.
+        <br><br>
+        По данным исследования The State of JS 2019, в котором приняло участие более 20 000 разработчиков, React
+        лидирует в категории «Фронтенд-фреймворки и библиотеки». 71 % респондентов сказали, что использовали эту
+        библиотеку и будут использовать её в будущем. С 2016 года доля разработчиков, которые используют React и
+        планируют использовать его в будущем, выросла с 48 до 71 %.
+        <br><br>
+        Другие популярные библиотеки и фреймворки уступают React. Например, только 40.5 % разработчиков сказали, что
+        использовали Vue.js и планируют использовать его в будущем. Однако популярность Vue тоже растёт — с 2016 года
+        она выросла с 8 до 40 %.
+        <br><br>
+        А вот популярность Angular падает. В 2019 году 35.8 % разработчиков сказали, что использовали этот фреймворк, но
+        не будут пользоваться им в будущем.
+        <br><br>
+        А вот популярность Angular падает. В 2019 году 35.8 % разработчиков сказали, что использовали этот фреймворк, но
+        не будут пользоваться им в будущем.
+        <br><br>
+        В ежегодном исследовании предпочтений разработчиков (Developer Survey 2019) 74.5 % пользователей Stack Overflow
+        назвали React самой любимой библиотекой. 21.6 % пользователей Stack Overflow назвали React самой востребованной
+        библиотекой.
+        <br><br>
+        Промежуточный итог: React — лидер по популярности среди фронтенд-фреймворков и библиотек. Для студентов и
+        начинающих программистов это особенно важная информация, так как её нужно учитывать при планировании обучения и
+        карьеры. В следующем разделе пойдёт речь о востребованности React на рынке труда.
+      </p>
+    </div>
+  </section>
+
+  <!-- Дополнительная информация о React, представлены ссылки на сторонние ресурсы -->
+  <section class="sources">
+    <div class="container">
+      <h2 class="sources__title default-title">
+        Дополнительная информация о React.js:
+      </h2>
+      <ul class="sources__links default-list">
+        <li class="sources__links-item"><a target="_blank"
+            href="https://ru.reactjs.org/docs/getting-started.html">Официальная документация React.js</a></li>
+        <li class="sources__links-item"><a target="_blank"
+            href="https://learn-reactjs.ru/tutorial#before-start">Учебник: введение в React.js
+          </a>
+        </li>
+        <li class="sources__links-item"><a target="_blank"
+            href="http://old.code.mu/books/advanced/javascript/react/">Учебник по фреймворку React.js</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Footer сайта, повторяется на всех страницах -->
+  <footer class="footer">
+    <div class="footer__text">
+      Моргунец Михаил <br> © 2021
+    </div>
+  </footer>
+
+  <!-- Подключение JQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- Подключение JavaScript файла -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>

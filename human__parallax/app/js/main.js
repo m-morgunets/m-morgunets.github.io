@@ -1,12 +1,5 @@
 $(function () {
 
-  let date = new Date;
-  let hours = date.getHours();
-  setInterval(() => {
-    date = new Date;
-    hours = date.getHours();
-  }, 60000);
-
   let windowWidth = $(window).width();
   let windowHeight = $(window).height();
   let X, Y;
@@ -24,36 +17,36 @@ $(function () {
   let eyesOffsetTop = eyesOffset.top;
   let eyesOffsetLeft = eyesOffset.left;
 
-  if (hours <= 23 && hours >= 7) {
-    $('.remove-sleep').addClass('active')
-
-    setTimeout(mousemoveOn, 1000)
-    function mousemoveOn() {
-      $('.face-sleepEye').css('opacity', 0)
-      setTimeout(() => {
-        $(document).mousemove(function (e) {
-          X = e.pageX;
-          Y = e.pageY;
-          mouseMove()
-        });
-      }, 500)
-    }
-
-    let offEyeRandom = randomInteger(3, 7) * 1000;
-    setTimeout(wink, offEyeRandom)
-
-    function wink() {
-      offEyeRandom = randomInteger(3, 7) * 1000
-      $('.face-sleepEye').css('opacity', 1)
-
-      setTimeout(() => {
-        $('.face-sleepEye').css('opacity', 0)
-      }, 150);
-      setTimeout(wink, offEyeRandom)
-    };
-  } else {
-    $('.title-sleep').addClass('active')
+  setTimeout(mousemoveOn, 1000)
+  function mousemoveOn() {
+    $('.face-sleepEye').css('opacity', 0)
+    setTimeout(() => {
+      $(document).mousemove(function (e) {
+        X = e.pageX;
+        Y = e.pageY;
+        if (X<(windowWidth/2)-600) {
+          X = (windowWidth/2)-600;
+        }
+        if (X>(windowWidth/2)+600) {
+          X = (windowWidth/2)+600;
+        }
+        mouseMove()
+      });
+    }, 500)
   }
+
+  let offEyeRandom = randomInteger(3, 7) * 1000;
+  setTimeout(wink, offEyeRandom)
+
+  function wink() {
+    offEyeRandom = randomInteger(3, 7) * 1000
+    $('.face-sleepEye').css('opacity', 1)
+
+    setTimeout(() => {
+      $('.face-sleepEye').css('opacity', 0)
+    }, 150);
+    setTimeout(wink, offEyeRandom)
+  };
 
 
 
